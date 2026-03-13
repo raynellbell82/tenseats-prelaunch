@@ -81,7 +81,7 @@ export function LandingHeader() {
                   Why Tenseats
                 </Button>
               </Link>
-              <Link href="/cities">
+              <Link href="/#cities-globe">
                 <Button
                   variant="ghost"
                   className="text-base text-muted-foreground hover:text-foreground"
@@ -144,7 +144,7 @@ export function LandingHeader() {
                   </SheetClose>
                   <SheetClose asChild>
                     <Link
-                      href="/cities"
+                      href="/#cities-globe"
                       className="flex items-center rounded-md px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                     >
                       Cities

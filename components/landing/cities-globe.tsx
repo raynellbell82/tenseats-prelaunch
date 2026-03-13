@@ -204,6 +204,7 @@ export default function CitiesGlobe() {
 
   return (
     <section
+      id="cities-globe"
       ref={sectionRef}
       className="relative py-20 px-4 overflow-hidden"
       aria-labelledby="cities-globe-heading"
