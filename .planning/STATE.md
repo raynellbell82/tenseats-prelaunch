@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 09-02-PLAN.md
-last_updated: "2026-03-13T10:51:13.874Z"
+stopped_at: Completed 08.1-01-PLAN.md
+last_updated: "2026-03-13T11:14:50.970Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
-  total_phases: 9
-  completed_phases: 8
-  total_plans: 19
-  completed_plans: 18
+  total_phases: 10
+  completed_phases: 10
+  total_plans: 20
+  completed_plans: 20
 ---
 
 # Project State
@@ -66,6 +66,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 08-why-tenseats-page P02 | 5 | 3 tasks | 3 files |
 | Phase 09-seo-deployment-copy-qa P01 | 8 | 2 tasks | 5 files |
 | Phase 09-seo-deployment-copy-qa P02 | 2 | 2 tasks | 1 files |
+| Phase 08.1-cities-globe P01 | 13 | 3 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -123,6 +124,8 @@ Recent decisions affecting current work:
 - [Phase 09-seo-deployment-copy-qa]: Dockerfile uses npm ci --legacy-peer-deps matching .npmrc; .npmrc not in .dockerignore
 - [Phase 09-seo-deployment-copy-qa]: Code identifiers using 'insider' are exempt from COPY-01 — only visible text strings are in scope
 - [Phase 09-seo-deployment-copy-qa]: Replaced forbidden 'unique' with contextual alternatives: distinctive/particular/rare/singular
+- [Phase 08.1-cities-globe]: cities-globe-loader.tsx client wrapper required — Next.js 16 Turbopack does not allow next/dynamic ssr:false in Server Components
+- [Phase 08.1-cities-globe]: METROS_DATA has different city slugs than plan examples — mapped actual 32 slugs to US Census Bureau regions; South=16, Midwest=9, Northeast=4, West=3
 
 ### Pending Todos
 
@@ -134,6 +137,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T10:51:13.868Z
-Stopped at: Completed 09-02-PLAN.md
+Last session: 2026-03-13T11:14:50.968Z
+Stopped at: Completed 08.1-01-PLAN.md
 Resume file: None
