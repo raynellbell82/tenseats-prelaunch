@@ -18,8 +18,8 @@
 - [x] **SCAF-09**: Copy convex.json from source (functions config with better-auth external package)
 - [x] **SCAF-10**: Do NOT copy convex/http.ts — rely on existing shared HTTP router
 - [x] **SCAF-11**: Derive package.json from source with only name and scripts.dev changed, run npm install
-- [ ] **SCAF-12**: Create .env.local with all required env vars (Convex, Stripe, Better Auth, n8n)
-- [ ] **SCAF-13**: Connect to existing Convex deployment via CONVEX_DEPLOYMENT env var, generate _generated/ types
+- [x] **SCAF-12**: Create .env.local with all required env vars (Convex, Stripe, Better Auth, n8n)
+- [x] **SCAF-13**: Connect to existing Convex deployment via CONVEX_DEPLOYMENT env var, generate _generated/ types
 - [x] **SCAF-14**: Create auth API route at app/api/auth/[...all]/route.ts from source
 
 ### Layout & Navigation
@@ -153,8 +153,8 @@
 | SCAF-09 | Phase 1 | Complete |
 | SCAF-10 | Phase 1 | Complete |
 | SCAF-11 | Phase 1 | Complete |
-| SCAF-12 | Phase 1 | Pending |
-| SCAF-13 | Phase 1 | Pending |
+| SCAF-12 | Phase 1 | Complete |
+| SCAF-13 | Phase 1 | Complete |
 | SCAF-14 | Phase 1 | Complete |
 | LAYO-01 | Phase 2 | Pending |
 | LAYO-02 | Phase 2 | Pending |

@@ -12,7 +12,7 @@ Build a standalone Next.js + Convex pre-launch site from a copied source repo. T
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Scaffold** - Copy source files, init project, connect to shared Convex deployment
+- [x] **Phase 1: Scaffold** - Copy source files, init project, connect to shared Convex deployment (completed 2026-03-13)
 - [ ] **Phase 2: Layout & Navigation** - Root layout, providers, landing header, footer
 - [ ] **Phase 3: Homepage** - Hero, countdown, founding banner, CTAs at /
 - [ ] **Phase 4: Join Page** - 5-section join page with Stripe checkout at /join
@@ -146,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold | 1/3 | In Progress|  |
+| 1. Scaffold | 3/3 | Complete   | 2026-03-13 |
 | 2. Layout & Navigation | 0/TBD | Not started | - |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. Join Page | 0/TBD | Not started | - |
