@@ -356,6 +356,12 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "Get past the algorithm",
+        cityDescription:
+          "The city's best tables fill by word of mouth, not Yelp reviews. Tenseats surfaces the supper clubs, pop-ups, and chef's tables that locals whisper about before anyone writes them up.",
+      },
+      {
         role: "chef",
         cityHeadline: "Host Chicago's next cult table",
         cityDescription:
@@ -368,10 +374,22 @@ export const CITY_DATA: Record<string, CityData> = {
           "Chicago's whiskey and craft cocktail scene is legendary. Partner your programs with supper clubs, pop-ups, and chef collaborations to reach guests who drink as seriously as they eat.",
       },
       {
-        role: "guest",
-        cityHeadline: "Get past the algorithm",
+        role: "curator",
+        cityHeadline: "Chicago's underground moves fast",
         cityDescription:
-          "The city's best tables fill by word of mouth, not Yelp reviews. Tenseats surfaces the supper clubs, pop-ups, and chef's tables that locals whisper about before anyone writes them up.",
+          "Logan Square pop-ups, Pilsen supper clubs, Wicker Park borrowed kitchens — the scene rotates weekly and the press arrives months late. Curators who track which Monday nights matter are the city's essential insiders.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Your space is the West Loop's next table",
+        cityDescription:
+          "Chicago's restaurant-dense West Loop proves that the right space draws the right chef. A converted loft, a closed kitchen on a dark night, a courtyard — connect it with the pop-up chefs who need exactly what you have.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Chicago's supper club scene needs connectors",
+        cityDescription:
+          "The chef incubating in a Pilsen kitchen needs an audience. The Wicker Park venue host needs the right concept. You know both sides of that equation — and in Chicago's whisper-network food culture, that introduction is everything.",
       },
     ],
     tier: 1,
@@ -411,10 +429,28 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "Find it before the crowd",
+        cityDescription:
+          "The food truck that sells out before it tweets, the pop-up without a website — Tenseats maps Austin's hidden food scene so you get access before the line forms.",
+      },
+      {
         role: "chef",
         cityHeadline: "Austin's pop-up culture is your launchpad",
         cityDescription:
           "East Austin backyards and trailer parks have launched careers. Test your concept in front of the city's most food-forward audience before anyone else has heard your name.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Mezcal and mesquite deserve a stage",
+        cityDescription:
+          "Austin's cocktail scene runs on mezcal flights, smoked agave programs, and Rainey Street loft collaborations with chefs. Bring your pairing dinners to a city that drinks as thoughtfully as it eats.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "East Austin moves before anyone notices",
+        cityDescription:
+          "East 6th and Manor Road chefs test their best concepts in borrowed spaces before anyone is watching. Curators who know which trailer park pop-up matters this weekend are the city's most valuable insiders.",
       },
       {
         role: "venueHost",
@@ -423,10 +459,10 @@ export const CITY_DATA: Record<string, CityData> = {
           "Austin's outdoor culture makes private spaces ideal for intimate dinners. List your backyard, rooftop, or loft with Tenseats and connect with chefs who need exactly what you have.",
       },
       {
-        role: "guest",
-        cityHeadline: "Find it before the crowd",
+        role: "facilitator",
+        cityHeadline: "Austin's food and music scene need connectors",
         cityDescription:
-          "The food truck that sells out before it tweets, the pop-up without a website — Tenseats maps Austin's hidden food scene so you get access before the line forms.",
+          "East Austin has chefs who need spaces and venue hosts who need the right events. You know the trailer park operators, the backyard dinner regulars, and the Tex-Mex tasting-menu chefs building something serious — make the introduction.",
       },
     ],
     tier: 1,
@@ -466,10 +502,22 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "Find what's whispered about",
+        cityDescription:
+          "The supper clubs without websites. The pop-ups that fill by text chain. Tenseats surfaces Atlanta's most coveted tables before the Instagram post goes up and the seats are gone.",
+      },
+      {
         role: "chef",
         cityHeadline: "Atlanta's pop-up pipeline is your path",
         cityDescription:
           "The city's borrowed kitchens on Monday nights have incubated some of the South's most-talked-about concepts. Atlanta's food community shows up for chefs who take risks in intimate spaces.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Atlanta's natural wine wave has room for you",
+        cityDescription:
+          "Natural wine pop-ups and chef-sommelier collaborations have spread across Summerhill and the Beltline corridor. Beverage professionals who can match Atlanta's evolving food ambition find an audience already primed.",
       },
       {
         role: "curator",
@@ -478,10 +526,16 @@ export const CITY_DATA: Record<string, CityData> = {
           "Atlanta's underground scene runs ahead of the press. Curators who know which borrowed kitchens open on which nights are the connective tissue of a scene the city hasn't fully acknowledged yet.",
       },
       {
-        role: "guest",
-        cityHeadline: "Find what's whispered about",
+        role: "venueHost",
+        cityHeadline: "The Beltline runs through your space",
         cityDescription:
-          "The supper clubs without websites. The pop-ups that fill by text chain. Tenseats surfaces Atlanta's most coveted tables before the Instagram post goes up and the seats are gone.",
+          "Atlanta's food culture flows along the Beltline corridor and into Cabbagetown's intimate side streets. Open your loft, studio, or outdoor space to the pop-up chefs who need exactly what the neighborhood provides.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Monday nights belong to the connectors",
+        cityDescription:
+          "Atlanta's borrowed-kitchen supper clubs thrive on the right introductions. You know which Summerhill venue host has a dark Monday and which pop-up chef is ready to fill it — and the city's food scene moves on that knowledge.",
       },
     ],
     tier: 1,
@@ -523,22 +577,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Bring your tradition to the table",
-        cityDescription:
-          "Houston's multiculturalism is its greatest culinary asset. Chefs drawing on authentic food traditions from any of the city's 90 represented cultures find an audience hungry for exactly what they grew up cooking.",
-      },
-      {
         role: "guest",
         cityHeadline: "Discover Houston's full range",
         cityDescription:
           "Houston's most interesting meals happen in neighborhoods visitors never reach. Tenseats maps the pop-ups, communal dinners, and off-menu experiences across all 77 language communities.",
       },
       {
+        role: "chef",
+        cityHeadline: "Bring your tradition to the table",
+        cityDescription:
+          "Houston's multiculturalism is its greatest culinary asset. Chefs drawing on authentic food traditions from any of the city's 90 represented cultures find an audience hungry for exactly what they grew up cooking.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Viet-Cajun crawfish calls for the right drink",
+        cityDescription:
+          "Houston's crawfish boil innovation — Korean BBQ crossovers, elevated seasonings — has created pairing opportunities no other American city has. Bring your program to the pop-ups pushing that tradition further.",
+      },
+      {
         role: "curator",
         cityHeadline: "Document the city's real food story",
         cityDescription:
           "Houston's culinary diversity is one of America's best-kept secrets. Curators who surface and connect these food traditions across communities are doing some of the most meaningful work in the city.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Bellaire Chinatown has space for the right event",
+        cityDescription:
+          "Houston's Bellaire corridor, Mahatma Gandhi District, and Alief carry food cultures that deserve an intimate dining format. Your space in these neighborhoods connects the city's most authentic culinary communities to the right audience.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "77 languages, one right introduction",
+        cityDescription:
+          "Houston's 90-country food culture creates connection opportunities no other city can match. You know which Nigerian pop-up chef needs a Bellaire kitchen and which Persian feast night needs the right guest list — make it happen.",
       },
     ],
     tier: 2,
@@ -578,22 +650,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Build a menu from what's in season",
-        cityDescription:
-          "Denver's farm-forward dining culture rewards chefs who follow the growing season. Pop-up dinners built around weekly market hauls draw the city's most engaged food audience.",
-      },
-      {
         role: "guest",
         cityHeadline: "Find Denver's off-platform tables",
         cityDescription:
           "The NYT called it the best food city. The best meals aren't in the guides. Tenseats surfaces the chef's tables, farm dinners, and LoDo underground experiences worth attending.",
       },
       {
+        role: "chef",
+        cityHeadline: "Build a menu from what's in season",
+        cityDescription:
+          "Denver's farm-forward dining culture rewards chefs who follow the growing season. Pop-up dinners built around weekly market hauls draw the city's most engaged food audience.",
+      },
+      {
         role: "mixologist",
         cityHeadline: "High-altitude cocktails deserve a stage",
         cityDescription:
           "Colorado's craft spirits and seasonal ingredients create cocktail opportunities no other city has. Pair your programs with Denver's pop-up dinner circuit and find guests who take drinking as seriously as eating.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Farm-to-altitude moves faster than the press",
+        cityDescription:
+          "Denver's seasonal pop-up circuit follows the Colorado growing calendar — August heirloom tomatoes, October elk and bison, winter ferments. Curators who track which chefs are cooking what, and when, hold the city's most valuable food knowledge.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "LoDo's warehouse walls have good acoustics",
+        cityDescription:
+          "Lower Downtown's converted loft spaces and off-night kitchen spaces are exactly what Denver's pop-up scene needs. List your LoDo space with Tenseats and connect with the chefs making the city's most interesting meals.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Colorado's chef and farmer network needs you",
+        cityDescription:
+          "Denver's farm-to-table pop-up culture runs on relationships — which farm has surplus heirloom tomatoes this week, which LoDo kitchen is dark on Thursday. You know both sides and the right event follows.",
       },
     ],
     tier: 2,
@@ -633,22 +723,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Philly's BYOB culture was built for you",
-        cityDescription:
-          "Philadelphia's particular licensing laws mean intimate dinners in rowhomes and borrowed kitchens are the city's most beloved dining format. Your pop-up concept fits here better than anywhere else.",
-      },
-      {
         role: "guest",
         cityHeadline: "The address arrives the morning of",
         cityDescription:
           "Philadelphia's pop-up dinner circuit runs on trust and word of mouth. Tenseats gets you on the lists for the 12-seat supper clubs that fill by text chain before they ever go public.",
       },
       {
+        role: "chef",
+        cityHeadline: "Philly's BYOB culture was built for you",
+        cityDescription:
+          "Philadelphia's particular licensing laws mean intimate dinners in rowhomes and borrowed kitchens are the city's most beloved dining format. Your pop-up concept fits here better than anywhere else.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Bring the bottle to the borrowed kitchen",
+        cityDescription:
+          "Philadelphia's BYOB culture runs on the right pairing. Beverage professionals who collaborate with Fishtown pop-up chefs and East Passyunk borrowed kitchens find an audience that takes the full table seriously.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Fishtown's BYOB circuit needs a guide",
+        cityDescription:
+          "Philadelphia's pop-up dinner scene rotates through rowhomes and borrowed kitchens that rarely publish schedules. Curators who track the East Passyunk after-dark circuit and the Reading Terminal-inspired chef dinners are the city's most essential connectors.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Your rowhome is the venue",
         cityDescription:
           "Fishtown rowhomes, South Philly dining rooms, and East Passyunk courtyards are perfect intimate dinner spaces. Connect with pop-up chefs who need your space for one perfect night.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Philly's BYOB circuit runs on introductions",
+        cityDescription:
+          "The pop-up chef who needs a Fishtown rowhome. The venue host who needs the right concept. The guest list that makes a 12-seat supper club feel curated rather than random. You know how to make all three work together.",
       },
     ],
     tier: 2,
