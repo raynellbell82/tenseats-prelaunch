@@ -34,7 +34,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. All source component, lib, and convex directories are present in the project
   4. `.env.local` contains all required env vars (Convex, Stripe, Better Auth, n8n)
   5. `convex/http.ts` does NOT exist in the project (shared router relied upon)
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 01-01-PLAN.md — Init Next.js project, copy configs, derive package.json, install deps
+- [ ] 01-02-PLAN.md — Copy component, lib, and Convex source files
+- [ ] 01-03-PLAN.md — Create .env.local, connect Convex, verify dev server
 
 ### Phase 2: Layout & Navigation
 **Goal**: Every page in the site shares a consistent dark-theme shell with working header navigation and footer
@@ -142,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold | 0/TBD | Not started | - |
+| 1. Scaffold | 0/3 | Planning complete | - |
 | 2. Layout & Navigation | 0/TBD | Not started | - |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. Join Page | 0/TBD | Not started | - |
