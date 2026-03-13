@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: City Persona Copy
 status: completed
-stopped_at: Completed 13-01-PLAN.md
-last_updated: "2026-03-13T15:03:41.736Z"
+stopped_at: Completed 13-02-PLAN.md
+last_updated: "2026-03-13T15:10:57.718Z"
 last_activity: "2026-03-13 — Phase 12 Plan 01 executed: persona icons, shared PersonaCard, refactored city/why sections"
 progress:
   total_phases: 2
   completed_phases: 1
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
   percent: 50
 ---
 
@@ -45,6 +45,7 @@ Progress: [█░░░░░░░░░] 50% (1 of 2 phases complete)
 |-------|-------|-------|----------|
 | 12-persona-component-foundation | 1 | 3min | 3min |
 | Phase 13-city-persona-copy P01 | 12min | 2 tasks | 1 files |
+| Phase 13-city-persona-copy P02 | 8min | 2 tasks | 1 files |
 
 ## Accumulated Context
 | Phase 12-persona-component-foundation P01 | 3min | 3 tasks | 5 files |
@@ -60,6 +61,8 @@ Recent decisions affecting current work:
 - [Phase 12]: PersonaCard headline prop optional: city-personas passes city headline, why-personas omits it
 - [Phase 13-city-persona-copy]: Replace entire topPersonas arrays (not append-only) to enforce canonical role order guest→chef→mixologist→curator→venueHost→facilitator
 - [Phase 13-city-persona-copy]: Facilitator copy pattern: anchor to specific neighborhoods and formats the facilitator connects, never generic
+- [Phase 13-city-persona-copy]: Replace entire topPersonas arrays (not append-only) to enforce canonical role order — consistent with Plan 01
+- [Phase 13-city-persona-copy]: Pittsburgh mixologist added despite research listing venueHost as missing — actual file had venueHost present (same data-correction pattern as Plan 01 Philadelphia)
 
 ### Pending Todos
 
@@ -72,6 +75,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-13T15:03:41.733Z
-Stopped at: Completed 13-01-PLAN.md
+Last session: 2026-03-13T15:10:57.716Z
+Stopped at: Completed 13-02-PLAN.md
 Resume file: None
