@@ -81,4 +81,4 @@ Plans:
 | 10. Wire City Slug to Launch Flow | v1.0 | 1/1 | Complete | 2026-03-13 |
 | 11. Nav & Auth Wiring Fixes | v1.0 | 1/1 | Complete | 2026-03-13 |
 | 12. Persona Component Foundation | 1/1 | Complete    | 2026-03-13 | - |
-| 13. City Persona Copy | 3/3 | Complete   | 2026-03-13 | - |
+| 13. City Persona Copy | 3/3 | Complete    | 2026-03-13 | - |
