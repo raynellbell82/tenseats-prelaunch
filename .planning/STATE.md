@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: City Persona Copy
-status: planning
+status: completed
 stopped_at: Completed 12-01-PLAN.md
-last_updated: "2026-03-13T14:35:58.582Z"
-last_activity: 2026-03-13 — Roadmap created, 8/8 requirements mapped across 2 phases
+last_updated: "2026-03-13T14:39:08.391Z"
+last_activity: "2026-03-13 — Phase 12 Plan 01 executed: persona icons, shared PersonaCard, refactored city/why sections"
 progress:
   total_phases: 2
   completed_phases: 1
   total_plans: 1
   completed_plans: 1
-  percent: 0
+  percent: 50
 ---
 
 # Project State
