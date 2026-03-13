@@ -1,7 +1,11 @@
-export default function Home() {
+import { LandingHeader } from "@/components/landing/landing-header";
+import { HeroSection } from "@/components/landing/hero-section";
+
+export default function HomePage() {
   return (
-    <div>
-      <h1>Tenseats Pre-Launch</h1>
-    </div>
+    <>
+      <LandingHeader />
+      <HeroSection />
+    </>
   );
 }
