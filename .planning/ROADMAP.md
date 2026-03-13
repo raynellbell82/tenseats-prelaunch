@@ -140,7 +140,10 @@ Plans:
   4. WhyPersonas shows 6 role cards (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator)
   5. WhyEconomics comparison table renders with $1.99 row and 4 competitor columns
   6. Comparison table is usable and not overflowing at 375px viewport
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 08-01-PLAN.md — Create WhyHero, WhyProblem, and WhyPersonas components
+- [ ] 08-02-PLAN.md — Create WhyEconomics, WhyCta, and /why-tenseats page route
 
 ### Phase 9: SEO, Deployment & Copy QA
 **Goal**: The site builds cleanly, is Coolify-deployable, ranks correctly in search, and every consumer-facing string passes brand compliance
@@ -169,5 +172,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 5. Auth | 2/2 | Complete   | 2026-03-13 |
 | 6. Launch Flow | 2/2 | Complete   | 2026-03-13 |
 | 7. City Pages | 0/2 | Not started | - |
-| 8. Why Tenseats Page | 0/TBD | Not started | - |
+| 8. Why Tenseats Page | 0/2 | Not started | - |
 | 9. SEO, Deployment & Copy QA | 0/TBD | Not started | - |
