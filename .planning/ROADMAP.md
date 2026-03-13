@@ -45,7 +45,9 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
   2. The Facilitator card appears with a distinct icon and correctly labeled role title alongside Guest, Chef, Mixologist, Curator, and Venue Host
   3. Card design matches the reference: icon at top, role title, description — clean dark card with no extraneous UI
   4. The CityData TypeScript type accepts "facilitator" in the role union without type errors
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 12-01-PLAN.md — Update types, create custom SVG icons, extract shared PersonaCard, rewire both persona sections
 
 ### Phase 13: City Persona Copy
 **Goal**: All 32 city pages display complete, culturally-specific persona copy for all 6 roles — copy that locals would recognize, not tourist-level generics
@@ -74,5 +76,5 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 | 9. SEO, Deployment & Copy QA | v1.0 | 3/3 | Complete | 2026-03-13 |
 | 10. Wire City Slug to Launch Flow | v1.0 | 1/1 | Complete | 2026-03-13 |
 | 11. Nav & Auth Wiring Fixes | v1.0 | 1/1 | Complete | 2026-03-13 |
-| 12. Persona Component Foundation | v1.1 | 0/TBD | Not started | - |
+| 12. Persona Component Foundation | v1.1 | 0/1 | Planning | - |
 | 13. City Persona Copy | v1.1 | 0/TBD | Not started | - |
