@@ -383,7 +383,7 @@ export const CITY_DATA: Record<string, CityData> = {
         role: "venueHost",
         cityHeadline: "Your space is the West Loop's next table",
         cityDescription:
-          "Chicago's restaurant-dense West Loop proves that the right space draws the right chef. A converted loft, a closed kitchen on a dark night, a courtyard — connect it with the pop-up chefs who need exactly what you have.",
+          "Chicago's table-dense West Loop proves that the right space draws the right chef. A converted loft, a closed kitchen on a dark night, a courtyard — connect it with the pop-up chefs who need exactly what you have.",
       },
       {
         role: "facilitator",
@@ -1707,7 +1707,7 @@ export const CITY_DATA: Record<string, CityData> = {
         role: "facilitator",
         cityHeadline: "Bridge the Warehouse Arts District and the kitchen",
         cityDescription:
-          "St. Pete's gallery dinner circuit runs on people who know both worlds. You know which Central Arts District gallery hosts chefs after closing, which EDGE District venue needs a food series, and which chef wants a space with art on the walls instead of restaurant lighting.",
+          "St. Pete's gallery dinner circuit runs on people who know both worlds. You know which Central Arts District gallery hosts chefs after closing, which EDGE District venue needs a food series, and which chef wants a space with art on the walls instead of standard venue lighting.",
       },
     ],
     tier: 3,
@@ -2413,7 +2413,7 @@ export const CITY_DATA: Record<string, CityData> = {
         role: "chef",
         cityHeadline: "Greenville's food community is ready",
         cityDescription:
-          "The city's Main Street revival has created an audience for thoughtful food experiences that Greenville's independent restaurant culture has begun to serve. Pop-up chefs who engage with Appalachian traditions and local sourcing find a community that takes food seriously.",
+          "The city's Main Street revival has created an audience for thoughtful food experiences that Greenville's independent food culture has begun to serve. Pop-up chefs who engage with Appalachian traditions and local sourcing find a community that takes food seriously.",
       },
       {
         role: "mixologist",
