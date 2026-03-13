@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 10-01-PLAN.md
-last_updated: "2026-03-13T12:34:46.947Z"
+stopped_at: Completed 11-01-PLAN.md
+last_updated: "2026-03-13T13:06:16.440Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
-  total_phases: 11
-  completed_phases: 11
-  total_plans: 21
-  completed_plans: 21
+  total_phases: 12
+  completed_phases: 12
+  total_plans: 22
+  completed_plans: 22
 ---
 
 # Project State
@@ -69,6 +69,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 08.1-cities-globe P01 | 13 | 3 tasks | 6 files |
 | Phase 09-seo-deployment-copy-qa P03 | 5 | 2 tasks | 0 files |
 | Phase 10-wire-city-slug-launch P01 | 3 | 2 tasks | 2 files |
+| Phase 11-nav-auth-wiring-fixes P01 | 4 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -130,6 +131,8 @@ Recent decisions affecting current work:
 - [Phase 08.1-cities-globe]: METROS_DATA has different city slugs than plan examples — mapped actual 32 slugs to US Census Bureau regions; South=16, Midwest=9, Northeast=4, West=3
 - [Phase 10-wire-city-slug-launch]: initialValue fills search text only — dropdown not opened; LaunchPageContent handles metro ID selection via separate useEffect
 - [Phase 10-wire-city-slug-launch]: LaunchPageContent calls listActiveMetros independently — decouples slug resolution from LaunchCitySearch's internal query
+- [Phase 11-nav-auth-wiring-fixes]: Queue signup form joins queue first (no auth required), then sends OTP — consistent with login-form.tsx OTP pattern
+- [Phase 11-nav-auth-wiring-fixes]: Cities nav links use /#cities-globe hash anchor — scrolls on homepage, navigates then scrolls from other pages
 
 ### Pending Todos
 
@@ -141,6 +144,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T12:31:53.712Z
-Stopped at: Completed 10-01-PLAN.md
+Last session: 2026-03-13T13:06:16.437Z
+Stopped at: Completed 11-01-PLAN.md
 Resume file: None

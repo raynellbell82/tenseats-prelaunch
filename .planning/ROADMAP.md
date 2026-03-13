@@ -23,7 +23,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 8.1: Cities Globe** - INSERTED — Interactive 3D globe on homepage with region-tabbed city navigation pills (completed 2026-03-13)
 - [x] **Phase 9: SEO, Deployment & Copy QA** - Sitemap, Dockerfile, build health, brand compliance audit (completed 2026-03-13)
 - [x] **Phase 10: Wire City Slug to Launch Flow** - Fix initialCitySlug prop so city pages pre-filter launch search (gap closure) (completed 2026-03-13)
-- [ ] **Phase 11: Nav & Auth Wiring Fixes** - Fix /cities nav 404, align queue signup with OTP auth (gap closure)
+- [x] **Phase 11: Nav & Auth Wiring Fixes** - Fix /cities nav 404, align queue signup with OTP auth (gap closure) (completed 2026-03-13)
 
 ## Phase Details
 
@@ -223,4 +223,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 8.1 -> 
 | 8.1. Cities Globe | 0/1 | Planned    |  |
 | 9. SEO, Deployment & Copy QA | 3/3 | Complete   | 2026-03-13 |
 | 10. Wire City Slug to Launch Flow | 1/1 | Complete    | 2026-03-13 |
-| 11. Nav & Auth Wiring Fixes | 0/1 | Planned    |  |
+| 11. Nav & Auth Wiring Fixes | 1/1 | Complete   | 2026-03-13 |

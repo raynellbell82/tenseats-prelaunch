@@ -26,8 +26,8 @@
 
 - [x] **LAYO-01**: Root layout with Geist fonts, ThemeProvider (dark default), ConvexClientProvider, Footer, Toaster
 - [x] **LAYO-02**: Providers component with ThemeProvider and ConvexClientProvider — no SetupProvider
-- [ ] **LAYO-03**: Landing header with nav links to /join, /why-tenseats, /cities + mobile hamburger menu
-- [ ] **LAYO-04**: Logo loaded from Convex platformSettings (getLogoUrl, getDarkLogoUrl)
+- [x] **LAYO-03**: Landing header with nav links to /join, /why-tenseats, /cities + mobile hamburger menu
+- [x] **LAYO-04**: Logo loaded from Convex platformSettings (getLogoUrl, getDarkLogoUrl)
 - [x] **LAYO-05**: Dark/light theme toggle in header
 - [x] **LAYO-06**: Footer renders correctly (copied from main app)
 
@@ -168,8 +168,8 @@
 | SCAF-14 | Phase 1 | Complete |
 | LAYO-01 | Phase 2 | Complete |
 | LAYO-02 | Phase 2 | Complete |
-| LAYO-03 | Phase 11 | Pending |
-| LAYO-04 | Phase 11 | Pending |
+| LAYO-03 | Phase 11 | Complete |
+| LAYO-04 | Phase 11 | Complete |
 | LAYO-05 | Phase 2 | Complete |
 | LAYO-06 | Phase 2 | Complete |
 | HOME-01 | Phase 3 | Complete |
