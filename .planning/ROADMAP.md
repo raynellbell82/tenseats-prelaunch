@@ -47,7 +47,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. Visiting any route shows the LandingHeader with nav links to /join, /why-tenseats, /cities
   2. Mobile hamburger menu opens and closes correctly at 375px viewport
-  3. Logo loads from Convex platformSettings (dark logo visible in dark mode)
+  3. Logo loads from Convex platformSettings (getLogoUrl, getDarkLogoUrl)
   4. Footer renders on all pages
   5. Dark theme is applied by default — no flash of light theme on load
 **Plans**: 2 plans
@@ -78,7 +78,9 @@ Plans:
   2. JoinHero displays "Find where locals only whisper." headline (locked copy)
   3. ReserveSpotSection initiates a Stripe checkout session when clicked
   4. Page is readable and usable at 375px viewport width
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 04-01-PLAN.md — Create /join route page assembling all 5 existing join components with LandingHeader
 
 ### Phase 5: Auth
 **Goal**: Visitors can create an account or log in via OTP email and stay authenticated across sessions
@@ -147,14 +149,14 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 3/3 | Complete   | 2026-03-13 |
 | 2. Layout & Navigation | 2/2 | Complete   | 2026-03-13 |
 | 3. Homepage | 1/1 | Complete   | 2026-03-13 |
-| 4. Join Page | 0/TBD | Not started | - |
+| 4. Join Page | 0/1 | Not started | - |
 | 5. Auth | 0/TBD | Not started | - |
 | 6. Launch Flow | 0/TBD | Not started | - |
 | 7. City Pages | 0/TBD | Not started | - |
