@@ -108,9 +108,9 @@
 - [x] **DEPL-02**: Robots.txt allowing all crawlers, pointing to sitemap
 - [x] **DEPL-03**: Dockerfile for Coolify with multi-stage build and standalone output
 - [x] **DEPL-04**: Health check endpoint at /api/health returning { ok: true }
-- [ ] **DEPL-05**: npm run build exits with zero TypeScript errors
-- [ ] **DEPL-06**: No console errors in browser dev tools
-- [ ] **DEPL-07**: Mobile viewport (375px) — no horizontal overflow
+- [x] **DEPL-05**: npm run build exits with zero TypeScript errors
+- [x] **DEPL-06**: No console errors in browser dev tools
+- [x] **DEPL-07**: Mobile viewport (375px) — no horizontal overflow
 
 ### Brand & Copy Compliance
 
@@ -226,9 +226,9 @@
 | DEPL-02 | Phase 9 | Complete |
 | DEPL-03 | Phase 9 | Complete |
 | DEPL-04 | Phase 9 | Complete |
-| DEPL-05 | Phase 9 | Pending |
-| DEPL-06 | Phase 9 | Pending |
-| DEPL-07 | Phase 9 | Pending |
+| DEPL-05 | Phase 9 | Complete |
+| DEPL-06 | Phase 9 | Complete |
+| DEPL-07 | Phase 9 | Complete |
 | COPY-01 | Phase 9 | Complete |
 | COPY-02 | Phase 9 | Complete |
 | COPY-03 | Phase 9 | Complete |
