@@ -10,13 +10,22 @@ import type { Doc } from "@/convex/_generated/dataModel";
 interface LaunchCitySearchProps {
   onSelect: (metroId: string) => void;
   onClear: () => void;
+  initialValue?: string; // Pre-fill the search input (e.g. "Chicago, IL")
 }
 
-export function LaunchCitySearch({ onSelect, onClear }: LaunchCitySearchProps) {
+export function LaunchCitySearch({ onSelect, onClear, initialValue }: LaunchCitySearchProps) {
   const metros = useQuery(api.metros.listActiveMetros);
   const [search, setSearch] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const hasInitialized = useRef(false);
+
+  useEffect(() => {
+    if (initialValue && !hasInitialized.current) {
+      setSearch(initialValue);
+      hasInitialized.current = true;
+    }
+  }, [initialValue]);
 
   const filtered = useMemo((): Doc<"metros">[] => {
     if (!metros) return [];
