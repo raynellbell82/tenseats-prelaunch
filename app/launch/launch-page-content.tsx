@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { LaunchCitySearch } from "@/components/launch/launch-city-search";
@@ -17,6 +17,19 @@ export function LaunchPageContent({ initialCitySlug }: LaunchPageContentProps) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const config = useQuery(api.launch.queue.getLaunchConfig);
+  const metros = useQuery(api.metros.listActiveMetros);
+
+  const hasInitializedCity = useRef(false);
+
+  useEffect(() => {
+    if (initialCitySlug && metros && !hasInitializedCity.current) {
+      const match = metros.find((m) => m.name === initialCitySlug);
+      if (match) {
+        setSelectedMetroId(match._id);
+        hasInitializedCity.current = true;
+      }
+    }
+  }, [initialCitySlug, metros]);
 
   function handleCitySelect(metroId: string) {
     setSelectedMetroId(metroId);
@@ -56,6 +69,11 @@ export function LaunchPageContent({ initialCitySlug }: LaunchPageContentProps) {
         <LaunchCitySearch
           onSelect={handleCitySelect}
           onClear={handleCityClear}
+          initialValue={
+            initialCitySlug && metros
+              ? metros.find((m) => m.name === initialCitySlug)?.displayName
+              : undefined
+          }
         />
       </div>
 
