@@ -19,7 +19,7 @@ export type CityData = {
     { heading: string; description: string; unsplashQuery: string },
   ];
   topPersonas: Array<{
-    role: "chef" | "mixologist" | "venueHost" | "curator" | "guest";
+    role: "chef" | "mixologist" | "venueHost" | "curator" | "guest" | "facilitator";
     cityHeadline: string;
     cityDescription: string;
   }>;
