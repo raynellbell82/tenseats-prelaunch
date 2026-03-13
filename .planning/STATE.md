@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 08-01-PLAN.md
-last_updated: "2026-03-13T10:21:00.984Z"
+stopped_at: Completed 08-02-PLAN.md
+last_updated: "2026-03-13T10:25:32.109Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
-  completed_phases: 7
+  completed_phases: 8
   total_plans: 16
-  completed_plans: 15
+  completed_plans: 16
 ---
 
 # Project State
@@ -63,6 +63,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 07-city-pages P01 | 25 | 2 tasks | 1 files |
 | Phase 07-city-pages P02 | 15 | 2 tasks | 5 files |
 | Phase 08-why-tenseats-page P01 | 2 | 3 tasks | 3 files |
+| Phase 08-why-tenseats-page P02 | 5 | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -113,6 +114,9 @@ Recent decisions affecting current work:
 - [Phase 07-city-pages]: Next.js 15 async params pattern used in city page — await params in generateMetadata and page component
 - [Phase 08-why-tenseats-page]: No CTA button in WhyHero — scroll-down ChevronDown only per plan spec
 - [Phase 08-why-tenseats-page]: Network icon used for Facilitator role — Handshake not available in current lucide-react version
+- [Phase 08-why-tenseats-page]: Sticky first column on comparison table — prevents feature names from scrolling out of view on mobile
+- [Phase 08-why-tenseats-page]: WhyCta countdown gated on featureCountdownEnabled && deadline — pulsing placeholder while config loading
+- [Phase 08-why-tenseats-page]: /why-tenseats is Server Component with Metadata export — same pattern as join page, no use client at page level
 
 ### Pending Todos
 
@@ -124,6 +128,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T10:21:00.981Z
-Stopped at: Completed 08-01-PLAN.md
+Last session: 2026-03-13T10:25:32.107Z
+Stopped at: Completed 08-02-PLAN.md
 Resume file: None
