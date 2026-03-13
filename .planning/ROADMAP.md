@@ -20,7 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 6: Launch Flow** - City search, slot grid, queue, Stripe checkout, success/expired pages (completed 2026-03-13)
 - [x] **Phase 7: City Pages** - 32 metro pages with city data, static generation, per-city SEO (completed 2026-03-13)
 - [x] **Phase 8: Why Tenseats Page** - Brand story page with personas, economics table at /why-tenseats (completed 2026-03-13)
-- [ ] **Phase 8.1: Cities Globe** - INSERTED — Interactive 3D globe on homepage with region-tabbed city navigation pills
+- [x] **Phase 8.1: Cities Globe** - INSERTED — Interactive 3D globe on homepage with region-tabbed city navigation pills (completed 2026-03-13)
 - [x] **Phase 9: SEO, Deployment & Copy QA** - Sitemap, Dockerfile, build health, brand compliance audit (completed 2026-03-13)
 
 ## Phase Details
