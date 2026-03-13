@@ -83,14 +83,14 @@
 
 ### Why Tenseats Page
 
-- [ ] **WHY-01**: Why Tenseats page at /why-tenseats with LandingHeader
-- [ ] **WHY-02**: WhyHero with "Built different. On purpose." headline (locked copy)
-- [ ] **WHY-03**: WhyProblem two-column layout — "Sponsored. Optimized. Irrelevant." vs "The whisper, surfaced."
-- [ ] **WHY-04**: WhyPersonas with 6 role cards (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator)
+- [x] **WHY-01**: Why Tenseats page at /why-tenseats with LandingHeader
+- [x] **WHY-02**: WhyHero with "Built different. On purpose." headline (locked copy)
+- [x] **WHY-03**: WhyProblem two-column layout — "Sponsored. Optimized. Irrelevant." vs "The whisper, surfaced."
+- [x] **WHY-04**: WhyPersonas with 6 role cards (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator)
 - [ ] **WHY-05**: WhyEconomics with $1.99 comparison table (Tenseats vs Eventbrite vs Tock vs Luma)
 - [ ] **WHY-06**: WhyCta with "The Insiders are already inside." headline, countdown widget, "Become an Insider" CTA
 - [ ] **WHY-07**: Comparison table mobile-responsive
-- [ ] **WHY-08**: All section copy matches accepted copy decisions (locked)
+- [x] **WHY-08**: All section copy matches accepted copy decisions (locked)
 
 ### SEO & Deployment
 
@@ -197,14 +197,14 @@
 | CITY-08 | Phase 7 | Complete |
 | CITY-09 | Phase 7 | Complete |
 | CITY-10 | Phase 7 | Complete |
-| WHY-01 | Phase 8 | Pending |
-| WHY-02 | Phase 8 | Pending |
-| WHY-03 | Phase 8 | Pending |
-| WHY-04 | Phase 8 | Pending |
+| WHY-01 | Phase 8 | Complete |
+| WHY-02 | Phase 8 | Complete |
+| WHY-03 | Phase 8 | Complete |
+| WHY-04 | Phase 8 | Complete |
 | WHY-05 | Phase 8 | Pending |
 | WHY-06 | Phase 8 | Pending |
 | WHY-07 | Phase 8 | Pending |
-| WHY-08 | Phase 8 | Pending |
+| WHY-08 | Phase 8 | Complete |
 | DEPL-01 | Phase 9 | Pending |
 | DEPL-02 | Phase 9 | Pending |
 | DEPL-03 | Phase 9 | Pending |
