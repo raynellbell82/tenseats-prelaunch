@@ -92,9 +92,10 @@ Plans:
   3. Submitting a valid email triggers a Better Auth OTP email
   4. After OTP entry, user is authenticated and redirected
   5. Refreshing the browser preserves the session (user stays logged in)
-**Plans**: 1 plan
+**Plans**: 2 plans
 Plans:
-- [ ] 05-01-PLAN.md — Copy validation schema, create auth layout with LandingHeader, create signup/login/verify-email pages, patch redirects to /
+- [x] 05-01-PLAN.md — Copy validation schema, create auth layout with LandingHeader, create signup/login/verify-email pages, patch redirects to /
+- [ ] 05-02-PLAN.md — Replace password-based login form with OTP-first email flow (gap closure for AUTH-02)
 
 ### Phase 6: Launch Flow
 **Goal**: An authenticated visitor can search for their city, browse founding slots, join the queue or complete Stripe checkout, and land on a confirmation page
@@ -159,7 +160,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 2. Layout & Navigation | 2/2 | Complete   | 2026-03-13 |
 | 3. Homepage | 1/1 | Complete   | 2026-03-13 |
 | 4. Join Page | 2/2 | Complete   | 2026-03-13 |
-| 5. Auth | 0/1 | Not started | - |
+| 5. Auth | 1/2 | In progress | - |
 | 6. Launch Flow | 0/TBD | Not started | - |
 | 7. City Pages | 0/TBD | Not started | - |
 | 8. Why Tenseats Page | 0/TBD | Not started | - |
