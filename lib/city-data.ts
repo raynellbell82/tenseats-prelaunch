@@ -1601,22 +1601,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Ybor's heritage is your ingredient",
-        cityDescription:
-          "Tampa's immigrant food traditions — Cuban, Spanish, Italian — are rich culinary material. Pop-up chefs who draw on these roots while pushing them forward find an audience that's both proud of the history and hungry for what comes next.",
-      },
-      {
         role: "guest",
         cityHeadline: "Tampa is more than Cuban sandwiches",
         cityDescription:
           "The city's Ybor City heritage, Gulf Coast seafood, and growing chef community create a food scene that goes far beyond the tourist narrative. Tenseats surfaces the pop-ups and chef's tables where Tampa's real food culture lives.",
       },
       {
+        role: "chef",
+        cityHeadline: "Ybor's heritage is your ingredient",
+        cityDescription:
+          "Tampa's immigrant food traditions — Cuban, Spanish, Italian — are rich culinary material. Pop-up chefs who draw on these roots while pushing them forward find an audience that's both proud of the history and hungry for what comes next.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Gulf Coast spirits deserve a proper program",
+        cityDescription:
+          "Tampa's cocktail culture is catching up to its food scene. Pop-up bar programs that engage with the city's Cuban rum heritage, Ybor history, and Gulf Coast citrus find an audience that knows there's more to drink here than the waterfront tourist bars suggest.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Ybor City's food story is still being written",
+        cityDescription:
+          "The Cuban, Spanish, and Italian immigrant traditions that built Ybor are evolving, not disappearing. Curators who document the pop-up chefs building on this heritage — and the Armature Works shadow circuit developing around it — are telling Tampa's most honest food story.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Tampa's historic spaces need events",
         cityDescription:
           "Ybor City's cigar factories, Hyde Park bungalows, and Channel District lofts offer intimate dining spaces with genuine history. Connect your venue with the pop-up chefs ready to fill them.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Connect Ybor heritage chefs to Armature Works crowds",
+        cityDescription:
+          "Tampa's food scene has the traditions and the talent; what it needs is the right matchmaker. You know which Ybor City chef wants a proper dining room, which Hyde Park venue is looking for a dinner series, and which Armature Works crowd would show up for something with real history behind it.",
       },
     ],
     tier: 3,
@@ -1656,22 +1674,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "St. Pete's art community is your audience",
-        cityDescription:
-          "Florida's arts capital has a creative-class audience primed for thoughtful food experiences. Pop-up chefs who engage with the gallery and studio community find collaborators and guests who show up ready for something different.",
-      },
-      {
         role: "guest",
         cityHeadline: "Art and food in one evening",
         cityDescription:
           "St. Pete's gallery dinner circuit combines two of the best things a city can offer. Tenseats surfaces the chef-artist collaborations and Warehouse Arts District pop-ups that make St. Petersburg's cultural scene complete.",
       },
       {
+        role: "chef",
+        cityHeadline: "St. Pete's art community is your audience",
+        cityDescription:
+          "Florida's arts capital has a creative-class audience primed for thoughtful food experiences. Pop-up chefs who engage with the gallery and studio community find collaborators and guests who show up ready for something different.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "EDGE District is your pop-up stage",
+        cityDescription:
+          "St. Pete's emerging creative corridor runs on the same crowd that discovers art before it's reviewed and drinks before they're on a menu. Pop-up cocktail programs in EDGE District gallery spaces and Central Arts District venues find the city's most adventurous palates.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Document the arts-food crossover, dish by dish",
+        cityDescription:
+          "The chef-artist collaborations happening in St. Pete's Warehouse Arts District and gallery dinner circuit exist almost entirely off the record. Curators who trace this scene are capturing Florida's most genuinely creative food culture before the national press arrives.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Your gallery is the best dining room in the city",
         cityDescription:
           "St. Pete's gallery and studio spaces are natural venues for intimate dinners. Connect your creative space with the pop-up chefs who want to cook in an environment that matches the quality of their food.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Bridge the Warehouse Arts District and the kitchen",
+        cityDescription:
+          "St. Pete's gallery dinner circuit runs on people who know both worlds. You know which Central Arts District gallery hosts chefs after closing, which EDGE District venue needs a food series, and which chef wants a space with art on the walls instead of restaurant lighting.",
       },
     ],
     tier: 3,
@@ -1711,22 +1747,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Milwaukee's heritage is rich material",
-        cityDescription:
-          "German food traditions, Friday fish fry culture, and a serious cheese and beer pantry give Milwaukee chefs distinctive raw material. Pop-ups that engage with this heritage authentically find the city's most passionate audience.",
-      },
-      {
         role: "guest",
         cityHeadline: "Milwaukee's Third Ward is worth the trip",
         cityDescription:
           "Beyond the fish fries and beer halls, Milwaukee's Third Ward and Walker's Point have a pop-up culture that surprises even the city's residents. Tenseats maps the dinners the locals keep off social media.",
       },
       {
+        role: "chef",
+        cityHeadline: "Milwaukee's heritage is rich material",
+        cityDescription:
+          "German food traditions, Friday fish fry culture, and a serious cheese and beer pantry give Milwaukee chefs distinctive raw material. Pop-ups that engage with this heritage authentically find the city's most passionate audience.",
+      },
+      {
         role: "mixologist",
         cityHeadline: "Craft cocktails meet craft brewing country",
         cityDescription:
-          "Milwaukee's beer culture creates rare opportunities for cocktail professionals. Spirits programs that engage with local brewing traditions — grain-to-glass, beer cocktails, brewing-adjacent spirits — find an audience that takes beverages seriously.",
+          "Milwaukee's beer culture creates rare opportunities for cocktail professionals. Spirits programs that engage with local brewing traditions — grain-to-glass pours, brewing-adjacent spirits, supper club beer pairings — find an audience that takes beverages seriously.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "The supper club tradition is worth preserving",
+        cityDescription:
+          "Milwaukee's German-rooted supper club heritage is one of the Midwest's most distinctive dining formats — and the Third Ward's new generation of chefs is finding fresh ways to honor it. Curators who document this evolution are capturing a living tradition mid-transformation.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Third Ward spaces hold the city's food future",
+        cityDescription:
+          "Milwaukee's renovated warehouse district offers converted loft spaces, gallery-adjacent rooms, and restored industrial floors that match the seriousness of the chefs who want to cook in them. Connect your space with the pop-up community redefining Milwaukee's table.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Walker's Point dinners run on word of mouth",
+        cityDescription:
+          "Milwaukee's most interesting food experiences — Walker's Point community feasts, Third Ward supper club revivals, Brady Street pop-ups — operate on invitation and personal networks. You know who's cooking, where the space opens up, and which crowd is worth gathering.",
       },
     ],
     tier: 3,
@@ -1766,22 +1820,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Sonoran terroir is unlike anything else",
-        cityDescription:
-          "Phoenix's desert pantry — saguaro fruit, mesquite, prickly pear, Sonoran chiles — gives chefs access to ingredients no coastal city can replicate. Pop-up dinners built on this terroir create genuinely singular dining experiences.",
-      },
-      {
         role: "guest",
         cityHeadline: "Phoenix's food scene outgrew its reputation",
         cityDescription:
           "Beyond the resort dining, Phoenix has a desert-to-table pop-up culture that draws on Sonoran ingredients and borderland food traditions. Tenseats maps the chef dinners and pop-up events the city's food community attends.",
       },
       {
+        role: "chef",
+        cityHeadline: "Sonoran terroir is unlike anything else",
+        cityDescription:
+          "Phoenix's desert pantry — saguaro fruit, mesquite, prickly pear, Sonoran chiles — gives chefs access to ingredients no coastal city can replicate. Pop-up dinners built on this terroir create genuinely singular dining experiences.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Desert botanicals belong in your glass",
+        cityDescription:
+          "Prickly pear, mesquite, Sonoran herbs, and Arizona agave spirits give Phoenix cocktail professionals a pantry no other American city offers. Pop-up bar programs in Roosevelt Row gallery spaces and Melrose venues find the right crowd for something genuinely regional.",
+      },
+      {
         role: "curator",
         cityHeadline: "Document the Sonoran table",
         cityDescription:
-          "Phoenix's desert food culture is one of America's most distinctive and least-documented culinary stories. Curators who surface the Sonoran pop-up circuit and indigenous ingredient traditions are doing irreplaceable work.",
+          "Phoenix's desert food culture is one of America's most distinctive and least-documented culinary stories. Curators who surface the Sonoran pop-up circuit, borderland cooking traditions, and indigenous ingredient work are doing irreplaceable documentation.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Roosevelt Row spaces match the city's ambition",
+        cityDescription:
+          "Phoenix's midtown arts corridor has the right spaces for the food culture it's producing — converted bungalows, gallery floors, and outdoor venues that come alive in the cooler months. Connect your space with the chefs building the Sonoran table.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Connect Sonoran chefs to the Roosevelt Row circuit",
+        cityDescription:
+          "Phoenix's desert-to-table scene runs on relationships between farmers, foragers, chefs, and spaces. You know which Melrose chef is sourcing Sonoran ingredients without a venue to serve them in, which Roosevelt Row gallery opens its floor on Sundays, and who to invite.",
       },
     ],
     tier: 3,
@@ -1821,22 +1893,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Scottsdale's audience expects the best",
-        cityDescription:
-          "The city's affluent, internationally-traveled resident base creates demand for intimate dining experiences that go beyond resort food. Pop-up chefs who deliver genuine quality and exclusivity find an audience willing to pay for access.",
-      },
-      {
         role: "guest",
         cityHeadline: "Scottsdale's best tables aren't in the resorts",
         cityDescription:
           "The supper clubs and private dinners happening in Old Town and North Scottsdale operate quietly, filling by invitation and local knowledge. Tenseats gets you access to the tables the city's food community keeps private.",
       },
       {
+        role: "chef",
+        cityHeadline: "Scottsdale's audience expects the best",
+        cityDescription:
+          "The city's internationally-traveled resident base creates demand for intimate dining experiences that go beyond resort food. Pop-up chefs who deliver genuine quality and exclusivity find an audience willing to pay for access.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Arizona wine and spirits deserve better staging",
+        cityDescription:
+          "Verde Valley, Sonoita, and Willcox wines are finding their way to Scottsdale's private tables — and Arizona agave spirits are following. Pop-up cocktail and pairing programs in Old Town studio spaces find residents who know the difference between a resort pour and a genuinely regional one.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Old Town's supper club circuit runs quietly",
+        cityDescription:
+          "Scottsdale's private dining scene — historic property dinners, North Scottsdale ranch events, Old Town studio suppers — exists almost entirely by word of mouth. Curators who document this circuit give it the audience it deserves without removing its intimacy.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Scottsdale's private spaces are the best venues",
         cityDescription:
           "Historic Old Town properties, North Scottsdale ranch settings, and private estate gardens create intimate venues for chef's table experiences. Connect your space with the chefs who want to serve Scottsdale's most discerning guests.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Old Town's best nights run on local knowledge",
+        cityDescription:
+          "Scottsdale's private dining circuit doesn't advertise. You know which Old Town historic property hosts chef dinners off-calendar, which North Scottsdale ranch is available for farm-to-desert-table events, and which chef is ready to serve the city's most discerning private audience.",
       },
     ],
     tier: 3,
