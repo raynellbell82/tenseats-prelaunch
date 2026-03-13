@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 08-02-PLAN.md
-last_updated: "2026-03-13T10:28:18.157Z"
+stopped_at: Completed 09-01-PLAN.md
+last_updated: "2026-03-13T10:50:20.907Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
   completed_phases: 8
-  total_plans: 16
-  completed_plans: 16
+  total_plans: 19
+  completed_plans: 17
 ---
 
 # Project State
@@ -64,6 +64,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 07-city-pages P02 | 15 | 2 tasks | 5 files |
 | Phase 08-why-tenseats-page P01 | 2 | 3 tasks | 3 files |
 | Phase 08-why-tenseats-page P02 | 5 | 3 tasks | 3 files |
+| Phase 09-seo-deployment-copy-qa P01 | 8 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -117,6 +118,8 @@ Recent decisions affecting current work:
 - [Phase 08-why-tenseats-page]: Sticky first column on comparison table — prevents feature names from scrolling out of view on mobile
 - [Phase 08-why-tenseats-page]: WhyCta countdown gated on featureCountdownEnabled && deadline — pulsing placeholder while config loading
 - [Phase 08-why-tenseats-page]: /why-tenseats is Server Component with Metadata export — same pattern as join page, no use client at page level
+- [Phase 09-seo-deployment-copy-qa]: sitemap.ts uses METROS_DATA array for slug enumeration — authoritative 32-metro list
+- [Phase 09-seo-deployment-copy-qa]: Dockerfile uses npm ci --legacy-peer-deps matching .npmrc; .npmrc not in .dockerignore
 
 ### Pending Todos
 
@@ -128,6 +131,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T10:25:32.107Z
-Stopped at: Completed 08-02-PLAN.md
+Last session: 2026-03-13T10:50:20.904Z
+Stopped at: Completed 09-01-PLAN.md
 Resume file: None

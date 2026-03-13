@@ -177,4 +177,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 6. Launch Flow | 2/2 | Complete   | 2026-03-13 |
 | 7. City Pages | 2/2 | Complete   | 2026-03-13 |
 | 8. Why Tenseats Page | 2/2 | Complete   | 2026-03-13 |
-| 9. SEO, Deployment & Copy QA | 0/3 | Not started | - |
+| 9. SEO, Deployment & Copy QA | 1/3 | In Progress|  |

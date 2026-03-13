@@ -94,10 +94,10 @@
 
 ### SEO & Deployment
 
-- [ ] **DEPL-01**: Sitemap at /sitemap.xml with all 34 URLs (homepage, join, why, launch + 32 cities)
-- [ ] **DEPL-02**: Robots.txt allowing all crawlers, pointing to sitemap
-- [ ] **DEPL-03**: Dockerfile for Coolify with multi-stage build and standalone output
-- [ ] **DEPL-04**: Health check endpoint at /api/health returning { ok: true }
+- [x] **DEPL-01**: Sitemap at /sitemap.xml with all 34 URLs (homepage, join, why, launch + 32 cities)
+- [x] **DEPL-02**: Robots.txt allowing all crawlers, pointing to sitemap
+- [x] **DEPL-03**: Dockerfile for Coolify with multi-stage build and standalone output
+- [x] **DEPL-04**: Health check endpoint at /api/health returning { ok: true }
 - [ ] **DEPL-05**: npm run build exits with zero TypeScript errors
 - [ ] **DEPL-06**: No console errors in browser dev tools
 - [ ] **DEPL-07**: Mobile viewport (375px) — no horizontal overflow
@@ -205,10 +205,10 @@
 | WHY-06 | Phase 8 | Complete |
 | WHY-07 | Phase 8 | Complete |
 | WHY-08 | Phase 8 | Complete |
-| DEPL-01 | Phase 9 | Pending |
-| DEPL-02 | Phase 9 | Pending |
-| DEPL-03 | Phase 9 | Pending |
-| DEPL-04 | Phase 9 | Pending |
+| DEPL-01 | Phase 9 | Complete |
+| DEPL-02 | Phase 9 | Complete |
+| DEPL-03 | Phase 9 | Complete |
+| DEPL-04 | Phase 9 | Complete |
 | DEPL-05 | Phase 9 | Pending |
 | DEPL-06 | Phase 9 | Pending |
 | DEPL-07 | Phase 9 | Pending |
