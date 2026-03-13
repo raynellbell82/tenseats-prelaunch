@@ -22,6 +22,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 8: Why Tenseats Page** - Brand story page with personas, economics table at /why-tenseats (completed 2026-03-13)
 - [x] **Phase 8.1: Cities Globe** - INSERTED — Interactive 3D globe on homepage with region-tabbed city navigation pills (completed 2026-03-13)
 - [x] **Phase 9: SEO, Deployment & Copy QA** - Sitemap, Dockerfile, build health, brand compliance audit (completed 2026-03-13)
+- [ ] **Phase 10: Wire City Slug to Launch Flow** - Fix initialCitySlug prop so city pages pre-filter launch search (gap closure)
 
 ## Phase Details
 
@@ -178,10 +179,22 @@ Plans:
 - [ ] 09-02-PLAN.md — Audit and fix all consumer-facing copy for brand compliance (COPY-01 through COPY-06)
 - [ ] 09-03-PLAN.md — Run production build, fix errors, verify console and mobile viewport (human checkpoint)
 
+### Phase 10: Wire City Slug to Launch Flow
+**Goal**: When a visitor arrives at /launch?city=[slug] from a city page, the city search is pre-filled and the slot grid is immediately visible — no manual re-search required
+**Depends on**: Phase 6, Phase 7
+**Requirements**: LNCH-01, CITY-06
+**Gap Closure:** Closes gaps from v1.0 audit (initialCitySlug prop ignored)
+**Success Criteria** (what must be TRUE):
+  1. Navigating from /cities/chicago-il "Reserve My Seat" to /launch?city=chicago-il pre-selects Chicago in the city search
+  2. The slot grid for the pre-selected city is visible on load without user interaction
+  3. Navigating to /launch without a city query param still shows the empty search (no regression)
+Plans:
+- [ ] 10-01-PLAN.md — Resolve initialCitySlug to metro ID and wire to LaunchCitySearch default value
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 8.1 -> 9
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 8.1 -> 9 -> 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -195,3 +208,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 8.1 -> 
 | 8. Why Tenseats Page | 2/2 | Complete   | 2026-03-13 |
 | 8.1. Cities Globe | 0/1 | Planned    |  |
 | 9. SEO, Deployment & Copy QA | 3/3 | Complete   | 2026-03-13 |
+| 10. Wire City Slug to Launch Flow | 0/1 | Planned    |  |

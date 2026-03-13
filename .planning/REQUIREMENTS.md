@@ -51,7 +51,7 @@
 
 ### Launch Flow
 
-- [x] **LNCH-01**: Launch page at /launch with city search
+- [ ] **LNCH-01**: Launch page at /launch with city search
 - [x] **LNCH-02**: Slot grid shows available slots for selected city
 - [x] **LNCH-03**: Queue signup form submits to Convex
 - [x] **LNCH-04**: Stripe checkout creates session and redirects
@@ -75,7 +75,7 @@
 - [x] **CITY-03**: CityHero with city-specific headline, subhead, and "Reserve My Seat" CTA linking to /launch?city=[slug]
 - [x] **CITY-04**: CityFoodScene with 3 scene blocks per city (heading, description)
 - [x] **CITY-05**: CityPersonas with 3 role cards per city, each linking to /join
-- [x] **CITY-06**: CityReserve wrapping ReserveSpotSection pre-filtered to current city
+- [ ] **CITY-06**: CityReserve wrapping ReserveSpotSection pre-filtered to current city
 - [x] **CITY-07**: Per-city SEO metadata (title, description)
 - [x] **CITY-08**: lib/city-data.ts with complete CityData type and all 32 city entries (Tier 1, 2, 3)
 - [x] **CITY-09**: City data includes heroHeadline, heroSubhead, metaTagline, metaDescription, sceneIntro, sceneBlocks, topPersonas, tier
@@ -189,7 +189,7 @@
 | AUTH-03 | Phase 5 | Complete |
 | AUTH-04 | Phase 5 | Complete |
 | AUTH-05 | Phase 5 | Complete |
-| LNCH-01 | Phase 6 | Complete |
+| LNCH-01 | Phase 10 | Pending |
 | LNCH-02 | Phase 6 | Complete |
 | LNCH-03 | Phase 6 | Complete |
 | LNCH-04 | Phase 6 | Complete |
@@ -202,7 +202,7 @@
 | CITY-03 | Phase 7 | Complete |
 | CITY-04 | Phase 7 | Complete |
 | CITY-05 | Phase 7 | Complete |
-| CITY-06 | Phase 7 | Complete |
+| CITY-06 | Phase 10 | Pending |
 | CITY-07 | Phase 7 | Complete |
 | CITY-08 | Phase 7 | Complete |
 | CITY-09 | Phase 7 | Complete |
