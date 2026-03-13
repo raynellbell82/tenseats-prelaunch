@@ -15,14 +15,14 @@ Requirements for city persona copy expansion.
 
 ### Component
 
-- [ ] **COMP-01**: City personas grid renders 6 cards in a responsive layout (3×2 on desktop, 2×3 on tablet, 1×6 on mobile)
-- [ ] **COMP-02**: Facilitator persona added to role type, icon map, and display map
-- [ ] **COMP-03**: Card design matches the reference image (icon, role title, description — clean, dark cards)
+- [x] **COMP-01**: City personas grid renders 6 cards in a responsive layout (3×2 on desktop, 2×3 on tablet, 1×6 on mobile)
+- [x] **COMP-02**: Facilitator persona added to role type, icon map, and display map
+- [x] **COMP-03**: Card design matches the reference image (icon, role title, description — clean, dark cards)
 
 ### Data
 
 - [ ] **DATA-01**: `topPersonas` array in city-data.ts expanded to 6 entries per city for all 32 cities
-- [ ] **DATA-02**: CityData type updated to include "facilitator" in the role union
+- [x] **DATA-02**: CityData type updated to include "facilitator" in the role union
 
 ## Future Requirements
 
@@ -44,11 +44,11 @@ None — focused milestone.
 | COPY-01 | Phase 13 | Pending |
 | COPY-02 | Phase 13 | Pending |
 | COPY-03 | Phase 13 | Pending |
-| COMP-01 | Phase 12 | Pending |
-| COMP-02 | Phase 12 | Pending |
-| COMP-03 | Phase 12 | Pending |
+| COMP-01 | Phase 12 | Complete |
+| COMP-02 | Phase 12 | Complete |
+| COMP-03 | Phase 12 | Complete |
 | DATA-01 | Phase 13 | Pending |
-| DATA-02 | Phase 12 | Pending |
+| DATA-02 | Phase 12 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 8 total

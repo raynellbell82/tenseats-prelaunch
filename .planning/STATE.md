@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: City Persona Copy
 status: planning
-stopped_at: Phase 12 context gathered
-last_updated: "2026-03-13T14:24:18.911Z"
+stopped_at: Completed 12-01-PLAN.md
+last_updated: "2026-03-13T14:35:58.582Z"
 last_activity: 2026-03-13 — Roadmap created, 8/8 requirements mapped across 2 phases
 progress:
   total_phases: 2
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  completed_phases: 1
+  total_plans: 1
+  completed_plans: 1
   percent: 0
 ---
 
@@ -25,27 +25,28 @@ See: .planning/PROJECT.md (updated 2026-03-13)
 
 ## Current Position
 
-Phase: 12 of 13 (Persona Component Foundation)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-03-13 — Roadmap created, 8/8 requirements mapped across 2 phases
+Phase: 12 of 13 (Persona Component Foundation — COMPLETE)
+Plan: 1 of 1 complete
+Status: Phase 12 done — Ready for Phase 13
+Last activity: 2026-03-13 — Phase 12 Plan 01 executed: persona icons, shared PersonaCard, refactored city/why sections
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 50% (1 of 2 phases complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0 (v1.1)
-- Average duration: —
-- Total execution time: —
+- Total plans completed: 1 (v1.1)
+- Average duration: 3min
+- Total execution time: 3min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 12-persona-component-foundation | 1 | 3min | 3min |
 
 ## Accumulated Context
+| Phase 12-persona-component-foundation P01 | 3min | 3 tasks | 5 files |
 
 ### Decisions
 
@@ -54,6 +55,8 @@ All decisions logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 - v1.1 scope: Only persona section changes — hero, food scene, reserve sections untouched
 - Phase 12 first: Type and component changes must land before any copy can render correctly
+- [Phase 12]: City personas CTA links to /launch?city=[slug] (city-specific conversion path, not generic /join)
+- [Phase 12]: PersonaCard headline prop optional: city-personas passes city headline, why-personas omits it
 
 ### Pending Todos
 
@@ -66,6 +69,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-13T14:24:18.909Z
-Stopped at: Phase 12 context gathered
-Resume file: .planning/phases/12-persona-component-foundation/12-CONTEXT.md
+Last session: 2026-03-13T14:35:58.580Z
+Stopped at: Completed 12-01-PLAN.md
+Resume file: None
