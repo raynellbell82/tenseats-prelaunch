@@ -1161,22 +1161,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "Get in at the beginning",
+        cityDescription:
+          "The chefs building Detroit's next generation of tables are testing menus in borrowed Corktown kitchens right now. Tenseats puts you at those seats before the James Beard nomination and the 6-month wait list.",
+      },
+      {
         role: "chef",
         cityHeadline: "Detroit's pop-up pipeline is your launchpad",
         cityDescription:
           "More than any other American city, Detroit turns pop-ups into permanent institutions. Eastern Market Saturdays have launched careers. The city's food community shows up and stays loyal.",
       },
       {
-        role: "guest",
-        cityHeadline: "Get in at the beginning",
+        role: "mixologist",
+        cityHeadline: "Corktown is ready for your cocktail program",
         cityDescription:
-          "The chefs building Detroit's next great restaurants are testing menus in borrowed kitchens right now. Tenseats puts you at those tables before the James Beard nomination and the 6-month wait list.",
+          "Detroit's craft spirits scene is growing alongside its food revival. Pop-up bars and cocktail collaborations in Corktown and Midtown spaces find an audience that takes beverages as seriously as the food they're paired with.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Document Detroit's comeback story, dish by dish",
+        cityDescription:
+          "The chefs who stayed through the hard years and the young ones returning now are making food with genuine roots. Curators who surface the Eastern Market pop-up circuit and Corktown experiments are writing the city's most honest food history.",
       },
       {
         role: "venueHost",
         cityHeadline: "Detroit's spaces need the right events",
         cityDescription:
           "Corktown lofts, Midtown warehouse spaces, and Eastern Market stalls create intimate venues that match Detroit's creative energy. Connect your space with the pop-up chefs building the city's food future.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Connect Eastern Market chefs to Midtown stages",
+        cityDescription:
+          "Detroit's pop-up-to-permanent pipeline runs on the right introductions. You know which Corktown kitchen has a free Tuesday, which Eastern Market chef needs a proper venue, and which Midtown space is looking for a dining series. Make the match.",
       },
     ],
     tier: 2,
@@ -1216,22 +1234,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Build something before Charlotte catches up",
-        cityDescription:
-          "Charlotte's food scene is growing faster than its reputation. Chefs who establish pop-up presence now in Plaza Midwood and NoDa will become the foundational names when the city's food culture reaches its next level.",
-      },
-      {
         role: "guest",
         cityHeadline: "Charlotte eats better than you think",
         cityDescription:
           "The city's underground pop-up circuit in Plaza Midwood, NoDa, and South End is building something real. Tenseats surfaces the dinners happening before the city's food reputation catches up to the actual food.",
       },
       {
+        role: "chef",
+        cityHeadline: "Build something before Charlotte catches up",
+        cityDescription:
+          "Charlotte's food scene is growing faster than its reputation. Chefs who establish pop-up presence now in Plaza Midwood and NoDa will become the foundational names when the city's food culture reaches its next level.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "NoDa's arts scene is thirsty for you",
+        cityDescription:
+          "South End's breweries built the foundation; the next chapter belongs to cocktail professionals who understand Charlotte's New South identity. Pop-up bar programs in NoDa gallery spaces and Plaza Midwood venues find a crowd ready for something with more intention.",
+      },
+      {
         role: "curator",
         cityHeadline: "Document Charlotte's food coming-of-age",
         cityDescription:
           "The city is in a culinary adolescence — growing fast and finding its identity. Curators who track the Plaza Midwood pop-ups and NoDa collaborative dinners are capturing something that won't look the same in three years.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Plaza Midwood spaces match the moment",
+        cityDescription:
+          "The neighborhood's converted homes, studio galleries, and independent retail back rooms are the right scale for Charlotte's emerging pop-up culture. Connect your space with the chefs who are building what the city becomes.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Charlotte's chefs need the right connections",
+        cityDescription:
+          "The Plaza Midwood pop-up circuit is growing faster than its infrastructure. You know which NoDa gallery opens its kitchen on off nights, which South End venue needs a chef series, and which new arrival needs an introduction to the city's food community.",
       },
     ],
     tier: 2,
@@ -1271,22 +1307,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Columbus's growth is your opportunity",
-        cityDescription:
-          "The Short North is becoming one of the Midwest's most interesting food corridors. Pop-up chefs who establish here now build audiences before the national press arrives to confirm what locals already know.",
-      },
-      {
         role: "guest",
         cityHeadline: "Columbus food is better than advertised",
         cityDescription:
           "The Condé Nast recognition was deserved. The Short North pop-up circuit and OSU's international food community create genuinely interesting dining you won't find anywhere else in the Midwest.",
       },
       {
+        role: "chef",
+        cityHeadline: "Columbus's growth is your opportunity",
+        cityDescription:
+          "The Short North is becoming one of the Midwest's most interesting food corridors. Pop-up chefs who establish here now build audiences before the national press arrives to confirm what locals already know.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Short North crowds are ready for craft",
+        cityDescription:
+          "Columbus's German Village beer heritage has given way to a serious cocktail culture in the Short North. Pop-up bar programs in gallery-adjacent spaces and artist studios find an audience that treats beverages as seriously as the food.",
+      },
+      {
         role: "curator",
         cityHeadline: "Map Columbus's emerging scene",
         cityDescription:
-          "Columbus's food scene is developing faster than its documentation. Curators who surface the Short North pop-ups and OSU-adjacent international food events are creating the guides the city needs.",
+          "Columbus's food scene is developing faster than its documentation. Curators who surface the Short North pop-ups, Franklinton art-dinner hybrids, and OSU-adjacent international food events are creating the guides the city needs.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Short North spaces make the evening",
+        cityDescription:
+          "The corridor's renovated storefronts, arts studios, and historic buildings create intimate settings for pop-up dinners that match Columbus's creative energy. Connect your space with the chefs building the city's next chapter.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Short North pop-ups run on introductions",
+        cityDescription:
+          "Columbus's food scene is moving faster than its rolodex. You know which Franklinton art space is open on Mondays, which OSU-trained chef is looking for a German Village venue, and which Short North crowd is worth inviting to a new concept.",
       },
     ],
     tier: 2,
@@ -1326,22 +1380,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Orlando's locals are hungry for you",
-        cityDescription:
-          "The city's 75 million annual tourists create the impression of a monoculture. But Orlando's local food scene — Mills 50, Audubon Park, Thornton Park — has a passionate audience that shows up for real food experiences.",
-      },
-      {
         role: "guest",
         cityHeadline: "Skip the parks. Find the tables.",
         cityDescription:
           "Tenseats maps the real Orlando — the Mills 50 pop-ups, the Audubon Park garden dinners, and the chef's tables that happen after the tourists head back to their hotels for the night.",
       },
       {
+        role: "chef",
+        cityHeadline: "Orlando's locals are hungry for you",
+        cityDescription:
+          "The city's 75 million annual tourists create the impression of a monoculture. But Orlando's local food scene — Mills 50, Audubon Park, Thornton Park — has a passionate audience that shows up for real food experiences.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Mills 50 is the right crowd for craft",
+        cityDescription:
+          "The Vietnamese and Southeast Asian corridor along Colonial Drive has no shortage of adventurous palates. Pop-up cocktail programs that engage with regional spirits, tropical ingredients, and the neighborhood's immigrant food traditions find an audience that doesn't need to be convinced.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "The real Orlando is waiting to be mapped",
+        cityDescription:
+          "The city's Mills 50 corridor, Winter Park farmers market circuit, and Audubon Park dining community exist almost entirely outside the national food press. Curators who document this scene are telling a story no one else is telling.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Orlando has the best event spaces no one knows about",
         cityDescription:
           "Garden spaces, converted warehouse venues, and private dining rooms in local neighborhoods offer everything theme park venues don't — authenticity, intimacy, and a local audience who comes back.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Connect Mills 50 chefs to Audubon Park audiences",
+        cityDescription:
+          "Orlando's local food community is spread across neighborhoods that don't always talk to each other. You know which Winter Park pop-up chef is looking for a Thornton Park venue, and which Audubon Park space has the right audience for a Mills 50 collaboration.",
       },
     ],
     tier: 2,
@@ -1383,22 +1455,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "OTR's revival is your opportunity",
-        cityDescription:
-          "Over-the-Rhine's renovated spaces and Findlay Market's loyal community create ideal conditions for pop-up chefs. Cincinnati's food community supports the chefs who show up and cook seriously.",
-      },
-      {
         role: "guest",
         cityHeadline: "Cincinnati's table runs deeper than the chili",
         cityDescription:
-          "OTR's food revival has produced a genuine pop-up culture beyond the neighborhood's headline restaurants. Tenseats surfaces the Findlay Market dinners and supper clubs the city's food community keeps to themselves.",
+          "OTR's food revival has produced a genuine pop-up culture beyond the neighborhood's headline tables. Tenseats surfaces the Findlay Market dinners and supper clubs the city's food community keeps to themselves.",
+      },
+      {
+        role: "chef",
+        cityHeadline: "OTR's revival is your opportunity",
+        cityDescription:
+          "Over-the-Rhine's renovated Italianate spaces and Findlay Market's loyal community create ideal conditions for pop-up chefs. Cincinnati's food community supports the chefs who show up and cook seriously.",
       },
       {
         role: "mixologist",
         cityHeadline: "Cincinnati's spirits scene is underrated",
         cityDescription:
-          "The city's craft distillery and brewery culture offers pairing dinner opportunities that Cincinnati's growing food audience is ready for. Your cocktail program fits perfectly into the OTR pop-up circuit.",
+          "The city's craft distillery and brewery culture — bourbon, rye, and locally-brewed ale pairings — offers cocktail opportunities that Cincinnati's growing food audience is ready for. Your program fits perfectly into the OTR pop-up circuit.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "OTR's second act is worth documenting",
+        cityDescription:
+          "Cincinnati chili is the legend; the Findlay Market pop-up circuit and OTR supper clubs are the story no one has told yet. Curators who track what's happening in the historic Italianate blocks are capturing an urban food revival mid-stride.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "OTR's architecture is the best dining room",
+        cityDescription:
+          "Over-the-Rhine's renovated buildings — 19th-century Italianate facades, brick floors, high ceilings — create intimate dinner settings that no new construction can replicate. Connect your space with the pop-up chefs who know what to do with a room like this.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Connect Findlay Market chefs to OTR venues",
+        cityDescription:
+          "Cincinnati's food revival runs on the right introductions. You know which Findlay Market vendor is ready for a proper sit-down dinner, which OTR venue has a Tuesday opening, and which Northside crowd would show up for something they've never seen before.",
       },
     ],
     tier: 3,
@@ -1438,22 +1528,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Pittsburgh's food community runs deep",
-        cityDescription:
-          "The city's modest reputation creates opportunity for chefs who show up. Lawrenceville's growing audience and the Strip District's pantry create ideal conditions for pop-up concepts with real culinary ambition.",
-      },
-      {
         role: "guest",
         cityHeadline: "Pittsburgh eats better than the reputation",
         cityDescription:
           "The Strip District, Lawrenceville, and East Liberty have a pop-up culture that the Northeast hasn't discovered yet. Tenseats maps the dinners happening before Pittsburgh's food scene gets the national attention it deserves.",
       },
       {
+        role: "chef",
+        cityHeadline: "Pittsburgh's food community runs deep",
+        cityDescription:
+          "The city's modest reputation creates opportunity for chefs who show up. Lawrenceville's growing audience and the Strip District's Eastern European and Italian pantry create ideal conditions for pop-up concepts with real culinary ambition.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Lawrenceville is ready for your program",
+        cityDescription:
+          "Pittsburgh's bar culture has always been serious; what's changed is the ambition. Pop-up cocktail programs in Lawrenceville creative spaces and East Liberty venues find an audience that knows the difference between a well and a craft pour.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Strip District is your research library",
+        cityDescription:
+          "The weekend market's Eastern European delis, Italian specialty stores, and international grocers represent a living food archive. Curators who document Pittsburgh's Polish, Ukrainian, and Slovak culinary traditions — as they're being revived by a new generation — are doing essential work.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Pittsburgh's spaces are ready for events",
         cityDescription:
           "Lawrenceville row houses, Strip District lofts, and East Liberty creative spaces create intimate venues for pop-up dinners. Connect your space with Pittsburgh's growing chef community.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Match Strip District provisions to Lawrenceville tables",
+        cityDescription:
+          "Pittsburgh's food revival runs quietly, and the right connector makes it run better. You know which Lawrenceville chef needs a Strip District sourcing introduction, which East Liberty space is available for a Saturday dinner series, and which crowd is worth gathering.",
       },
     ],
     tier: 3,
