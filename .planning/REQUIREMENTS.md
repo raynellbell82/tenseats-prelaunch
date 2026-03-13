@@ -87,9 +87,9 @@
 - [x] **WHY-02**: WhyHero with "Built different. On purpose." headline (locked copy)
 - [x] **WHY-03**: WhyProblem two-column layout — "Sponsored. Optimized. Irrelevant." vs "The whisper, surfaced."
 - [x] **WHY-04**: WhyPersonas with 6 role cards (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator)
-- [ ] **WHY-05**: WhyEconomics with $1.99 comparison table (Tenseats vs Eventbrite vs Tock vs Luma)
-- [ ] **WHY-06**: WhyCta with "The Insiders are already inside." headline, countdown widget, "Become an Insider" CTA
-- [ ] **WHY-07**: Comparison table mobile-responsive
+- [x] **WHY-05**: WhyEconomics with $1.99 comparison table (Tenseats vs Eventbrite vs Tock vs Luma)
+- [x] **WHY-06**: WhyCta with "The Insiders are already inside." headline, countdown widget, "Become an Insider" CTA
+- [x] **WHY-07**: Comparison table mobile-responsive
 - [x] **WHY-08**: All section copy matches accepted copy decisions (locked)
 
 ### SEO & Deployment
@@ -201,9 +201,9 @@
 | WHY-02 | Phase 8 | Complete |
 | WHY-03 | Phase 8 | Complete |
 | WHY-04 | Phase 8 | Complete |
-| WHY-05 | Phase 8 | Pending |
-| WHY-06 | Phase 8 | Pending |
-| WHY-07 | Phase 8 | Pending |
+| WHY-05 | Phase 8 | Complete |
+| WHY-06 | Phase 8 | Complete |
+| WHY-07 | Phase 8 | Complete |
 | WHY-08 | Phase 8 | Complete |
 | DEPL-01 | Phase 9 | Pending |
 | DEPL-02 | Phase 9 | Pending |
