@@ -150,7 +150,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 3/3 | Complete   | 2026-03-13 |
-| 2. Layout & Navigation | 0/2 | Not started | - |
+| 2. Layout & Navigation | 1/2 | In Progress|  |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. Join Page | 0/TBD | Not started | - |
 | 5. Auth | 0/TBD | Not started | - |

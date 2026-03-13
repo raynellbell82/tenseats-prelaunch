@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-scaffold-03-PLAN.md
-last_updated: "2026-03-13T01:32:48.712Z"
-last_activity: "2026-03-13 — Completed Phase 1 Plan 03: env vars, Convex codegen, dev server verified"
+stopped_at: Completed 02-layout-navigation-01-PLAN.md
+last_updated: "2026-03-12T01:28:00Z"
+last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 4
+  completed_plans: 4
   percent: 100
 ---
 
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-12)
 
 **Core value:** Convert visitors into Early Bird or Founding members via Stripe checkout while telling the Tenseats story across 32 city pages — on a shared Convex backend so accounts carry over to the full marketplace.
-**Current focus:** Phase 1 — Scaffold (COMPLETE)
+**Current focus:** Phase 2 — Layout & Navigation (in progress)
 
 ## Current Position
 
-Phase: 1 of 9 (Scaffold) — COMPLETE
-Plan: 3 of 3 in current phase (all complete)
+Phase: 2 of 9 (Layout & Navigation) — In Progress
+Plan: 1 of N in current phase (Plan 01 complete)
 Status: In progress
-Last activity: 2026-03-13 — Completed Phase 1 Plan 03: env vars, Convex codegen, dev server verified
+Last activity: 2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout
 
-Progress: [██████████░░░░░░░░░░] 100% of Phase 1
+Progress: [██████████░░░░░░░░░░] Phase 1 complete, Phase 2 started
 
 ## Performance Metrics
 
@@ -72,6 +72,9 @@ Recent decisions affecting current work:
 - [Phase 01-scaffold P02]: convex/http.ts intentionally excluded — relies on shared HTTP router in main Tenseats Convex deployment
 - [Phase 01-scaffold P03]: Env vars copied directly from main app .env.local — same Convex deployment, same secrets apply
 - [Phase 01-scaffold P03]: convex/notificationHelpers.ts added to satisfy schema import dependencies during codegen
+- [Phase 02-layout P01]: defaultTheme="dark" in ThemeProvider — dark required by LAYO-01, not system default
+- [Phase 02-layout P01]: suppressHydrationWarning on html element — required by next-themes to suppress server/client mismatch
+- [Phase 02-layout P01]: SetupProvider removed entirely — pre-launch site has no user setup flow
 
 ### Pending Todos
 
@@ -83,6 +86,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T01:30:00Z
-Stopped at: Completed 01-scaffold-03-PLAN.md
+Last session: 2026-03-12T01:28:00Z
+Stopped at: Completed 02-layout-navigation-01-PLAN.md
 Resume file: None
