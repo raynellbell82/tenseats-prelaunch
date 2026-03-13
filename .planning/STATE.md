@@ -3,15 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-layout-navigation-01-PLAN.md
-last_updated: "2026-03-12T01:28:00Z"
+stopped_at: Completed 02-02-PLAN.md — awaiting human-verify checkpoint
+last_updated: "2026-03-13T01:50:40.208Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
-  completed_phases: 1
-  total_plans: 4
-  completed_plans: 4
-  percent: 100
+  completed_phases: 2
+  total_plans: 5
+  completed_plans: 5
 ---
 
 # Project State
@@ -75,6 +74,8 @@ Recent decisions affecting current work:
 - [Phase 02-layout P01]: defaultTheme="dark" in ThemeProvider — dark required by LAYO-01, not system default
 - [Phase 02-layout P01]: suppressHydrationWarning on html element — required by next-themes to suppress server/client mismatch
 - [Phase 02-layout P01]: SetupProvider removed entirely — pre-launch site has no user setup flow
+- [Phase 02-layout-navigation]: SheetClose asChild wraps each mobile nav link so Sheet auto-closes on any link tap
+- [Phase 02-layout-navigation]: Theme toggle placed outside hidden md:flex nav block so it is always visible on all viewport widths
 
 ### Pending Todos
 
@@ -86,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-12T01:28:00Z
-Stopped at: Completed 02-layout-navigation-01-PLAN.md
+Last session: 2026-03-13T01:50:28.340Z
+Stopped at: Completed 02-02-PLAN.md — awaiting human-verify checkpoint
 Resume file: None
