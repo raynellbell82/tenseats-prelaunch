@@ -223,4 +223,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 8.1 -> 
 | 8.1. Cities Globe | 0/1 | Planned    |  |
 | 9. SEO, Deployment & Copy QA | 3/3 | Complete   | 2026-03-13 |
 | 10. Wire City Slug to Launch Flow | 1/1 | Complete    | 2026-03-13 |
-| 11. Nav & Auth Wiring Fixes | 1/1 | Complete   | 2026-03-13 |
+| 11. Nav & Auth Wiring Fixes | 1/1 | Complete    | 2026-03-13 |
