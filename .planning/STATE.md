@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 07-01-PLAN.md
-last_updated: "2026-03-13T04:08:38.101Z"
+stopped_at: Completed 07-02-PLAN.md
+last_updated: "2026-03-13T04:15:30.716Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
-  completed_phases: 6
+  completed_phases: 7
   total_plans: 14
-  completed_plans: 13
+  completed_plans: 14
 ---
 
 # Project State
@@ -61,6 +61,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 06-launch-flow P01 | 5 | 2 tasks | 3 files |
 | Phase 06-launch-flow P02 | 3 | 2 tasks | 5 files |
 | Phase 07-city-pages P01 | 25 | 2 tasks | 1 files |
+| Phase 07-city-pages P02 | 15 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -106,6 +107,9 @@ Recent decisions affecting current work:
 - [Phase 07-city-pages]: METROS_DATA re-exported from lib/city-data.ts — city components import from lib/ not Convex server code
 - [Phase 07-city-pages]: sceneBlocks typed as 3-element tuple to enforce exactly 3 blocks at TypeScript compile time
 - [Phase 07-city-pages]: Tier 3 city copy derived from provided heroHeadline/heroSubhead/sceneIntro — metaTagline, metaDescription, sceneBlocks, topPersonas generated following Tier 1 patterns
+- [Phase 07-city-pages]: CityReserve does not wrap ReserveSpotSection — mirrors tier data and card markup with /launch?city=[slug] CTAs satisfying CITY-06 pre-filtering
+- [Phase 07-city-pages]: CityFoodScene uses decorative placeholder instead of Unsplash images — v1 text-only per CITY-V2-01 scope note
+- [Phase 07-city-pages]: Next.js 15 async params pattern used in city page — await params in generateMetadata and page component
 
 ### Pending Todos
 
@@ -117,6 +121,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T04:08:38.098Z
-Stopped at: Completed 07-01-PLAN.md
+Last session: 2026-03-13T04:15:30.713Z
+Stopped at: Completed 07-02-PLAN.md
 Resume file: None

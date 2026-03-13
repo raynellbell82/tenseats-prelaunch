@@ -70,13 +70,13 @@
 
 ### City Pages
 
-- [ ] **CITY-01**: Dynamic city pages at /cities/[slug] for all 32 metros
-- [ ] **CITY-02**: generateStaticParams() produces all 32 paths from METROS_DATA
-- [ ] **CITY-03**: CityHero with city-specific headline, subhead, and "Reserve My Seat" CTA linking to /launch?city=[slug]
-- [ ] **CITY-04**: CityFoodScene with 3 scene blocks per city (heading, description)
-- [ ] **CITY-05**: CityPersonas with 3 role cards per city, each linking to /join
-- [ ] **CITY-06**: CityReserve wrapping ReserveSpotSection pre-filtered to current city
-- [ ] **CITY-07**: Per-city SEO metadata (title, description)
+- [x] **CITY-01**: Dynamic city pages at /cities/[slug] for all 32 metros
+- [x] **CITY-02**: generateStaticParams() produces all 32 paths from METROS_DATA
+- [x] **CITY-03**: CityHero with city-specific headline, subhead, and "Reserve My Seat" CTA linking to /launch?city=[slug]
+- [x] **CITY-04**: CityFoodScene with 3 scene blocks per city (heading, description)
+- [x] **CITY-05**: CityPersonas with 3 role cards per city, each linking to /join
+- [x] **CITY-06**: CityReserve wrapping ReserveSpotSection pre-filtered to current city
+- [x] **CITY-07**: Per-city SEO metadata (title, description)
 - [x] **CITY-08**: lib/city-data.ts with complete CityData type and all 32 city entries (Tier 1, 2, 3)
 - [x] **CITY-09**: City data includes heroHeadline, heroSubhead, metaTagline, metaDescription, sceneIntro, sceneBlocks, topPersonas, tier
 - [x] **CITY-10**: All heroSubhead copy under 25-word limit
@@ -187,13 +187,13 @@
 | LNCH-06 | Phase 6 | Complete |
 | LNCH-07 | Phase 6 | Complete |
 | LNCH-08 | Phase 6 | Complete |
-| CITY-01 | Phase 7 | Pending |
-| CITY-02 | Phase 7 | Pending |
-| CITY-03 | Phase 7 | Pending |
-| CITY-04 | Phase 7 | Pending |
-| CITY-05 | Phase 7 | Pending |
-| CITY-06 | Phase 7 | Pending |
-| CITY-07 | Phase 7 | Pending |
+| CITY-01 | Phase 7 | Complete |
+| CITY-02 | Phase 7 | Complete |
+| CITY-03 | Phase 7 | Complete |
+| CITY-04 | Phase 7 | Complete |
+| CITY-05 | Phase 7 | Complete |
+| CITY-06 | Phase 7 | Complete |
+| CITY-07 | Phase 7 | Complete |
 | CITY-08 | Phase 7 | Complete |
 | CITY-09 | Phase 7 | Complete |
 | CITY-10 | Phase 7 | Complete |
