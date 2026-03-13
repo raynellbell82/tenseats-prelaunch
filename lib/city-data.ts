@@ -796,22 +796,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "Find the 12 seats worth finding",
+        cityDescription:
+          "In a city with 26,000 options, the meals worth remembering don't have Resy pages. Tenseats surfaces the 8-seat Greenpoint pop-ups and Brooklyn warehouse dinners before they fill.",
+      },
+      {
         role: "chef",
         cityHeadline: "New York's underground is your stage",
         cityDescription:
           "The city's most talked-about culinary moments happen in borrowed kitchens and warehouse pop-ups before anyone has a permanent address. New York rewards the chef who shows up first.",
       },
       {
-        role: "guest",
-        cityHeadline: "Find the 12 seats worth finding",
+        role: "mixologist",
+        cityHeadline: "Bushwick warehouses need your program",
         cityDescription:
-          "In a city with 26,000 restaurants, the meals worth remembering don't have Resy pages. Tenseats surfaces the 8-seat Greenpoint pop-ups and Brooklyn warehouse dinners before they fill.",
+          "New York's underground dinner circuit runs through Bushwick and Greenpoint spaces that open for one night and move the next. Beverage professionals who can match the pace of the outer-borough pop-up scene find an audience already primed.",
       },
       {
         role: "curator",
         cityHeadline: "New York needs better maps",
         cityDescription:
           "The city's underground food scene is vast and fast-moving. Curators who track the Queens pop-up circuit, the Bushwick warehouse dinners, and the apartment omakase circuit are doing work the city's food media can't keep up with.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Your apartment is the next omakase",
+        cityDescription:
+          "Manhattan's shadow omakase economy runs through art studios, lofts, and borrowed spaces at a fraction of the Midtown price. List your space and connect with the chefs who make those evenings worth attending.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "The outer-borough circuit needs connectors",
+        cityDescription:
+          "Jackson Heights chefs, Bushwick warehouse hosts, Crown Heights guest lists — New York's underground moves on Instagram DMs and the right introduction. You know which chef needs which space and which night to make it work.",
       },
     ],
     tier: 2,
@@ -851,22 +869,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Cook for the city's most connected table",
-        cityDescription:
-          "DC's diplomatic community and policy world create a dining audience unlike any other city. Pop-ups here reach a globally literate crowd that can take a chef's reputation international.",
-      },
-      {
         role: "guest",
         cityHeadline: "The city's international tables await",
         cityDescription:
           "DC's pop-up circuit draws on 170 countries worth of culinary tradition. Tenseats surfaces the Filipino kamayan dinners, Persian feast nights, and international supper clubs happening in private DC spaces.",
       },
       {
+        role: "chef",
+        cityHeadline: "Cook for the city's most connected table",
+        cityDescription:
+          "DC's diplomatic community and policy world create a dining audience unlike any other city. Pop-ups here reach a globally literate crowd that can take a chef's reputation international.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "The 14th Street corridor wants your program",
+        cityDescription:
+          "Shaw and Logan Circle's pop-up circuit has generated cocktail collaboration opportunities that rarely surface in DC food coverage. Partner with the borrowed-kitchen chef scene and reach a crowd that drinks with intention.",
+      },
+      {
         role: "curator",
         cityHeadline: "DC's best food goes unreported",
         cityDescription:
           "The city's most interesting meals happen in private spaces that the Washingtonian food section never covers. Curators who map DC's international pop-up circuit are the city's essential food guides.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Georgetown's garden spaces have the right guests",
+        cityDescription:
+          "DC's historic homes, embassy-adjacent gardens, and Shaw warehouse lofts host some of the city's most civilized dinners. Connect your space with pop-up chefs drawing on the city's diplomatic culinary diversity.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Embassy Row runs on the right introductions",
+        cityDescription:
+          "DC's international pop-up circuit — Nigerian feast nights, Persian kamayan dinners, Ethiopian-adjacent collaborations — depends on connectors who know which chefs are ready and which private spaces are available. That's your role here.",
       },
     ],
     tier: 2,
@@ -906,22 +942,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Charleston's heritage is your canvas",
-        cityDescription:
-          "The Lowcountry's food traditions — Gullah Geechee, rice culture, tidal seafood — offer chefs a culinary heritage unlike anywhere else in America. Intimate pop-ups here carry real cultural weight.",
-      },
-      {
         role: "guest",
         cityHeadline: "Beyond the Wine + Food Festival",
         cityDescription:
           "The real Charleston dining experience doesn't happen during festival weekend. Tenseats surfaces the year-round pop-ups, borrowed kitchen dinners, and backyard supper clubs where the city's best chefs cook freely.",
       },
       {
+        role: "chef",
+        cityHeadline: "Charleston's heritage is your canvas",
+        cityDescription:
+          "The Lowcountry's food traditions — Gullah Geechee, rice culture, tidal seafood — offer chefs a culinary heritage unlike anywhere else in America. Intimate pop-ups here carry real cultural weight.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Lowcountry terroir calls for the right pairing",
+        cityDescription:
+          "She-crab soup, sea island okra, and tidal shellfish create pairing opportunities specific to Charleston's ingredient terroir. Beverage professionals who collaborate with upper King Street chefs find an audience that takes the full experience seriously.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "The Lowcountry table needs documentation",
+        cityDescription:
+          "Charleston's food heritage — Gullah Geechee cooking, rice traditions, tidal seafood — is deep and often overlooked by the festival-season press. Curators who track and surface the year-round borrowed kitchen scene carry the city's real food story.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Your piazza is a dining room",
         cityDescription:
           "Charleston's historic architecture creates intimate dinner venues the world doesn't have. Connect your porch, garden, or courtyard with the pop-up chefs who want to cook in the most atmospheric setting in the South.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Upper King's table runs on the right match",
+        cityDescription:
+          "Charleston's pop-up scene pairs James Beard-caliber chefs with piazzas, historic garden spaces, and borrowed kitchens across the peninsula. You know which chef is ready and which space is open — the right evening follows.",
       },
     ],
     tier: 2,
@@ -961,22 +1015,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Appalachian tradition is your pantry",
-        cityDescription:
-          "Asheville's food culture rewards chefs who root their work in the mountains. Ramps, pawpaws, heirloom grains — pop-ups built on authentic local sourcing find the city's most passionate audience.",
-      },
-      {
         role: "guest",
         cityHeadline: "Foodtopia's best-kept tables",
         cityDescription:
           "The James Beard recognition is real, but the city's most interesting meals happen in River Arts District studios and farmhouse dinner spaces. Tenseats maps the pop-ups that Foodtopia's best locals attend.",
       },
       {
+        role: "chef",
+        cityHeadline: "Appalachian tradition is your pantry",
+        cityDescription:
+          "Asheville's food culture rewards chefs who root their work in the mountains. Ramps, pawpaws, heirloom grains — pop-ups built on authentic local sourcing find the city's most passionate audience.",
+      },
+      {
         role: "mixologist",
         cityHeadline: "The fermentation capital needs your programs",
         cityDescription:
           "Asheville's craft beverage scene is one of America's richest. Cider, mead, beer, and emerging wine culture create pairing opportunities that no other mid-sized city offers for cocktail and beverage professionals.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "River Arts District studios tell the full story",
+        cityDescription:
+          "Asheville's food culture runs through French Broad River studios, farmhouse supper tables, and craft fermentation events that rarely make regional press. Curators who track the full Foodtopia calendar hold the city's most honest food knowledge.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Your studio is the next farm supper",
+        cityDescription:
+          "River Arts District studios, mountain farmhouse spaces, and converted Appalachian barns are exactly the setting that Asheville's farm-forward pop-up chefs seek. Connect your space with the chefs rooting their work in the mountains.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Foodtopia runs on the right connections",
+        cityDescription:
+          "Asheville's craft beverage producers, Appalachian-sourcing chefs, and River Arts District venue hosts form a tight ecosystem. You know who needs whom — and the right pairing dinner or farm supper follows from that knowledge.",
       },
     ],
     tier: 2,
@@ -1016,22 +1088,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Deep Ellum's audience is ready for you",
-        cityDescription:
-          "Dallas's music and arts community is exactly the audience adventurous pop-up chefs need. The neighborhood that built the city's creative culture is now building its underground food scene too.",
-      },
-      {
         role: "guest",
         cityHeadline: "Dallas eats better than its reputation",
         cityDescription:
           "Beyond the steakhouses, Dallas has a thriving pop-up culture in Deep Ellum, Bishop Arts, and the Design District. Tenseats surfaces the seatings that don't make the food section.",
       },
       {
+        role: "chef",
+        cityHeadline: "Deep Ellum's audience is ready for you",
+        cityDescription:
+          "Dallas's music and arts community is exactly the audience adventurous pop-up chefs need. The neighborhood that built the city's creative culture is now building its underground food scene too.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Deep Ellum after the show needs a drink",
+        cityDescription:
+          "Dallas's music venue culture and its emerging pop-up dinner scene share the same Deep Ellum streets. Beverage professionals who partner with Bishop Arts chefs find an audience already gathered and ready to extend the evening.",
+      },
+      {
         role: "curator",
         cityHeadline: "Dallas's hidden food scene needs a map",
         cityDescription:
           "The city's Mexican-American culinary traditions, Vietnamese community food culture, and growing chef roster are building something significant. Curators who can surface and connect these scenes are doing essential work.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Bishop Arts converted spaces need the right events",
+        cityDescription:
+          "Bishop Arts District's converted homes and studio spaces and Deep Ellum's warehouse floors are exactly the venue format Dallas's pop-up chefs need. Connect your space with chefs who want to cook for the city's most engaged audience.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Dallas's Tex-Mex tasting scene needs connectors",
+        cityDescription:
+          "Dallas chefs pushing interior Mexican and Tex-Mex tasting menus need the right venues, guest lists, and timing. You know the Bishop Arts hosts, the Deep Ellum kitchen operators, and the guests who will show up for something serious.",
       },
     ],
     tier: 2,
