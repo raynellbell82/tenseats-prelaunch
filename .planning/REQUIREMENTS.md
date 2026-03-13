@@ -77,9 +77,9 @@
 - [ ] **CITY-05**: CityPersonas with 3 role cards per city, each linking to /join
 - [ ] **CITY-06**: CityReserve wrapping ReserveSpotSection pre-filtered to current city
 - [ ] **CITY-07**: Per-city SEO metadata (title, description)
-- [ ] **CITY-08**: lib/city-data.ts with complete CityData type and all 32 city entries (Tier 1, 2, 3)
-- [ ] **CITY-09**: City data includes heroHeadline, heroSubhead, metaTagline, metaDescription, sceneIntro, sceneBlocks, topPersonas, tier
-- [ ] **CITY-10**: All heroSubhead copy under 25-word limit
+- [x] **CITY-08**: lib/city-data.ts with complete CityData type and all 32 city entries (Tier 1, 2, 3)
+- [x] **CITY-09**: City data includes heroHeadline, heroSubhead, metaTagline, metaDescription, sceneIntro, sceneBlocks, topPersonas, tier
+- [x] **CITY-10**: All heroSubhead copy under 25-word limit
 
 ### Why Tenseats Page
 
@@ -194,9 +194,9 @@
 | CITY-05 | Phase 7 | Pending |
 | CITY-06 | Phase 7 | Pending |
 | CITY-07 | Phase 7 | Pending |
-| CITY-08 | Phase 7 | Pending |
-| CITY-09 | Phase 7 | Pending |
-| CITY-10 | Phase 7 | Pending |
+| CITY-08 | Phase 7 | Complete |
+| CITY-09 | Phase 7 | Complete |
+| CITY-10 | Phase 7 | Complete |
 | WHY-01 | Phase 8 | Pending |
 | WHY-02 | Phase 8 | Pending |
 | WHY-03 | Phase 8 | Pending |
