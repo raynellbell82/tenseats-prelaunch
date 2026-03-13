@@ -41,20 +41,20 @@ None — focused milestone.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| COPY-01 | — | Pending |
-| COPY-02 | — | Pending |
-| COPY-03 | — | Pending |
-| COMP-01 | — | Pending |
-| COMP-02 | — | Pending |
-| COMP-03 | — | Pending |
-| DATA-01 | — | Pending |
-| DATA-02 | — | Pending |
+| COPY-01 | Phase 13 | Pending |
+| COPY-02 | Phase 13 | Pending |
+| COPY-03 | Phase 13 | Pending |
+| COMP-01 | Phase 12 | Pending |
+| COMP-02 | Phase 12 | Pending |
+| COMP-03 | Phase 12 | Pending |
+| DATA-01 | Phase 13 | Pending |
+| DATA-02 | Phase 12 | Pending |
 
 **Coverage:**
 - v1.1 requirements: 8 total
-- Mapped to phases: 0
-- Unmapped: 8 ⚠️
+- Mapped to phases: 8
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-13*
-*Last updated: 2026-03-13 after initial definition*
+*Last updated: 2026-03-13 after v1.1 roadmap creation*
