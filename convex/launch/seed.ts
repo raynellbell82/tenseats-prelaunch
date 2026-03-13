@@ -55,7 +55,7 @@ export const enableFeatureFlags = internalMutation({
  * Idempotent: skips if a config already exists.
  * Schedules closeLifetimeOffer to run at the deadline.
  */
-export const seedLaunchConfig = mutation({
+export const seedLaunchConfig: typeof mutation = mutation({
   args: { deadline: v.optional(v.number()) },
   returns: v.object({ skipped: v.boolean(), id: v.id("launchConfig") }),
   handler: async (ctx, args) => {
