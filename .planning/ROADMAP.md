@@ -201,6 +201,7 @@ Plans:
   1. Clicking "Cities" in the header nav scrolls to the cities globe section (no 404)
   2. Mobile hamburger "Cities" link behaves the same
   3. Queue signup form uses OTP email flow, not password-based signUp
+**Plans**: 1 plan
 Plans:
 - [ ] 11-01-PLAN.md — Fix /cities nav link target, align queue signup form with OTP auth
 
