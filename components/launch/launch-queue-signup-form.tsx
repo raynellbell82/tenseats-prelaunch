@@ -8,7 +8,7 @@ import { z } from "zod";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
-import { signUp } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import {
   Loader2,
   ChefHat,
@@ -66,7 +66,6 @@ const ROLES = [
 
 const formSchema = z.object({
   email: z.string().email("Enter a valid email address"),
-  password: z.string().min(8, "Password must be at least 8 characters"),
   metroId: z.string().min(1, "Select a metro area"),
   category: z.enum(["chef", "mixologist", "creator", "venueHost", "guest"], {
     message: "Select a role",
@@ -96,7 +95,6 @@ export function LaunchQueueSignupForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
-      password: "",
       metroId: preselectedMetroId,
       category: preselectedCategory as FormValues["category"],
     },
@@ -107,30 +105,29 @@ export function LaunchQueueSignupForm({
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
     try {
-      await signUp.email({
-        email: values.email,
-        password: values.password,
-        name: values.email.split("@")[0],
-      });
-
+      // First join the queue (no auth needed to join queue)
       const preRegistrationId = await joinQueue({
         email: values.email,
         metroId: values.metroId as Id<"metros">,
         category: values.category,
       });
-
       sessionStorage.setItem("preRegistrationId", preRegistrationId);
-      router.push("/launch/queue");
+
+      // Then send OTP for email verification
+      await authClient.emailOtp.sendVerificationOtp({
+        email: values.email,
+        type: "email-verification",
+      });
+      sessionStorage.setItem("otp-verify-email", values.email);
+      sessionStorage.setItem("otp-sent-ts", Date.now().toString());
+
+      // Redirect to verify-email page (existing OTP entry UI)
+      router.push("/verify-email");
     } catch (error: unknown) {
       const message =
         error instanceof Error ? error.message : String(error);
 
-      if (
-        message.toLowerCase().includes("already") &&
-        message.toLowerCase().includes("exist")
-      ) {
-        toast.error("Account already exists. Try signing in instead.");
-      } else if (message.toLowerCase().includes("already registered")) {
+      if (message.toLowerCase().includes("already registered")) {
         toast.error("You are already registered for this slot.");
       } else {
         toast.error(message || "Something went wrong. Please try again.");
@@ -228,7 +225,7 @@ export function LaunchQueueSignupForm({
               )}
 
               <p className="text-sm text-muted-foreground text-center">
-                Create your account
+                Enter your email
               </p>
 
               <FormField
@@ -250,25 +247,6 @@ export function LaunchQueueSignupForm({
                   </FormItem>
                 )}
               />
-              <FormField
-                control={form.control}
-                name="password"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Password</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="password"
-                        placeholder="Min 8 characters"
-                        className="rounded-lg border-border h-11"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
               <div className="flex items-center gap-3 pt-2">
                 <button
                   type="button"
