@@ -176,7 +176,7 @@ export function VerifyEmailForm({ email, initialCode }: VerifyEmailFormProps) {
       // Success - show animation then redirect
       setVerified(true);
       setTimeout(() => {
-        router.push("/feed");
+        router.push("/");
       }, 1500);
     },
     [email, router, attempts]

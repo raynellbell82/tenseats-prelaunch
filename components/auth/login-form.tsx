@@ -121,7 +121,7 @@ export function LoginForm() {
         }
       }
 
-      router.push("/feed");
+      router.push("/");
     } catch {
       form.setError("root", {
         type: "manual",

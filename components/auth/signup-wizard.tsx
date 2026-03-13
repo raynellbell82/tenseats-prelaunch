@@ -78,7 +78,7 @@ export function SignupWizard() {
         email: data.email,
         password: data.password,
         name: `${data.firstName} ${data.lastName}`,
-        callbackURL: "/feed", // Where to redirect after email verification
+        callbackURL: "/", // Pre-launch: redirect to homepage after email verification
       });
 
       if (error) {
