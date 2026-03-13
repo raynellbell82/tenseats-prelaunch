@@ -610,7 +610,7 @@ export const CITY_DATA: Record<string, CityData> = {
     metaDescription:
       "BYOB dinners, pop-ups, and chef's tables in Philadelphia — Fishtown, East Passyunk, South Philly. Community-curated, address revealed the morning of.",
     sceneIntro:
-      "Philadelphia's BYOB culture — a product of the city's unique licensing laws — created one of America's most intimate pop-up dining ecosystems. Fishtown warehouses, South Philly rowhomes, and East Passyunk side streets host the city's most creative food experiences.",
+      "Philadelphia's BYOB culture — a product of the city's distinctive licensing laws — created one of America's most intimate pop-up dining ecosystems. Fishtown warehouses, South Philly rowhomes, and East Passyunk side streets host the city's most creative food experiences.",
     sceneBlocks: [
       {
         heading: "BYOB is a culture, not a policy",
@@ -636,7 +636,7 @@ export const CITY_DATA: Record<string, CityData> = {
         role: "chef",
         cityHeadline: "Philly's BYOB culture was built for you",
         cityDescription:
-          "Philadelphia's unique licensing laws mean intimate dinners in rowhomes and borrowed kitchens are the city's most beloved dining format. Your pop-up concept fits here better than anywhere else.",
+          "Philadelphia's particular licensing laws mean intimate dinners in rowhomes and borrowed kitchens are the city's most beloved dining format. Your pop-up concept fits here better than anywhere else.",
       },
       {
         role: "guest",
@@ -1420,7 +1420,7 @@ export const CITY_DATA: Record<string, CityData> = {
         role: "mixologist",
         cityHeadline: "Craft cocktails meet craft brewing country",
         cityDescription:
-          "Milwaukee's beer culture creates unique opportunities for cocktail professionals. Spirits programs that engage with local brewing traditions — grain-to-glass, beer cocktails, brewing-adjacent spirits — find an audience that takes beverages seriously.",
+          "Milwaukee's beer culture creates rare opportunities for cocktail professionals. Spirits programs that engage with local brewing traditions — grain-to-glass, beer cocktails, brewing-adjacent spirits — find an audience that takes beverages seriously.",
       },
     ],
     tier: 3,
@@ -1437,7 +1437,7 @@ export const CITY_DATA: Record<string, CityData> = {
     metaDescription:
       "Desert pop-ups, Sonoran food events, and chef dinners in Phoenix, AZ — Melrose, Downtown Phoenix, Arts District. Desert-to-table cuisine, curated by locals.",
     sceneIntro:
-      "Phoenix's Sonoran Desert terroir is unique in American food culture — the cuisine that emerges from this landscape, in the hands of the right chefs, is unlike anything on the coasts. Pop-ups exploring Sonoran ingredients and traditions are the city's most compelling dining.",
+      "Phoenix's Sonoran Desert terroir is singular in American food culture — the cuisine that emerges from this landscape, in the hands of the right chefs, is unlike anything on the coasts. Pop-ups exploring Sonoran ingredients and traditions are the city's most compelling dining.",
     sceneBlocks: [
       {
         heading: "Desert-to-table",
