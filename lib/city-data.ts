@@ -1966,22 +1966,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "Ann Arbor eats beyond Zingerman's",
+        cityDescription:
+          "Zingerman's built the foundation, but Kerrytown's pop-up circuit and the university's international food community have built on it. Tenseats surfaces the dinners that Ann Arbor's most food-literate locals attend — not the delis, the dinner tables.",
+      },
+      {
         role: "chef",
         cityHeadline: "Ann Arbor's food culture runs deep",
         cityDescription:
           "The Zingerman's community has trained the city's palate and created an audience that understands craft and quality. Pop-up chefs find a university town that takes food seriously and shows up for the chefs who match that seriousness.",
       },
       {
-        role: "guest",
-        cityHeadline: "Ann Arbor eats beyond Zingerman's",
+        role: "mixologist",
+        cityHeadline: "Kerrytown has room for the right pour",
         cityDescription:
-          "Zingerman's built the foundation, but Kerrytown's pop-up circuit and the university's international food community have built on it. Tenseats surfaces the dinners that Ann Arbor's most food-literate locals attend.",
+          "Ann Arbor's craft beverage culture — built alongside Zingerman's and the university's international palette — creates an audience for cocktail programs that reference the same depth. Pop-ups pairing Kerrytown-sourced ingredients with considered spirits find a city ready for it.",
       },
       {
         role: "curator",
         cityHeadline: "Document Ann Arbor's food heritage",
         cityDescription:
           "The city's Zingerman's-built food culture is a genuine culinary legacy. Curators who surface the Kerrytown pop-up scene and the chef community the deli incubated are telling one of American food's most interesting local stories.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Kerrytown spaces host the city's best evenings",
+        cityDescription:
+          "Ann Arbor's historic market district and university-adjacent spaces create intimate venues with genuine character. Your Kerrytown storefront or renovated historic space connects with the Zingerman's-generation chefs who want to cook for an audience that gets it.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "The Zingerman's network needs a connector",
+        cityDescription:
+          "Ann Arbor's chef community — trained in the Zingerman's ecosystem, feeding a university population with global tastes — runs on the right introductions. You know which Kerrytown venue has a dark Monday, which Zingerman's alumnus is ready for a pop-up. Make that call.",
       },
     ],
     tier: 3,
@@ -2021,22 +2039,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "Grand Rapids is building something worth attending",
+        cityDescription:
+          "The Fulton Street pop-up circuit and Eastown's creative dining scene are producing food experiences that reflect Michigan's best ingredients. Tenseats maps the dinners where Grand Rapids' food community actually eats — and the ones they keep quiet.",
+      },
+      {
         role: "chef",
         cityHeadline: "Michigan's pantry is your competitive advantage",
         cityDescription:
           "Grand Rapids' access to Michigan's agricultural bounty — Great Lakes fish, orchard fruits, craft beverages — gives local chefs distinctive ingredients that no coastal city can replicate. Pop-up dinners built on this sourcing create genuinely local dining experiences.",
       },
       {
-        role: "guest",
-        cityHeadline: "Grand Rapids is building something worth attending",
+        role: "mixologist",
+        cityHeadline: "West Michigan hops deserve the spotlight",
         cityDescription:
-          "The Fulton Street pop-up circuit and Eastown's creative dining scene are producing food experiences that reflect Michigan's best ingredients. Tenseats maps the dinners where Grand Rapids' food community actually eats.",
+          "Grand Rapids sits in the country's most productive hop-growing region, and Michigan's craft spirit scene is building alongside it. Cocktail programs that work with local distilleries and the Fulton Street Market's seasonal ingredients find an audience already attuned to provenance.",
       },
       {
         role: "curator",
         cityHeadline: "Document West Michigan's food story",
         cityDescription:
           "Grand Rapids' agricultural access and growing chef community create a food story the national press hasn't told yet. Curators who surface the Fulton Street pop-up scene are documenting the early chapters of something significant.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Eastown spaces anchor the city's creative table",
+        cityDescription:
+          "Grand Rapids' Eastown and Bridge Street corridor spaces — creative-class storefronts, renovated warehouses, neighborhood venues with real character — connect with the chef community that sources at Fulton Street. Your space is the stage they're looking for.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "West Michigan's food scene needs its connector",
+        cityDescription:
+          "Grand Rapids' chef community is building on Michigan's agricultural pantry — and the right introductions determine which dinners actually happen. You know which Fulton Street vendor has produce worth featuring, which Eastown venue has a dark weekend. Bridge that gap.",
       },
     ],
     tier: 3,
@@ -2076,22 +2112,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Memphis's BBQ heritage is your canvas",
-        cityDescription:
-          "The city's most interesting chefs don't just replicate the BBQ tradition — they expand it. Pop-ups that take Memphis's culinary heritage seriously and push it somewhere new find an audience hungry for exactly that conversation.",
-      },
-      {
         role: "guest",
         cityHeadline: "Memphis beyond Beale Street",
         cityDescription:
           "South Main's gallery dinners, Cooper-Young's creative food scene, and Soulsville's community kitchen events tell a Memphis food story that Beale Street's tourist circuit never reaches. Tenseats maps where Memphis locals actually eat.",
       },
       {
+        role: "chef",
+        cityHeadline: "Memphis's BBQ heritage is your canvas",
+        cityDescription:
+          "The city's most interesting chefs don't just replicate the BBQ tradition — they expand it. Pop-ups that take Memphis's culinary heritage seriously and push it somewhere new find an audience hungry for exactly that conversation.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "South Main's cocktail scene is just starting",
+        cityDescription:
+          "Cooper-Young and South Main are building a craft beverage culture alongside the food scene. Cocktail programs that draw on Tennessee whiskey heritage, Southern botanicals, and the neighborhood's creative energy find an audience that's graduated from Beale Street's tourist bars.",
+      },
+      {
         role: "curator",
         cityHeadline: "Memphis food deserves better documentation",
         cityDescription:
           "The city's BBQ mythology overshadows a genuinely deep and evolving food culture. Curators who surface the South Main pop-up circuit and Soulsville's community kitchen scene are telling the real Memphis food story.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "South Main gallery spaces host the real Memphis table",
+        cityDescription:
+          "Memphis's arts district warehouses, Cooper-Young storefronts, and Soulsville community spaces create intimate dining settings with genuine neighborhood character. Connect your space with the chefs who are building something beyond the BBQ mythology.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Cooper-Young's food scene runs on introductions",
+        cityDescription:
+          "Memphis's creative food circuit — South Main gallery dinners, Cooper-Young chef collaborations, Soulsville community events — needs the right connector. You know which warehouse has a dark weekend, which chef's ready to push the BBQ tradition somewhere new. Make it happen.",
       },
     ],
     tier: 3,
@@ -2131,22 +2185,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Indianapolis is ready to be surprised",
-        cityDescription:
-          "The city's Mass Ave and Fountain Square communities have an appetite for food experiences that go beyond expectations. Pop-up chefs who show up with genuine ambition find an audience that shows up back — and brings its friends.",
-      },
-      {
         role: "guest",
         cityHeadline: "Indy's food scene outgrew its reputation",
         cityDescription:
           "Beyond the steakhouses and sports bars, Indianapolis has a creative food culture in Mass Ave, Fountain Square, and the Stutz campus. Tenseats maps the pop-up dinners and chef's tables where Indy's food community actually eats.",
       },
       {
+        role: "chef",
+        cityHeadline: "Indianapolis is ready to be surprised",
+        cityDescription:
+          "The city's Mass Ave and Fountain Square communities have an appetite for food experiences that go beyond expectations. Pop-up chefs who show up with genuine ambition find an audience that shows up back — and brings its friends.",
+      },
+      {
         role: "mixologist",
         cityHeadline: "Indy's cocktail culture is ready",
         cityDescription:
           "Indianapolis's craft cocktail scene has matured alongside its food culture. Cocktail-forward pop-ups and pairing dinners in Mass Ave and Fountain Square find an audience that's graduated from sports bars and is ready for something more considered.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Document Indy's food scene before it's obvious",
+        cityDescription:
+          "Mass Ave and Fountain Square's pop-up circuit is building faster than the national food press has noticed. Curators who surface the Stutz campus events and the chef's table circuit in Indianapolis are capturing something at the right moment.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Stutz campus spaces belong in the story",
+        cityDescription:
+          "The historic Stutz factory, Fountain Square's renovated storefronts, and Mass Ave's gallery spaces create intimate dinner venues with real character. Connect your Indianapolis space with the chefs who want to cook for an audience that's already past expectations.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Mass Ave's food circuit runs on the right calls",
+        cityDescription:
+          "Indianapolis's creative food scene — Fountain Square pop-ups, Stutz campus events, Mass Ave chef collaborations — needs someone who knows which chef is ready and which space has a dark night. You're the bridge between Indy's culinary ambition and the rooms where it lands.",
       },
     ],
     tier: 3,
@@ -2186,22 +2258,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Buffalo's moment is now",
-        cityDescription:
-          "The city's creative revival has attracted a chef community ready to prove Buffalo is more than wings. Pop-up chefs who engage with Great Lakes ingredients and Allentown's creative energy find an audience that's been waiting for exactly this.",
-      },
-      {
         role: "guest",
         cityHeadline: "Buffalo's food scene outgrew the wings mythology",
         cityDescription:
           "Allentown, Elmwood Village, and Larkinville have a pop-up food culture that the national food press is beginning to notice. Tenseats maps the dinners where Buffalo's food community is building the city's culinary next chapter.",
       },
       {
+        role: "chef",
+        cityHeadline: "Buffalo's moment is now",
+        cityDescription:
+          "The city's creative revival has attracted a chef community ready to prove Buffalo is more than wings. Pop-up chefs who engage with Great Lakes ingredients and Allentown's creative energy find an audience that's been waiting for exactly this.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Great Lakes ingredients belong in the glass",
+        cityDescription:
+          "Buffalo's proximity to Lake Erie and the Niagara wine region gives cocktail programs access to regional spirits and local fruit that most cities can't source. Elmwood Village pop-ups and Allentown supper clubs are ready for pairings that reflect the city's actual pantry.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Buffalo's Polish and Italian kitchens deserve coverage",
+        cityDescription:
+          "The West Side's Polish delis, the East Side's Italian heritage kitchens, and Elmwood Village's evolving food community are building a food culture with real depth. Curators who surface Buffalo's heritage food scene alongside its emerging pop-up circuit tell the complete story.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Buffalo's spaces are perfect for intimate events",
         cityDescription:
           "Allentown Victorians, Larkinville industrial spaces, and Elmwood Village storefronts create intimate dining venues that match the city's character. Connect your space with the chefs building Buffalo's food future.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Elmwood Village's food scene needs its matchmaker",
+        cityDescription:
+          "Buffalo's revival is producing chefs with Great Lakes sourcing savvy and venues with genuine character — but the right dinner doesn't happen without the right introduction. You know which Allentown Victorian is available and which chef is ready to cook for 14. Bridge it.",
       },
     ],
     tier: 3,
@@ -2241,22 +2331,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Birmingham's food renaissance needs your voice",
-        cityDescription:
-          "The city's transformation from steel town to food destination has created space for chefs who take Southern food seriously. Pop-up chefs who engage with Birmingham's heritage and push it forward find an audience that's been waiting for exactly this.",
-      },
-      {
         role: "guest",
         cityHeadline: "Birmingham is the South's best food surprise",
         cityDescription:
           "The city's pop-up circuit in Five Points, Avondale, and Woodlawn is producing Southern food experiences that go beyond expectations. Tenseats surfaces the dinners where Birmingham's most food-literate community actually eats.",
       },
       {
+        role: "chef",
+        cityHeadline: "Birmingham's food renaissance needs your voice",
+        cityDescription:
+          "The city's transformation from steel town to food destination has created space for chefs who take Southern food seriously. Pop-up chefs who engage with Birmingham's heritage and push it forward find an audience that's been waiting for exactly this.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Avondale's brewery scene has a cocktail gap",
+        cityDescription:
+          "Birmingham's Avondale neighborhood built the city's craft beverage identity — and the cocktail programs moving into that space find a creative-class audience already primed for serious pours. Spirits that reference Southern botanicals and Alabama's distilling tradition land here.",
+      },
+      {
         role: "curator",
         cityHeadline: "Document Birmingham's food transformation",
         cityDescription:
           "The city's shift from industrial center to Southern food destination is one of America's great culinary stories. Curators who surface the Woodlawn community dinners and Avondale pop-up scene are documenting a transformation in real time.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Avondale's spaces match the scene's ambition",
+        cityDescription:
+          "Birmingham's Avondale brewery venues, Five Points South spaces, and Woodlawn community kitchens create intimate dinner settings with Southern character. Connect your space with the chefs building New South cuisine beyond Frank Stitt's original vision.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Birmingham's revival runs on the right introductions",
+        cityDescription:
+          "The city's pop-up circuit — Avondale brewery dinners, Woodlawn community tables, Five Points South chef collaborations — needs someone who can connect the James Beard generation's protégés with the spaces and guests ready for them. That's your role.",
       },
     ],
     tier: 3,
@@ -2296,22 +2404,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Greenville's food community is ready",
-        cityDescription:
-          "The city's Main Street revival has created an audience for thoughtful food experiences that Greenville's independent restaurant culture has begun to serve. Pop-up chefs who engage with Appalachian traditions and local sourcing find a community that takes food seriously.",
-      },
-      {
         role: "guest",
         cityHeadline: "Greenville is the South's most overlooked food city",
         cityDescription:
           "Falls Park supper clubs, Main Street chef's table events, and West End pop-up dinners have built a food scene that rivals cities twice Greenville's size. Tenseats maps where the city's food community actually gathers.",
       },
       {
+        role: "chef",
+        cityHeadline: "Greenville's food community is ready",
+        cityDescription:
+          "The city's Main Street revival has created an audience for thoughtful food experiences that Greenville's independent restaurant culture has begun to serve. Pop-up chefs who engage with Appalachian traditions and local sourcing find a community that takes food seriously.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Swamp Rabbit Trail farms reach the glass here",
+        cityDescription:
+          "Greenville's farm-to-table culture — built on Swamp Rabbit Trail agriculture and Upstate SC's growing season — creates ingredient access for cocktail programs that most cities can't source. Falls Park and Main Street pop-ups find an audience already primed for provenance.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Village of West Greenville deserves the spotlight",
+        cityDescription:
+          "The Village of West Greenville's arts district and the Swamp Rabbit Trail's farm community are producing a food culture that the national press hasn't discovered. Curators who surface this Appalachian-inflected scene are telling one of the South's most interesting emerging stories.",
+      },
+      {
         role: "venueHost",
         cityHeadline: "Greenville's spaces are perfectly suited for events",
         cityDescription:
           "Falls Park settings, Main Street storefronts, and West End creative spaces create intimate dinner venues with natural atmosphere. Connect your space with the pop-up chefs who want to cook in one of the South's most atmospheric small cities.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Main Street's table needs its connector",
+        cityDescription:
+          "Greenville's food scene — Swamp Rabbit Trail farm sourcing, Village of West Greenville pop-ups, Falls Park supper club circuit — runs on the right introductions. You know which farmer has surplus ramps, which Main Street space has a dark Friday. Connect them.",
       },
     ],
     tier: 3,
@@ -2351,22 +2477,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "Cleveland's comeback is your opportunity",
-        cityDescription:
-          "Ohio City and Tremont have an established audience for serious food. West Side Market's food community creates natural demand for pop-up dinners that go deeper than the neighborhood's restaurants. Cleveland rewards the chefs who show up and stay.",
-      },
-      {
         role: "guest",
         cityHeadline: "Cleveland's food scene earned the comeback narrative",
         cityDescription:
           "West Side Market, Ohio City, and Tremont have built a genuine food culture. Tenseats maps the pop-up dinners and supper clubs where Cleveland's food community gathers — the experiences the city's food press hasn't fully documented yet.",
       },
       {
+        role: "chef",
+        cityHeadline: "Cleveland's comeback is your opportunity",
+        cityDescription:
+          "Ohio City and Tremont have an established audience for serious food. West Side Market's food community creates natural demand for pop-up dinners that go deeper than the neighborhood's tables. Cleveland rewards the chefs who show up and stay.",
+      },
+      {
         role: "mixologist",
         cityHeadline: "Cleveland's cocktail culture is underrated",
         cityDescription:
           "Ohio City's craft cocktail scene has matured alongside its food culture. Spirits programs that engage with Great Lakes ingredients and Ohio agricultural products find an audience in Tremont and Gordon Square that takes beverages as seriously as food.",
+      },
+      {
+        role: "curator",
+        cityHeadline: "Slavic Village's food heritage is underdocumented",
+        cityDescription:
+          "Cleveland's Tremont and Slavic Village neighborhoods hold Eastern European food traditions — Polish, Slovenian, Czech — that the city's pop-up scene is beginning to engage with seriously. Curators who surface this archive alongside West Side Market's contemporary scene tell the complete story.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Ohio City's spaces have the right character",
+        cityDescription:
+          "Tremont galleries, Ohio City brick storefronts, and Gordon Square arts spaces create intimate dining venues with real Cleveland character. Connect your space with the chef community that West Side Market anchors — they're looking for rooms like yours.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "West Side Market's network needs a matchmaker",
+        cityDescription:
+          "Cleveland's food scene — chef incubation in Tremont, West Side Market sourcing, Gordon Square supper clubs — connects through the right introductions. You know which Ohio City venue has availability, which Market vendor's product a pop-up chef needs. Make the match.",
       },
     ],
     tier: 3,
@@ -2406,22 +2550,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
-        role: "chef",
-        cityHeadline: "OKC's food scene is building and needs you",
-        cityDescription:
-          "Oklahoma City's Food Row and Midtown neighborhoods have the creative energy and audience to support serious pop-up concepts. Chefs who arrive before the national press do will build the audiences that define the city's food culture.",
-      },
-      {
         role: "guest",
         cityHeadline: "Oklahoma City eats better than its reputation",
         cityDescription:
           "Film Row, Midtown, and the Plaza District have a pop-up food culture that the national food media hasn't documented yet. Tenseats maps the dinners where OKC's food community gathers before the rest of the country finds out.",
       },
       {
+        role: "chef",
+        cityHeadline: "OKC's food scene is building and needs you",
+        cityDescription:
+          "Oklahoma City's Film Row and Midtown neighborhoods have the creative energy and audience to support serious pop-up concepts. Chefs who arrive before the national press do will build the audiences that define the city's food culture.",
+      },
+      {
+        role: "mixologist",
+        cityHeadline: "Oklahoma's ranch country belongs in the glass",
+        cityDescription:
+          "OKC's emerging craft spirits scene and Paseo Arts District pop-up culture are meeting in cocktail programs that reference Oklahoma's cattle and grain heritage. Film Row's creative audience and the Asian District's ingredient diversity give mixologists something to work with.",
+      },
+      {
         role: "curator",
         cityHeadline: "Oklahoma City's food story is untold",
         cityDescription:
-          "The city's emerging pop-up culture, cattle heritage, and growing chef community are building something worth documenting. Curators who surface OKC's food scene are telling a story the national press hasn't found yet.",
+          "The city's emerging pop-up culture, cattle heritage, and growing chef community are building something worth documenting. Curators who surface OKC's Paseo Arts District scene and the Asian District's culinary depth are telling a story the national press hasn't found yet.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Paseo Arts District spaces have the right energy",
+        cityDescription:
+          "Oklahoma City's Paseo Arts District studios, Film Row converted theaters, and Plaza District creative spaces create intimate dinner settings with real character. Connect your venue with the chefs building ranch-to-table cuisine before the national press arrives.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "OKC's food scene needs its connector now",
+        cityDescription:
+          "Oklahoma City's pop-up circuit — Paseo Arts District, Film Row warehouse dinners, Asian District along Classen — is building fast. You know which Plaza District space has a dark night, which ranch-sourcing chef needs an audience. Make the introduction before it's obvious.",
       },
     ],
     tier: 3,
@@ -2461,22 +2623,40 @@ export const CITY_DATA: Record<string, CityData> = {
     ],
     topPersonas: [
       {
+        role: "guest",
+        cityHeadline: "The Delta table is one of America's most important",
+        cityDescription:
+          "Meridian and the Mississippi Delta represent the roots of American soul food and one of the nation's most significant culinary heritages. Tenseats surfaces the pop-ups and community dinners where this tradition is being kept alive and carried forward.",
+      },
+      {
         role: "chef",
         cityHeadline: "Tell the Delta food story with authority",
         cityDescription:
           "Meridian's culinary heritage is one of America's most important and least-documented food traditions. Chefs who cook from this knowledge — Delta foodways, African-American culinary heritage, soul food's deep roots — deserve an audience far beyond the county line.",
       },
       {
-        role: "guest",
-        cityHeadline: "The Delta table is one of America's most important",
+        role: "mixologist",
+        cityHeadline: "Mississippi Delta's drinking traditions run deep",
         cityDescription:
-          "Meridian and the Mississippi Delta represent the roots of American soul food and one of the nation's most significant culinary heritages. Tenseats surfaces the pop-ups and community dinners where this tradition is being kept alive and advanced.",
+          "The Delta's juke joint culture and community gathering traditions have their own beverage heritage — bourbon, sweet tea, fruit-forward spirits — that Meridian's pop-up scene is beginning to reclaim. Cocktail programs that reference this history find an audience hungry for authenticity.",
       },
       {
         role: "curator",
         cityHeadline: "Mississippi Delta food deserves its platform",
         cityDescription:
           "The culinary heritage of Meridian and the Delta is among America's most important and least-documented food stories. Curators who surface these traditions — connecting them to audiences who can support the chefs who carry them — are doing essential preservation work.",
+      },
+      {
+        role: "venueHost",
+        cityHeadline: "Meridian's community spaces hold the Delta tradition",
+        cityDescription:
+          "Church halls, community kitchens, and the civic spaces where Meridian's food culture has always lived create the most culturally honest dinner venues in Mississippi. Open your space to the chefs preserving Delta foodways and the audience that needs to find them.",
+      },
+      {
+        role: "facilitator",
+        cityHeadline: "Delta food traditions need a bridge to wider tables",
+        cityDescription:
+          "Meridian's pop-up circuit — church supper traditions, community kitchen dinners, Delta-rooted chef collaborations — needs someone who can connect local knowledge to audiences beyond the county line. You know which community kitchen is available, which chef's story deserves to be heard. Tell it.",
       },
     ],
     tier: 3,
