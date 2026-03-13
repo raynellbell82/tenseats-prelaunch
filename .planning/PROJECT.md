@@ -28,17 +28,15 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 - ✓ Brand compliance: locked copy enforced, forbidden adjectives removed — v1.0
 - ✓ Mobile-responsive (375px minimum, no horizontal overflow) — v1.0
 
+- ✓ 6-card responsive persona grid (3×2 desktop, 2×3 tablet, 1×6 mobile) on all city pages — v1.1
+- ✓ Facilitator role added to type system, custom SVG icon, and display map — v1.1
+- ✓ Shared PersonaCard component with framer-motion scroll animations — v1.1
+- ✓ 192 culturally-specific persona descriptions (32 cities × 6 roles) with neighborhood-level specificity — v1.1
+- ✓ Full brand compliance across all persona copy — zero forbidden adjectives — v1.1
+
 ### Active
 
-## Current Milestone: v1.1 City Persona Copy
-
-**Goal:** Expand every city page to show all 6 persona cards with culturally-specific copy that reflects each city's unique food, drink, and hospitality scene.
-
-**Target features:**
-- All 6 personas (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator) on every city page
-- City-specific persona copy researched and written per the tenseats-copy-writer skill
-- Cultural authenticity — each city's food/drink identity reflected in persona descriptions
-- Component update to render 6 cards (currently 2-3) in responsive grid
+(No active requirements — planning next milestone)
 
 ### Out of Scope
 
@@ -51,7 +49,7 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ## Context
 
-**Current State:** v1.0 shipped. 12 phases, 22 plans, 109 commits, 16,228 LOC TypeScript.
+**Current State:** v1.1 shipped. 14 phases, 26 plans, 128 commits, 20,373 LOC TypeScript.
 
 - **Source repo:** `/Users/tenseats/Documents/dev/Tenseats-marketplace-platform` (also cloneable from `https://github.com/raynellbell82/Tenseats-marketplace-platform.git` to `/tmp/tenseats-source`)
 - **Shared Convex deployment:** Both apps point to `api.tenseats.io`. Users who create accounts on pre-launch site log into the marketplace seamlessly when it goes live — same domain, deployment swap
@@ -92,6 +90,10 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 | cobe for 3D globe | Lightweight WebGL globe with graceful fallback | ✓ Good |
 | Cities nav → #cities-globe anchor | Avoids need for /cities index route | ✓ Good |
 | Queue signup pre-auth | Join queue before creating auth account | ⚠️ Revisit (session guard conflict) |
+| Shared PersonaCard component | Single card component for city and why pages, optional headline prop | ✓ Good |
+| Custom SVG icons over Lucide | Monoline stroke icons match brand aesthetic, theme-aware via currentColor | ✓ Good |
+| Replace full topPersonas arrays | Canonical role order enforced (guest→chef→mixologist→curator→venueHost→facilitator) | ✓ Good |
+| City-specific CTA to /launch?city= | Persona section CTA pre-fills city for higher conversion intent | ✓ Good |
 
 ---
-*Last updated: 2026-03-13 after v1.1 milestone start*
+*Last updated: 2026-03-13 after v1.1 milestone completion*

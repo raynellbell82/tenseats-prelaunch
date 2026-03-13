@@ -1,5 +1,23 @@
 # Milestones
 
+## v1.1 City Persona Copy (Shipped: 2026-03-13)
+
+**Phases completed:** 2 phases, 4 plans, 8 tasks
+
+**Key accomplishments:**
+- 6 custom monoline SVG persona icons and shared PersonaCard component with framer-motion scroll animations
+- Facilitator added as 6th persona role across type system, icon map, and display map
+- 192 culturally-specific persona descriptions written (32 cities × 6 roles) referencing named neighborhoods and local food scenes
+- Full brand compliance validated — zero forbidden adjectives across all persona copy
+- City-personas and why-personas sections refactored to shared PersonaCard in responsive 3×2 grid
+
+**Stats:**
+- 19 commits | 20 files | +2,740 / -279 lines | 20,373 LOC TypeScript
+- Timeline: 2026-03-13 (~1.2 hours)
+- Git range: 7775650..7548c06
+
+---
+
 ## v1.0 Pre-Launch Site (Shipped: 2026-03-13)
 
 **Phases completed:** 12 phases, 22 plans, 0 tasks
