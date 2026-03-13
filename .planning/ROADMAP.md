@@ -50,7 +50,10 @@ Plans:
   3. Logo loads from Convex platformSettings (dark logo visible in dark mode)
   4. Footer renders on all pages
   5. Dark theme is applied by default — no flash of light theme on load
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — Create Providers (ThemeProvider + ConvexClientProvider) and root layout with fonts, footer, toaster
+- [ ] 02-02-PLAN.md — Create LandingHeader with nav links, mobile hamburger menu, logo, and theme toggle
 
 ### Phase 3: Homepage
 **Goal**: Visitors landing on / see the Tenseats story, a live countdown, and clear paths to join or learn more
@@ -147,7 +150,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 3/3 | Complete   | 2026-03-13 |
-| 2. Layout & Navigation | 0/TBD | Not started | - |
+| 2. Layout & Navigation | 0/2 | Not started | - |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. Join Page | 0/TBD | Not started | - |
 | 5. Auth | 0/TBD | Not started | - |
