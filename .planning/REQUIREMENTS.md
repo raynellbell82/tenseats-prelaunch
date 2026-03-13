@@ -33,12 +33,12 @@
 
 ### Homepage
 
-- [ ] **HOME-01**: Homepage at / with LandingHeader and HeroSection
-- [ ] **HOME-02**: Live countdown from Convex launchConfig
-- [ ] **HOME-03**: Founding membership pill/banner visible
-- [ ] **HOME-04**: "Discover events worth attending" headline (locked copy)
-- [ ] **HOME-05**: "Get Started" CTA links to /signup
-- [ ] **HOME-06**: "Learn about our community" link points to /why-tenseats
+- [x] **HOME-01**: Homepage at / with LandingHeader and HeroSection
+- [x] **HOME-02**: Live countdown from Convex launchConfig
+- [x] **HOME-03**: Founding membership pill/banner visible
+- [x] **HOME-04**: "Discover events worth attending" headline (locked copy)
+- [x] **HOME-05**: "Get Started" CTA links to /signup
+- [x] **HOME-06**: "Learn about our community" link points to /why-tenseats
 
 ### Join Page
 
@@ -162,12 +162,12 @@
 | LAYO-04 | Phase 2 | Complete |
 | LAYO-05 | Phase 2 | Complete |
 | LAYO-06 | Phase 2 | Complete |
-| HOME-01 | Phase 3 | Pending |
-| HOME-02 | Phase 3 | Pending |
-| HOME-03 | Phase 3 | Pending |
-| HOME-04 | Phase 3 | Pending |
-| HOME-05 | Phase 3 | Pending |
-| HOME-06 | Phase 3 | Pending |
+| HOME-01 | Phase 3 | Complete |
+| HOME-02 | Phase 3 | Complete |
+| HOME-03 | Phase 3 | Complete |
+| HOME-04 | Phase 3 | Complete |
+| HOME-05 | Phase 3 | Complete |
+| HOME-06 | Phase 3 | Complete |
 | JOIN-01 | Phase 4 | Pending |
 | JOIN-02 | Phase 4 | Pending |
 | JOIN-03 | Phase 4 | Pending |

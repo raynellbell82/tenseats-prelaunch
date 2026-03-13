@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-02-PLAN.md
-last_updated: "2026-03-13T02:03:27.580Z"
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-13T02:14:00.620Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
-  completed_phases: 2
-  total_plans: 5
-  completed_plans: 5
+  completed_phases: 3
+  total_plans: 6
+  completed_plans: 6
 ---
 
 # Project State
@@ -52,6 +52,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 01-scaffold P01 | 6 | 3 tasks | 11 files |
 | Phase 01-scaffold P02 | 2 | 2 tasks | 82 files |
 | Phase 01-scaffold P03 | ~15min | 2 tasks | 8 files |
+| Phase 03-homepage P01 | 2 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,8 @@ Recent decisions affecting current work:
 - [Phase 02-layout-navigation]: SheetClose asChild wraps each mobile nav link so Sheet auto-closes on any link tap
 - [Phase 02-layout-navigation]: Theme toggle placed outside hidden md:flex nav block so it is always visible on all viewport widths
 - [Phase 02-layout-navigation]: SheetTitle with sr-only added to satisfy Radix UI accessibility requirement for DialogTitle
+- [Phase 03-homepage]: hero-section.tsx copied from main repo with /community link replaced by /why-tenseats for pre-launch site (HOME-06)
+- [Phase 03-homepage]: page.tsx is a Server Component rendering LandingHeader + HeroSection Client Components — no use client needed at page level
 
 ### Pending Todos
 
@@ -88,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T01:58:53.336Z
-Stopped at: Completed 02-02-PLAN.md
+Last session: 2026-03-13T02:14:00.618Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None
