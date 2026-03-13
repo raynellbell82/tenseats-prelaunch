@@ -46,7 +46,7 @@
 - [x] **JOIN-02**: JoinHero with "Find where locals only whisper." headline (locked copy)
 - [x] **JOIN-03**: FoodAsLanguageSection renders
 - [x] **JOIN-04**: FreeSeatSection renders
-- [x] **JOIN-05**: ReserveSpotSection renders with Stripe checkout integration
+- [x] **JOIN-05**: ReserveSpotSection renders tier cards with CTAs linking to /launch (Stripe checkout integration delivered by Phase 6 LNCH-04)
 - [x] **JOIN-06**: JoinCtaFooter renders
 
 ### Launch Flow

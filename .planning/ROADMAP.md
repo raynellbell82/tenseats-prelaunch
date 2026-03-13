@@ -70,13 +70,13 @@ Plans:
 - [ ] 03-01-PLAN.md — Copy HeroSection from source, fix /community to /why-tenseats link, wire homepage page.tsx
 
 ### Phase 4: Join Page
-**Goal**: Visitors at /join can read the Tenseats value proposition and initiate a Stripe checkout for a founding membership
+**Goal**: Visitors at /join can read the Tenseats value proposition and navigate toward founding membership checkout
 **Depends on**: Phase 2
 **Requirements**: JOIN-01, JOIN-02, JOIN-03, JOIN-04, JOIN-05, JOIN-06
 **Success Criteria** (what must be TRUE):
   1. /join renders all 5 sections: hero, food-as-language, free seat, reserve spot, CTA footer
   2. JoinHero displays "Find where locals only whisper." headline (locked copy)
-  3. ReserveSpotSection initiates a Stripe checkout session when clicked
+  3. ReserveSpotSection renders tier cards with CTAs that link to /launch
   4. Page is readable and usable at 375px viewport width
 **Plans**: 1 plan
 Plans:
