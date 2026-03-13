@@ -35,6 +35,7 @@ key-decisions:
   - "SheetClose asChild wraps each mobile nav link so Sheet auto-closes on any link tap without JS workarounds"
   - "Theme toggle positioned outside the hidden md:flex block so it is always visible on all viewports"
   - "useState(mobileOpen) used for controlled Sheet so links can close it programmatically"
+  - "SheetTitle with sr-only class added to satisfy Radix UI accessibility requirement for DialogTitle"
 
 patterns-established:
   - "Pattern: All landing page shared chrome (header/footer) lives in components/landing/ — per-page inclusion in Phase 3+"
@@ -55,10 +56,10 @@ completed: 2026-03-12
 
 ## Performance
 
-- **Duration:** ~5 min
+- **Duration:** ~10 min
 - **Started:** 2026-03-12T03:29:29Z
-- **Completed:** 2026-03-12T03:34:00Z
-- **Tasks:** 1 of 2 complete (Task 2 is human-verify checkpoint)
+- **Completed:** 2026-03-13T01:55:00Z
+- **Tasks:** 2 of 2 complete (Task 2: human-verify approved)
 - **Files modified:** 1
 
 ## Accomplishments
@@ -74,8 +75,9 @@ completed: 2026-03-12
 Each task was committed atomically:
 
 1. **Task 1: Create LandingHeader with nav links and mobile menu** - `cd4be80` (feat)
+2. **Accessibility fix (post-approval): add SheetTitle sr-only** - `cb56ea4` (fix)
 
-**Plan metadata:** pending final docs commit
+**Plan metadata:** `13e32aa` (docs: complete LandingHeader plan)
 
 ## Files Created/Modified
 
@@ -89,7 +91,20 @@ Each task was committed atomically:
 
 ## Deviations from Plan
 
-None - plan executed exactly as written. Source header was copied and modified per task spec.
+### Auto-fixed Issues
+
+**1. [Rule 2 - Missing Critical] Added SheetTitle with sr-only for Radix accessibility**
+- **Found during:** Post-approval (after Task 2 human-verify checkpoint)
+- **Issue:** Radix UI Sheet requires a DialogTitle (SheetTitle) for screen reader accessibility; its absence triggers a console warning
+- **Fix:** Added `<SheetTitle className="sr-only">Navigation menu</SheetTitle>` inside SheetContent
+- **Files modified:** components/landing/landing-header.tsx
+- **Verification:** Component renders without Radix accessibility warning
+- **Committed in:** `cb56ea4`
+
+---
+
+**Total deviations:** 1 auto-fixed (1 missing critical / accessibility)
+**Impact on plan:** Accessibility fix required for correct screen reader behavior. No scope creep.
 
 ## Issues Encountered
 
@@ -101,9 +116,10 @@ None - no external service configuration required for this plan.
 
 ## Next Phase Readiness
 
-- `LandingHeader` is ready for per-page inclusion starting in Phase 3
-- Awaiting human visual verification (Task 2 checkpoint) before marking Phase 2 complete
+- `LandingHeader` is ready for per-page inclusion starting in Phase 3 (human-verified)
+- All LAYO requirements addressed: LAYO-01/02/06 in plan 01, LAYO-03/04/05 in this plan
 - Component requires `ThemeProvider` and `ConvexClientProvider` in the tree (provided by root layout from Plan 01)
+- No blockers — Phase 2 complete
 
 ---
 *Phase: 02-layout-navigation*
