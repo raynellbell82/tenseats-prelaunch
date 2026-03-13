@@ -7,20 +7,20 @@
 
 ### Scaffold & Infrastructure
 
-- [ ] **SCAF-01**: Clone source repo to temp directory and copy all required component, convex, and lib files
+- [x] **SCAF-01**: Clone source repo to temp directory and copy all required component, convex, and lib files
 - [x] **SCAF-02**: Initialize Next.js 16.1.3 project with correct flags (no src-dir, skip-install, disable-git, use-npm)
 - [x] **SCAF-03**: Delete create-next-app boilerplate before copying source files
 - [x] **SCAF-04**: Copy config files from source (tsconfig.json, postcss.config.mjs, components.json, globals.css)
 - [x] **SCAF-05**: Create standalone next.config.ts with image domains for api.tenseats.io and unsplash
-- [ ] **SCAF-06**: Copy component directories (ui, launch, join, auth, shared/footer) from source
-- [ ] **SCAF-07**: Copy lib files (auth-client.ts, convex.tsx, utils.ts, auth-server.ts) from source
-- [ ] **SCAF-08**: Copy Convex files — full schema.ts, auth files, launch/, metros.ts, platformSettings.ts, emailTemplates.ts, webhookSigning.ts, convex.config.ts
-- [ ] **SCAF-09**: Copy convex.json from source (functions config with better-auth external package)
-- [ ] **SCAF-10**: Do NOT copy convex/http.ts — rely on existing shared HTTP router
+- [x] **SCAF-06**: Copy component directories (ui, launch, join, auth, shared/footer) from source
+- [x] **SCAF-07**: Copy lib files (auth-client.ts, convex.tsx, utils.ts, auth-server.ts) from source
+- [x] **SCAF-08**: Copy Convex files — full schema.ts, auth files, launch/, metros.ts, platformSettings.ts, emailTemplates.ts, webhookSigning.ts, convex.config.ts
+- [x] **SCAF-09**: Copy convex.json from source (functions config with better-auth external package)
+- [x] **SCAF-10**: Do NOT copy convex/http.ts — rely on existing shared HTTP router
 - [x] **SCAF-11**: Derive package.json from source with only name and scripts.dev changed, run npm install
 - [ ] **SCAF-12**: Create .env.local with all required env vars (Convex, Stripe, Better Auth, n8n)
 - [ ] **SCAF-13**: Connect to existing Convex deployment via CONVEX_DEPLOYMENT env var, generate _generated/ types
-- [ ] **SCAF-14**: Create auth API route at app/api/auth/[...all]/route.ts from source
+- [x] **SCAF-14**: Create auth API route at app/api/auth/[...all]/route.ts from source
 
 ### Layout & Navigation
 
@@ -142,20 +142,20 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SCAF-01 | Phase 1 | Pending |
+| SCAF-01 | Phase 1 | Complete |
 | SCAF-02 | Phase 1 | Complete |
 | SCAF-03 | Phase 1 | Complete |
 | SCAF-04 | Phase 1 | Complete |
 | SCAF-05 | Phase 1 | Complete |
-| SCAF-06 | Phase 1 | Pending |
-| SCAF-07 | Phase 1 | Pending |
-| SCAF-08 | Phase 1 | Pending |
-| SCAF-09 | Phase 1 | Pending |
-| SCAF-10 | Phase 1 | Pending |
+| SCAF-06 | Phase 1 | Complete |
+| SCAF-07 | Phase 1 | Complete |
+| SCAF-08 | Phase 1 | Complete |
+| SCAF-09 | Phase 1 | Complete |
+| SCAF-10 | Phase 1 | Complete |
 | SCAF-11 | Phase 1 | Complete |
 | SCAF-12 | Phase 1 | Pending |
 | SCAF-13 | Phase 1 | Pending |
-| SCAF-14 | Phase 1 | Pending |
+| SCAF-14 | Phase 1 | Complete |
 | LAYO-01 | Phase 2 | Pending |
 | LAYO-02 | Phase 2 | Pending |
 | LAYO-03 | Phase 2 | Pending |
