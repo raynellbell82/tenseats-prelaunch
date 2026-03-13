@@ -108,7 +108,10 @@ Plans:
   4. Clicking checkout creates a Stripe session and redirects to Stripe
   5. After successful payment, /launch/success renders confirmation
   6. Visiting /launch/expired with an expired session renders the expired page
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 06-01-PLAN.md — Create /launch page with city search, slot grid, queue signup and /launch/queue page with queue status
+- [ ] 06-02-PLAN.md — Create /launch/checkout with tier selector and Stripe redirect, /launch/success confirmation, /launch/expired with rejoin
 
 ### Phase 7: City Pages
 **Goal**: All 32 metro landing pages exist, are statically generated, contain city-specific copy and personas, and each drives visitors toward /launch
@@ -161,7 +164,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 3. Homepage | 1/1 | Complete   | 2026-03-13 |
 | 4. Join Page | 2/2 | Complete   | 2026-03-13 |
 | 5. Auth | 2/2 | Complete   | 2026-03-13 |
-| 6. Launch Flow | 0/TBD | Not started | - |
+| 6. Launch Flow | 0/2 | Not started | - |
 | 7. City Pages | 0/TBD | Not started | - |
 | 8. Why Tenseats Page | 0/TBD | Not started | - |
 | 9. SEO, Deployment & Copy QA | 0/TBD | Not started | - |
