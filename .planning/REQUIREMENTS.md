@@ -104,12 +104,12 @@
 
 ### Brand & Copy Compliance
 
-- [ ] **COPY-01**: "Insider" always capital I in all components
-- [ ] **COPY-02**: "restaurant" never appears in hero headlines or subheadlines
-- [ ] **COPY-03**: Competitors (Yelp, Eventbrite, OpenTable) not named in hero copy
-- [ ] **COPY-04**: All subheadlines under 25-word hard max
-- [ ] **COPY-05**: Forbidden adjectives (amazing, incredible, unique, best-in-class, world-class, revolutionary) not used
-- [ ] **COPY-06**: Discovery mechanic language used (whisper, hidden, local, access, invitation, unlisted, off-menu)
+- [x] **COPY-01**: "Insider" always capital I in all components
+- [x] **COPY-02**: "restaurant" never appears in hero headlines or subheadlines
+- [x] **COPY-03**: Competitors (Yelp, Eventbrite, OpenTable) not named in hero copy
+- [x] **COPY-04**: All subheadlines under 25-word hard max
+- [x] **COPY-05**: Forbidden adjectives (amazing, incredible, unique, best-in-class, world-class, revolutionary) not used
+- [x] **COPY-06**: Discovery mechanic language used (whisper, hidden, local, access, invitation, unlisted, off-menu)
 
 ## v2 Requirements
 
@@ -212,12 +212,12 @@
 | DEPL-05 | Phase 9 | Pending |
 | DEPL-06 | Phase 9 | Pending |
 | DEPL-07 | Phase 9 | Pending |
-| COPY-01 | Phase 9 | Pending |
-| COPY-02 | Phase 9 | Pending |
-| COPY-03 | Phase 9 | Pending |
-| COPY-04 | Phase 9 | Pending |
-| COPY-05 | Phase 9 | Pending |
-| COPY-06 | Phase 9 | Pending |
+| COPY-01 | Phase 9 | Complete |
+| COPY-02 | Phase 9 | Complete |
+| COPY-03 | Phase 9 | Complete |
+| COPY-04 | Phase 9 | Complete |
+| COPY-05 | Phase 9 | Complete |
+| COPY-06 | Phase 9 | Complete |
 
 **Coverage:**
 - v1 requirements: 76 total
