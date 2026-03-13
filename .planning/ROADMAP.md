@@ -65,7 +65,9 @@ Plans:
   3. Founding membership pill/banner is visible on the page
   4. "Get Started" CTA navigates to /signup
   5. "Learn about our community" link navigates to /why-tenseats
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Copy HeroSection from source, fix /community to /why-tenseats link, wire homepage page.tsx
 
 ### Phase 4: Join Page
 **Goal**: Visitors at /join can read the Tenseats value proposition and initiate a Stripe checkout for a founding membership
@@ -151,7 +153,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 3/3 | Complete   | 2026-03-13 |
 | 2. Layout & Navigation | 2/2 | Complete   | 2026-03-13 |
-| 3. Homepage | 0/TBD | Not started | - |
+| 3. Homepage | 0/1 | Not started | - |
 | 4. Join Page | 0/TBD | Not started | - |
 | 5. Auth | 0/TBD | Not started | - |
 | 6. Launch Flow | 0/TBD | Not started | - |
