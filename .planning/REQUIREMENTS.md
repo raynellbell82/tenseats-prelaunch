@@ -42,12 +42,12 @@
 
 ### Join Page
 
-- [ ] **JOIN-01**: Join page at /join with LandingHeader
-- [ ] **JOIN-02**: JoinHero with "Find where locals only whisper." headline (locked copy)
-- [ ] **JOIN-03**: FoodAsLanguageSection renders
-- [ ] **JOIN-04**: FreeSeatSection renders
-- [ ] **JOIN-05**: ReserveSpotSection renders with Stripe checkout integration
-- [ ] **JOIN-06**: JoinCtaFooter renders
+- [x] **JOIN-01**: Join page at /join with LandingHeader
+- [x] **JOIN-02**: JoinHero with "Find where locals only whisper." headline (locked copy)
+- [x] **JOIN-03**: FoodAsLanguageSection renders
+- [x] **JOIN-04**: FreeSeatSection renders
+- [x] **JOIN-05**: ReserveSpotSection renders with Stripe checkout integration
+- [x] **JOIN-06**: JoinCtaFooter renders
 
 ### Launch Flow
 
@@ -168,12 +168,12 @@
 | HOME-04 | Phase 3 | Complete |
 | HOME-05 | Phase 3 | Complete |
 | HOME-06 | Phase 3 | Complete |
-| JOIN-01 | Phase 4 | Pending |
-| JOIN-02 | Phase 4 | Pending |
-| JOIN-03 | Phase 4 | Pending |
-| JOIN-04 | Phase 4 | Pending |
-| JOIN-05 | Phase 4 | Pending |
-| JOIN-06 | Phase 4 | Pending |
+| JOIN-01 | Phase 4 | Complete |
+| JOIN-02 | Phase 4 | Complete |
+| JOIN-03 | Phase 4 | Complete |
+| JOIN-04 | Phase 4 | Complete |
+| JOIN-05 | Phase 4 | Complete |
+| JOIN-06 | Phase 4 | Complete |
 | AUTH-01 | Phase 5 | Pending |
 | AUTH-02 | Phase 5 | Pending |
 | AUTH-03 | Phase 5 | Pending |

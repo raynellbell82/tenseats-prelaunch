@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Scaffold** - Copy source files, init project, connect to shared Convex deployment (completed 2026-03-13)
 - [x] **Phase 2: Layout & Navigation** - Root layout, providers, landing header, footer (completed 2026-03-13)
 - [x] **Phase 3: Homepage** - Hero, countdown, founding banner, CTAs at / (completed 2026-03-13)
-- [ ] **Phase 4: Join Page** - 5-section join page with Stripe checkout at /join
+- [x] **Phase 4: Join Page** - 5-section join page with Stripe checkout at /join (completed 2026-03-13)
 - [ ] **Phase 5: Auth** - OTP signup/login, session persistence at /signup and /login
 - [ ] **Phase 6: Launch Flow** - City search, slot grid, queue, Stripe checkout, success/expired pages
 - [ ] **Phase 7: City Pages** - 32 metro pages with city data, static generation, per-city SEO
@@ -156,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 1. Scaffold | 3/3 | Complete   | 2026-03-13 |
 | 2. Layout & Navigation | 2/2 | Complete   | 2026-03-13 |
 | 3. Homepage | 1/1 | Complete   | 2026-03-13 |
-| 4. Join Page | 0/1 | Not started | - |
+| 4. Join Page | 1/1 | Complete   | 2026-03-13 |
 | 5. Auth | 0/TBD | Not started | - |
 | 6. Launch Flow | 0/TBD | Not started | - |
 | 7. City Pages | 0/TBD | Not started | - |
