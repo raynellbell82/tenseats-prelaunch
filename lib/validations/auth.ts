@@ -66,8 +66,7 @@ export type SignupFormData = z.infer<typeof signupSchema>;
 
 // Login schema
 export const loginSchema = z.object({
-  emailOrPhone: z.string().min(1, "Email or phone is required"),
-  password: z.string().min(1, "Password is required"),
+  email: z.string().email("Please enter a valid email address"),
 });
 
 export type LoginFormData = z.infer<typeof loginSchema>;
