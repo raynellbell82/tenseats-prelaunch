@@ -156,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 1. Scaffold | 3/3 | Complete   | 2026-03-13 |
 | 2. Layout & Navigation | 2/2 | Complete   | 2026-03-13 |
 | 3. Homepage | 1/1 | Complete   | 2026-03-13 |
-| 4. Join Page | 1/1 | Complete   | 2026-03-13 |
+| 4. Join Page | 2/2 | Complete   | 2026-03-13 |
 | 5. Auth | 0/TBD | Not started | - |
 | 6. Launch Flow | 0/TBD | Not started | - |
 | 7. City Pages | 0/TBD | Not started | - |
