@@ -150,13 +150,17 @@ Plans:
 **Depends on**: Phase 7, Phase 8
 **Requirements**: DEPL-01, DEPL-02, DEPL-03, DEPL-04, DEPL-05, DEPL-06, DEPL-07, COPY-01, COPY-02, COPY-03, COPY-04, COPY-05, COPY-06
 **Success Criteria** (what must be TRUE):
-  1. /sitemap.xml returns 34 URLs (homepage + join + why + launch + 32 city pages)
+  1. /sitemap.xml returns 36 URLs (homepage + join + why-tenseats + launch + 32 city pages)
   2. /robots.txt allows all crawlers and references the sitemap
   3. `docker build` completes with standalone Next.js output
   4. `npm run build` exits with zero TypeScript errors and zero console errors in the browser
   5. No page at 375px viewport has horizontal overflow
   6. Search through all rendered copy finds zero instances of forbidden adjectives, "restaurant" in heroes, or lowercase "insider"
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 09-01-PLAN.md — Create sitemap.ts, robots.ts, health check endpoint, Dockerfile and .dockerignore
+- [ ] 09-02-PLAN.md — Audit and fix all consumer-facing copy for brand compliance (COPY-01 through COPY-06)
+- [ ] 09-03-PLAN.md — Run production build, fix errors, verify console and mobile viewport (human checkpoint)
 
 ## Progress
 
@@ -173,4 +177,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 6. Launch Flow | 2/2 | Complete   | 2026-03-13 |
 | 7. City Pages | 2/2 | Complete   | 2026-03-13 |
 | 8. Why Tenseats Page | 2/2 | Complete   | 2026-03-13 |
-| 9. SEO, Deployment & Copy QA | 0/TBD | Not started | - |
+| 9. SEO, Deployment & Copy QA | 0/3 | Not started | - |
