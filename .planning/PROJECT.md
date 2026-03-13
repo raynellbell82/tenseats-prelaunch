@@ -30,7 +30,15 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ### Active
 
-(None — next milestone not yet planned)
+## Current Milestone: v1.1 City Persona Copy
+
+**Goal:** Expand every city page to show all 6 persona cards with culturally-specific copy that reflects each city's unique food, drink, and hospitality scene.
+
+**Target features:**
+- All 6 personas (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator) on every city page
+- City-specific persona copy researched and written per the tenseats-copy-writer skill
+- Cultural authenticity — each city's food/drink identity reflected in persona descriptions
+- Component update to render 6 cards (currently 2-3) in responsive grid
 
 ### Out of Scope
 
@@ -86,4 +94,4 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 | Queue signup pre-auth | Join queue before creating auth account | ⚠️ Revisit (session guard conflict) |
 
 ---
-*Last updated: 2026-03-13 after v1.0 milestone*
+*Last updated: 2026-03-13 after v1.1 milestone start*
