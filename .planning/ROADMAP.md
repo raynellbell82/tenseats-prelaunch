@@ -124,7 +124,10 @@ Plans:
   4. Three food scene blocks display for each city
   5. Three persona role cards display for each city, each linking to /join
   6. Per-city meta title and description are present in the page head
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 07-01-PLAN.md — Create lib/city-data.ts with CityData type, METROS_DATA re-export, and all 32 city entries
+- [ ] 07-02-PLAN.md — Create 4 city components (hero, food scene, personas, reserve) and city page route with static generation
 
 ### Phase 8: Why Tenseats Page
 **Goal**: Visitors at /why-tenseats understand what Tenseats is, who it's for, and why the economics are different — and are moved to act
@@ -165,6 +168,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 4. Join Page | 2/2 | Complete   | 2026-03-13 |
 | 5. Auth | 2/2 | Complete   | 2026-03-13 |
 | 6. Launch Flow | 2/2 | Complete   | 2026-03-13 |
-| 7. City Pages | 0/TBD | Not started | - |
+| 7. City Pages | 0/2 | Not started | - |
 | 8. Why Tenseats Page | 0/TBD | Not started | - |
 | 9. SEO, Deployment & Copy QA | 0/TBD | Not started | - |
