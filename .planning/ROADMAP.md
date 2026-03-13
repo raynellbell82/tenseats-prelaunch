@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Layout & Navigation** - Root layout, providers, landing header, footer (completed 2026-03-13)
 - [x] **Phase 3: Homepage** - Hero, countdown, founding banner, CTAs at / (completed 2026-03-13)
 - [x] **Phase 4: Join Page** - 5-section join page with Stripe checkout at /join (completed 2026-03-13)
-- [ ] **Phase 5: Auth** - OTP signup/login, session persistence at /signup and /login
+- [x] **Phase 5: Auth** - OTP signup/login, session persistence at /signup and /login (completed 2026-03-13)
 - [ ] **Phase 6: Launch Flow** - City search, slot grid, queue, Stripe checkout, success/expired pages
 - [ ] **Phase 7: City Pages** - 32 metro pages with city data, static generation, per-city SEO
 - [ ] **Phase 8: Why Tenseats Page** - Brand story page with personas, economics table at /why-tenseats
@@ -160,7 +160,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 2. Layout & Navigation | 2/2 | Complete   | 2026-03-13 |
 | 3. Homepage | 1/1 | Complete   | 2026-03-13 |
 | 4. Join Page | 2/2 | Complete   | 2026-03-13 |
-| 5. Auth | 1/2 | In progress | - |
+| 5. Auth | 2/2 | Complete   | 2026-03-13 |
 | 6. Launch Flow | 0/TBD | Not started | - |
 | 7. City Pages | 0/TBD | Not started | - |
 | 8. Why Tenseats Page | 0/TBD | Not started | - |
