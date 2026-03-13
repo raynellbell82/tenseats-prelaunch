@@ -9,9 +9,9 @@ Requirements for city persona copy expansion.
 
 ### Copy
 
-- [ ] **COPY-01**: Each city page displays all 6 persona cards (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator) with city-specific headline and description
-- [ ] **COPY-02**: Persona copy goes beyond surface-level food culture — references the lesser-known scene, small-scale operators, underground dining, neighborhood-level food movements, and cultural specifics that locals (not tourists) would recognize
-- [ ] **COPY-03**: All persona copy passes tenseats-copy-writer brand compliance
+- [x] **COPY-01**: Each city page displays all 6 persona cards (Guest, Chef, Mixologist, Curator, Venue Host, Facilitator) with city-specific headline and description
+- [x] **COPY-02**: Persona copy goes beyond surface-level food culture — references the lesser-known scene, small-scale operators, underground dining, neighborhood-level food movements, and cultural specifics that locals (not tourists) would recognize
+- [x] **COPY-03**: All persona copy passes tenseats-copy-writer brand compliance
 
 ### Component
 
@@ -21,7 +21,7 @@ Requirements for city persona copy expansion.
 
 ### Data
 
-- [ ] **DATA-01**: `topPersonas` array in city-data.ts expanded to 6 entries per city for all 32 cities
+- [x] **DATA-01**: `topPersonas` array in city-data.ts expanded to 6 entries per city for all 32 cities
 - [x] **DATA-02**: CityData type updated to include "facilitator" in the role union
 
 ## Future Requirements
@@ -41,13 +41,13 @@ None — focused milestone.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| COPY-01 | Phase 13 | Pending |
-| COPY-02 | Phase 13 | Pending |
-| COPY-03 | Phase 13 | Pending |
+| COPY-01 | Phase 13 | Complete |
+| COPY-02 | Phase 13 | Complete |
+| COPY-03 | Phase 13 | Complete |
 | COMP-01 | Phase 12 | Complete |
 | COMP-02 | Phase 12 | Complete |
 | COMP-03 | Phase 12 | Complete |
-| DATA-01 | Phase 13 | Pending |
+| DATA-01 | Phase 13 | Complete |
 | DATA-02 | Phase 12 | Complete |
 
 **Coverage:**
