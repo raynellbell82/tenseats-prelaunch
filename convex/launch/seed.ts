@@ -1,6 +1,12 @@
 import { mutation, internalMutation } from "../_generated/server";
-import { internal } from "../_generated/api";
+import type { FunctionReference } from "convex/server";
 import { v } from "convex/values";
+
+// closeLifetimeOffer lives in seedInternal.ts to avoid a circular type
+// reference: if it were defined here, seed.ts would reference
+// internal.launch.seed (itself) which prevents TypeScript from inferring
+// the type of seedLaunchConfig.
+export { closeLifetimeOffer } from "./seedInternal";
 
 const CATEGORIES = [
   "chef",
@@ -10,24 +16,18 @@ const CATEGORIES = [
   "guest",
 ] as const;
 
-/**
- * Scheduled internal mutation that closes the lifetime offer.
- * Fired by the scheduler at the configured deadline.
- */
-export const closeLifetimeOffer = internalMutation({
-  args: {},
-  returns: v.null(),
-  handler: async (ctx) => {
-    const config = await ctx.db.query("launchConfig").first();
-    if (!config) return null;
+// Type alias for the closeLifetimeOffer scheduler reference.
+// Using FunctionReference directly avoids the circular import.
+type CloseLifetimeOfferFn = FunctionReference<"mutation", "internal", Record<string, never>, null>;
 
-    await ctx.db.patch(config._id, {
-      isLifetimeOfferActive: false,
-      updatedAt: Date.now(),
-    });
-    return null;
-  },
-});
+// Lazily resolve the internal reference to avoid circular type dependency.
+// At runtime, internal.launch.seedInternal.closeLifetimeOffer resolves correctly
+// via anyApi in api.js.
+function getCloseLifetimeOfferRef(): CloseLifetimeOfferFn {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { internal } = require("../_generated/api");
+  return internal.launch.seedInternal.closeLifetimeOffer as CloseLifetimeOfferFn;
+}
 
 /**
  * Enable all launch feature flags.
@@ -55,7 +55,7 @@ export const enableFeatureFlags = internalMutation({
  * Idempotent: skips if a config already exists.
  * Schedules closeLifetimeOffer to run at the deadline.
  */
-export const seedLaunchConfig: typeof mutation = mutation({
+export const seedLaunchConfig = mutation({
   args: { deadline: v.optional(v.number()) },
   returns: v.object({ skipped: v.boolean(), id: v.id("launchConfig") }),
   handler: async (ctx, args) => {
@@ -68,7 +68,7 @@ export const seedLaunchConfig: typeof mutation = mutation({
 
     const scheduleId = await ctx.scheduler.runAt(
       deadline,
-      internal.launch.seed.closeLifetimeOffer,
+      getCloseLifetimeOfferRef(),
       {},
     );
 

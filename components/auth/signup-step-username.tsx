@@ -1,10 +1,7 @@
 "use client";
 
 import { useFormContext } from "react-hook-form";
-import { useQuery } from "convex/react";
-import { ArrowLeft, Check, X, Loader2 } from "lucide-react";
-import { api } from "@/convex/_generated/api";
-import { useDebounce } from "@/lib/hooks/use-debounce";
+import { ArrowLeft } from "lucide-react";
 import {
   FormField,
   FormItem,
@@ -22,22 +19,7 @@ interface UsernameStepProps {
 }
 
 export function UsernameStep({ onNext, onBack }: UsernameStepProps) {
-  const { control, watch } = useFormContext<SignupFormData>();
-  const username = watch("username");
-  const debouncedUsername = useDebounce(username, 500);
-
-  // Skip query if username is empty or too short
-  const shouldCheck = debouncedUsername && debouncedUsername.length >= 3;
-
-  const availabilityResult = useQuery(
-    api.users.checkUsernameAvailability,
-    shouldCheck ? { username: debouncedUsername } : "skip"
-  );
-
-  // Determine availability status
-  const isChecking = shouldCheck && availabilityResult === undefined;
-  const isAvailable = availabilityResult?.available === true;
-  const isUnavailable = availabilityResult?.available === false;
+  const { control } = useFormContext<SignupFormData>();
 
   return (
     <div className="space-y-4">
@@ -48,41 +30,14 @@ export function UsernameStep({ onNext, onBack }: UsernameStepProps) {
           <FormItem>
             <FormLabel>Username</FormLabel>
             <FormControl>
-              <div className="relative">
-                <Input
-                  type="text"
-                  placeholder="your_username"
-                  autoComplete="username"
-                  {...field}
-                />
-                {shouldCheck && (
-                  <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                    {isChecking && (
-                      <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
-                    )}
-                    {isAvailable && (
-                      <Check className="h-4 w-4 text-green-600" />
-                    )}
-                    {isUnavailable && (
-                      <X className="h-4 w-4 text-destructive" />
-                    )}
-                  </div>
-                )}
-              </div>
+              <Input
+                type="text"
+                placeholder="your_username"
+                autoComplete="username"
+                {...field}
+              />
             </FormControl>
             <FormMessage />
-            {/* Availability feedback */}
-            {shouldCheck && !isChecking && (
-              <p
-                className={`text-sm ${
-                  isAvailable ? "text-green-600" : "text-destructive"
-                }`}
-              >
-                {isAvailable
-                  ? "Username is available"
-                  : "Username is already taken"}
-              </p>
-            )}
           </FormItem>
         )}
       />

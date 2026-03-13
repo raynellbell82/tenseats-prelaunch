@@ -20,16 +20,21 @@ import type * as launch_queueActions from "../launch/queueActions.js";
 import type * as launch_queueEmail from "../launch/queueEmail.js";
 import type * as launch_queueInternal from "../launch/queueInternal.js";
 import type * as launch_seed from "../launch/seed.js";
+import type * as launch_seedInternal from "../launch/seedInternal.js";
+import type * as mcpServers from "../mcpServers.js";
 import type * as metros from "../metros.js";
 import type * as notificationHelpers from "../notificationHelpers.js";
 import type * as platformSettings from "../platformSettings.js";
 import type * as webhookSigning from "../webhookSigning.js";
+import type * as stripeWebhooks from "../stripeWebhooks.js";
+import type * as emailUtilities from "../emailUtilities.js";
 import { ApiFromModules, FilterApi, FunctionReference } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   authHelpers: typeof authHelpers;
   emailTemplates: typeof emailTemplates;
+  emailUtilities: typeof emailUtilities;
   "launch/membershipCheckout": typeof launch_membershipCheckout;
   "launch/membershipFulfillment": typeof launch_membershipFulfillment;
   "launch/membershipWebhooks": typeof launch_membershipWebhooks;
@@ -39,9 +44,12 @@ declare const fullApi: ApiFromModules<{
   "launch/queueEmail": typeof launch_queueEmail;
   "launch/queueInternal": typeof launch_queueInternal;
   "launch/seed": typeof launch_seed;
+  "launch/seedInternal": typeof launch_seedInternal;
+  mcpServers: typeof mcpServers;
   metros: typeof metros;
   notificationHelpers: typeof notificationHelpers;
   platformSettings: typeof platformSettings;
+  stripeWebhooks: typeof stripeWebhooks;
   webhookSigning: typeof webhookSigning;
 }>;
 
