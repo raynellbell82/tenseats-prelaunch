@@ -32,7 +32,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 **Milestone Goal:** Expand every city page to show all 6 persona cards with culturally-specific copy reflecting each city's unique food, drink, and hospitality scene.
 
 - [x] **Phase 12: Persona Component Foundation** - Update types, component, and icon maps to support all 6 personas including Facilitator (completed 2026-03-13)
-- [ ] **Phase 13: City Persona Copy** - Research and write city-specific persona copy for all 32 cities × 6 personas
+- [x] **Phase 13: City Persona Copy** - Research and write city-specific persona copy for all 32 cities × 6 personas (completed 2026-03-13)
 
 ## Phase Details
 
@@ -58,7 +58,7 @@ Plans:
   2. Each city's persona descriptions reference that city's specific food/drink subculture (local neighborhoods, underground scenes, regional ingredients, or small operators) rather than generic claims any city could make
   3. All 192 persona entries (32 cities × 6 roles) pass tenseats-copy-writer brand compliance — no forbidden adjectives, no claims that contradict brand voice
   4. The topPersonas array in city-data.ts contains exactly 6 entries per city across all 32 metros
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 Plans:
 - [ ] 13-01-PLAN.md — Write persona copy for cities 1-11 (Chicago through Dallas)
 - [ ] 13-02-PLAN.md — Write persona copy for cities 12-22 (Detroit through Scottsdale)
@@ -81,4 +81,4 @@ Plans:
 | 10. Wire City Slug to Launch Flow | v1.0 | 1/1 | Complete | 2026-03-13 |
 | 11. Nav & Auth Wiring Fixes | v1.0 | 1/1 | Complete | 2026-03-13 |
 | 12. Persona Component Foundation | 1/1 | Complete    | 2026-03-13 | - |
-| 13. City Persona Copy | 2/3 | In Progress|  | - |
+| 13. City Persona Copy | 3/3 | Complete   | 2026-03-13 | - |
