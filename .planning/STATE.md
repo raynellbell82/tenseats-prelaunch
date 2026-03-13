@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 06-01-PLAN.md
-last_updated: "2026-03-13T03:35:52.021Z"
+stopped_at: Completed 06-02-PLAN.md
+last_updated: "2026-03-13T03:36:53.438Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
-  completed_phases: 5
+  completed_phases: 6
   total_plans: 12
-  completed_plans: 11
+  completed_plans: 12
 ---
 
 # Project State
@@ -59,6 +59,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 05-auth P01 | 10 | 3 tasks | 8 files |
 | Phase 05-auth P02 | 1 | 2 tasks | 3 files |
 | Phase 06-launch-flow P01 | 5 | 2 tasks | 3 files |
+| Phase 06-launch-flow P02 | 3 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -99,6 +100,8 @@ Recent decisions affecting current work:
 - [Phase 05-auth]: Login page reduced to plain Server Component — removed Suspense, searchParams, and password-reset banner
 - [Phase 06-launch-flow]: LaunchPageContent extracted to separate file (launch-page-content.tsx) in route dir — keeps page.tsx clean Server Component
 - [Phase 06-launch-flow]: searchParams awaited in async Server Component then passed as initialCitySlug prop to LaunchPageContent (Next.js 15 async searchParams pattern)
+- [Phase 06-launch-flow]: checkout-page-content reads preRegistrationId from sessionStorage first, URL searchParams second — handles Stripe cancel_url redirect
+- [Phase 06-launch-flow]: useAction (not useMutation) for createMembershipCheckout Convex action that hits Stripe API
 
 ### Pending Todos
 
@@ -110,6 +113,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T03:35:52.019Z
-Stopped at: Completed 06-01-PLAN.md
+Last session: 2026-03-13T03:36:53.435Z
+Stopped at: Completed 06-02-PLAN.md
 Resume file: None

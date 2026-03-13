@@ -54,11 +54,11 @@
 - [x] **LNCH-01**: Launch page at /launch with city search
 - [x] **LNCH-02**: Slot grid shows available slots for selected city
 - [x] **LNCH-03**: Queue signup form submits to Convex
-- [ ] **LNCH-04**: Stripe checkout creates session and redirects
-- [ ] **LNCH-05**: Success page at /launch/success after payment
-- [ ] **LNCH-06**: Expired page at /launch/expired for expired sessions
+- [x] **LNCH-04**: Stripe checkout creates session and redirects
+- [x] **LNCH-05**: Success page at /launch/success after payment
+- [x] **LNCH-06**: Expired page at /launch/expired for expired sessions
 - [x] **LNCH-07**: Queue page at /launch/queue shows position
-- [ ] **LNCH-08**: Checkout page at /launch/checkout
+- [x] **LNCH-08**: Checkout page at /launch/checkout
 
 ### Auth
 
@@ -182,11 +182,11 @@
 | LNCH-01 | Phase 6 | Complete |
 | LNCH-02 | Phase 6 | Complete |
 | LNCH-03 | Phase 6 | Complete |
-| LNCH-04 | Phase 6 | Pending |
-| LNCH-05 | Phase 6 | Pending |
-| LNCH-06 | Phase 6 | Pending |
+| LNCH-04 | Phase 6 | Complete |
+| LNCH-05 | Phase 6 | Complete |
+| LNCH-06 | Phase 6 | Complete |
 | LNCH-07 | Phase 6 | Complete |
-| LNCH-08 | Phase 6 | Pending |
+| LNCH-08 | Phase 6 | Complete |
 | CITY-01 | Phase 7 | Pending |
 | CITY-02 | Phase 7 | Pending |
 | CITY-03 | Phase 7 | Pending |
