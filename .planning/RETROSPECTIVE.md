@@ -45,6 +45,44 @@
 
 ---
 
+## Milestone: v1.1 — City Persona Copy
+
+**Shipped:** 2026-03-13
+**Phases:** 2 | **Plans:** 4 | **Commits:** 19
+
+### What Was Built
+- Shared PersonaCard component with 6 custom monoline SVG icons and framer-motion scroll animations
+- Facilitator added as 6th persona role across type system, icon map, and display map
+- 192 culturally-specific persona descriptions (32 cities × 6 roles) with neighborhood-level specificity
+- Brand compliance validation — zero forbidden adjectives across all persona copy
+
+### What Worked
+- Sequential wave execution (3 waves on same file) avoided merge conflicts — each wave picked up where the last left off
+- Research phase pre-computed which roles were missing per city, so execution agents didn't need to analyze the data file
+- Auto-correcting data deviations (Pittsburgh already had venueHost, 3 pre-existing "restaurant" violations) kept plans moving without human intervention
+- Plan 13-03 validation task caught and fixed issues created by earlier plans — verification-at-end pattern works
+
+### What Was Inefficient
+- 3 separate plans for a single file (lib/city-data.ts) meant 3 sequential waves — could have been 2 waves or even 1 plan with more tasks
+- Research phase listed role gaps that didn't match actual file state (Pittsburgh, Philadelphia) — research accuracy vs codebase reality gap
+
+### Patterns Established
+- Canonical persona role order enforced: guest → chef → mixologist → curator → venueHost → facilitator
+- Replace full arrays (not append-only) when enforcing order constraints
+- Copy spot-checks: 5 random cities sampled for cultural specificity verification
+
+### Key Lessons
+1. When all plans modify the same file, sequential waves are forced regardless of parallelization setting — plan structure should account for file-level dependencies
+2. Research-generated gap lists should be verified against actual codebase state before planning — stale research creates in-execution deviations
+3. Brand compliance validation as a dedicated task (not just per-plan checks) catches cross-plan issues efficiently
+
+### Cost Observations
+- Model mix: Orchestration on opus, execution and verification on sonnet
+- Entire v1.1 built in ~1.2 hours (including research, planning, execution, verification, audit)
+- Notable: 192 persona entries written and validated in 3 execution sessions (~27 min total execution)
+
+---
+
 ## Cross-Milestone Trends
 
 ### Process Evolution
@@ -52,8 +90,10 @@
 | Milestone | Commits | Phases | Key Change |
 |-----------|---------|--------|------------|
 | v1.0 | 109 | 12 | Initial build — copy-from-source with shared backend |
+| v1.1 | 19 | 2 | Content-focused milestone — data expansion with brand compliance |
 
 ### Top Lessons (Verified Across Milestones)
 
 1. Integration testing across phase boundaries catches issues that per-phase verification misses
 2. Copy-from-source projects need early schema validation against the shared deployment
+3. Research accuracy degrades with codebase changes — always verify research against actual file state before execution
