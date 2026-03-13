@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-03-13T02:49:12.275Z"
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-13T03:03:23.521Z"
 last_activity: "2026-03-12 — Completed Phase 2 Plan 01: Providers and root layout"
 progress:
   total_phases: 9
-  completed_phases: 4
-  total_plans: 8
-  completed_plans: 8
+  completed_phases: 5
+  total_plans: 9
+  completed_plans: 9
 ---
 
 # Project State
@@ -56,6 +56,7 @@ Progress: [██████████░░░░░░░░░░] Phase 1
 | Phase 04-join-page P01 | 5 | 1 tasks | 1 files |
 | Phase 04-join-page P01 | 30 | 2 tasks | 1 files |
 | Phase 04-join-page P02 | 2 | 2 tasks | 3 files |
+| Phase 05-auth P01 | 10 | 3 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -89,6 +90,9 @@ Recent decisions affecting current work:
 - [Phase 04-join-page]: No wrapper divs or extra styles at page level — each component manages its own layout
 - [Phase 04-join-page]: Stripe checkout integration is Phase 6 LNCH-04 scope — Phase 4 join page correctly renders tier cards with CTAs linking to /launch
 - [Phase 04-join-page]: Phase 4 gap was a documentation mismatch not missing implementation — resolved by doc update not code change
+- [Phase 05-auth]: Auth layout uses LandingHeader (not Navbar) — consistent with pre-launch pattern
+- [Phase 05-auth]: verify-email page is Client Component — requires useSession and useSearchParams hooks
+- [Phase 05-auth]: signup-wizard callbackURL patched from /feed to / — pre-launch has no /feed route
 
 ### Pending Todos
 
@@ -100,6 +104,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T02:46:12.230Z
-Stopped at: Completed 04-02-PLAN.md
+Last session: 2026-03-13T03:03:23.519Z
+Stopped at: Completed 05-01-PLAN.md
 Resume file: None

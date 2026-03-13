@@ -62,11 +62,11 @@
 
 ### Auth
 
-- [ ] **AUTH-01**: Signup page at /signup with OTP email flow
-- [ ] **AUTH-02**: Login page at /login with OTP email flow
-- [ ] **AUTH-03**: Email verification via Better Auth OTP
-- [ ] **AUTH-04**: Session persists across browser refresh
-- [ ] **AUTH-05**: Auth layout with centered form, LandingHeader
+- [x] **AUTH-01**: Signup page at /signup with OTP email flow
+- [x] **AUTH-02**: Login page at /login with OTP email flow
+- [x] **AUTH-03**: Email verification via Better Auth OTP
+- [x] **AUTH-04**: Session persists across browser refresh
+- [x] **AUTH-05**: Auth layout with centered form, LandingHeader
 
 ### City Pages
 
@@ -174,11 +174,11 @@
 | JOIN-04 | Phase 4 | Complete |
 | JOIN-05 | Phase 4 | Complete |
 | JOIN-06 | Phase 4 | Complete |
-| AUTH-01 | Phase 5 | Pending |
-| AUTH-02 | Phase 5 | Pending |
-| AUTH-03 | Phase 5 | Pending |
-| AUTH-04 | Phase 5 | Pending |
-| AUTH-05 | Phase 5 | Pending |
+| AUTH-01 | Phase 5 | Complete |
+| AUTH-02 | Phase 5 | Complete |
+| AUTH-03 | Phase 5 | Complete |
+| AUTH-04 | Phase 5 | Complete |
+| AUTH-05 | Phase 5 | Complete |
 | LNCH-01 | Phase 6 | Pending |
 | LNCH-02 | Phase 6 | Pending |
 | LNCH-03 | Phase 6 | Pending |
