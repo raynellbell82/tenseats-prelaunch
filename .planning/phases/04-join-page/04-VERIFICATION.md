@@ -3,7 +3,12 @@ phase: 04-join-page
 verified: 2026-03-12T00:00:00Z
 status: passed
 score: 4/4 success criteria verified
-re_verification: true
+re_verification:
+  previous_status: passed
+  previous_score: 4/4
+  gaps_closed: []
+  gaps_remaining: []
+  regressions: []
 human_verification:
   - test: "Verify /join renders correctly at 375px viewport"
     expected: "All 5 sections visible, no horizontal overflow, readable text at mobile width"
@@ -20,8 +25,8 @@ human_verification:
 
 **Phase Goal:** Visitors at /join can read the Tenseats value proposition and navigate toward founding membership checkout
 **Verified:** 2026-03-12
-**Status:** passed — all 4 success criteria verified (gap resolved by documentation scope correction)
-**Re-verification:** Yes — gap closed by updating ROADMAP and REQUIREMENTS to correctly scope Stripe checkout to Phase 6 LNCH-04
+**Status:** passed — all 4 success criteria verified, no regressions from previous verification
+**Re-verification:** Yes — regression check after prior passed verification (04-02 gap closure)
 
 ---
 
@@ -31,10 +36,10 @@ human_verification:
 
 | # | Truth | Status | Evidence |
 |---|-------|--------|----------|
-| 1 | /join renders all 5 sections: hero, food-as-language, free seat, reserve spot, CTA footer | VERIFIED | `app/join/page.tsx` imports and renders all 5 components in correct order plus LandingHeader; 19 lines, no stubs |
-| 2 | JoinHero displays "Find where locals only whisper." headline (locked copy) | VERIFIED | `join-hero.tsx` line 55-58: `<span>Find where locals</span><span>only whisper.</span>` — exact copy present |
-| 3 | ReserveSpotSection renders tier cards with CTAs that link to /launch | VERIFIED | reserve-spot-section.tsx renders Early Bird and Founding tier cards; CTAs use Link href='/launch' pointing to Phase 6 checkout flow |
-| 4 | Page is readable and usable at 375px viewport width | NEEDS HUMAN | Components use responsive Tailwind classes (`sm:` breakpoints, `max-w-` containers, `px-6`) — visual confirmation needed |
+| 1 | /join renders all 5 sections: hero, food-as-language, free seat, reserve spot, CTA footer | VERIFIED | `app/join/page.tsx` (19 lines) imports and renders all 5 components in correct order plus LandingHeader; no stubs |
+| 2 | JoinHero displays "Find where locals only whisper." headline (locked copy) | VERIFIED | `join-hero.tsx` lines 55-57: `<span className="block whitespace-nowrap">Find where locals</span><span ...>only whisper.</span>` — exact copy present |
+| 3 | ReserveSpotSection renders tier cards with CTAs that link to /launch | VERIFIED | `reserve-spot-section.tsx` renders Early Bird and Founding tier cards; both CTAs use `<Link href="/launch">` pointing to Phase 6 checkout flow |
+| 4 | Page is readable and usable at 375px viewport width | NEEDS HUMAN | Components use responsive Tailwind classes (`sm:` breakpoints, `max-w-` containers, `px-6`) — visual confirmation required |
 
 **Score:** 4/4 success criteria verified
 
@@ -44,29 +49,29 @@ human_verification:
 
 | Artifact | Expected | Status | Details |
 |----------|----------|--------|---------|
-| `app/join/page.tsx` | Join page route assembling all 5 join sections with LandingHeader | VERIFIED | 19 lines, Server Component, no "use client", imports all 6 components |
-| `components/join/join-hero.tsx` | JoinHero component with locked headline | VERIFIED | 112 lines, substantive, "use client", framer-motion animations, locked copy present |
-| `components/join/food-as-language-section.tsx` | 3 food story cards with images | VERIFIED | 72 lines, substantive, 3 blocks with Unsplash images, heading/description |
-| `components/join/free-seat-section.tsx` | 5 role tabs (Chef, Mixologist, Creator, Venue Host, Guest) | VERIFIED | 217 lines, substantive, useState for active role, all 5 roles defined |
-| `components/join/reserve-spot-section.tsx` | Tier cards + Stripe checkout | PARTIAL | 194 lines, substantive tier cards (Early Bird + Founding), Convex query for config, countdown — but CTAs link to /launch only, no Stripe checkout |
-| `components/join/join-cta-footer.tsx` | "Your city is waiting. Take your seat." CTA | VERIFIED | 57 lines, exact headline present, "Join Tenseats" button links to /signup |
-| `components/landing/landing-header.tsx` | LandingHeader | VERIFIED | File exists (Phase 2 artifact) |
+| `app/join/page.tsx` | Join page route assembling all 5 join sections with LandingHeader | VERIFIED | 19 lines, Server Component, no "use client", imports all 6 components, renders all in fragment |
+| `components/join/join-hero.tsx` | JoinHero component with locked headline | VERIFIED | 112 lines, substantive, "use client", framer-motion animations, locked copy at lines 55-57 |
+| `components/join/food-as-language-section.tsx` | 3 food story cards with Unsplash images | VERIFIED | 72 lines, substantive, 3 blocks with Unsplash image URLs, heading and description per block |
+| `components/join/free-seat-section.tsx` | 5 role tabs (Chef, Mixologist, Creator, Venue Host, Guest) | VERIFIED | 217 lines, substantive, useState for activeRole, all 5 roles defined with headline/description/perks |
+| `components/join/reserve-spot-section.tsx` | Tier cards with CTAs linking to /launch | VERIFIED | 194 lines, substantive, useQuery(api.launch.queue.getLaunchConfig), Early Bird and Founding tiers, both CTAs `<Link href="/launch">` |
+| `components/join/join-cta-footer.tsx` | "Your city is waiting. Take your seat." CTA | VERIFIED | 57 lines, exact headline at lines 18-20, "Join Tenseats" button links to /signup |
+| `components/landing/landing-header.tsx` | LandingHeader | VERIFIED | 169 lines, exists (Phase 2 artifact), imported and rendered at line 11 of page.tsx |
 
 ---
 
 ## Key Link Verification
 
-All 6 import links from `app/join/page.tsx` verified against actual file patterns:
+All 6 import links from `app/join/page.tsx` verified against actual file contents:
 
 | From | To | Via | Status | Details |
 |------|----|-----|--------|---------|
-| `app/join/page.tsx` | `components/join/join-hero.tsx` | `import { JoinHero }` | WIRED | Line 2 matches pattern `import.*JoinHero.*from.*components/join` |
-| `app/join/page.tsx` | `components/join/food-as-language-section.tsx` | `import { FoodAsLanguageSection }` | WIRED | Line 3 matches pattern |
-| `app/join/page.tsx` | `components/join/free-seat-section.tsx` | `import { FreeSeatSection }` | WIRED | Line 4 matches pattern |
-| `app/join/page.tsx` | `components/join/reserve-spot-section.tsx` | `import { ReserveSpotSection }` | WIRED | Line 5 matches pattern |
-| `app/join/page.tsx` | `components/join/join-cta-footer.tsx` | `import { JoinCtaFooter }` | WIRED | Line 6 matches pattern |
-| `app/join/page.tsx` | `components/landing/landing-header.tsx` | `import { LandingHeader }` | WIRED | Line 1 matches pattern |
-| `reserve-spot-section.tsx` CTA | Stripe checkout | `createCheckoutSession` or API call | NOT WIRED | Only `<Link href="/launch">` — /launch does not exist, no Stripe integration |
+| `app/join/page.tsx` | `components/join/join-hero.tsx` | `import { JoinHero }` | WIRED | Line 2: `import { JoinHero } from "@/components/join/join-hero"` |
+| `app/join/page.tsx` | `components/join/food-as-language-section.tsx` | `import { FoodAsLanguageSection }` | WIRED | Line 3: `import { FoodAsLanguageSection } from "@/components/join/food-as-language-section"` |
+| `app/join/page.tsx` | `components/join/free-seat-section.tsx` | `import { FreeSeatSection }` | WIRED | Line 4: `import { FreeSeatSection } from "@/components/join/free-seat-section"` |
+| `app/join/page.tsx` | `components/join/reserve-spot-section.tsx` | `import { ReserveSpotSection }` | WIRED | Line 5: `import { ReserveSpotSection } from "@/components/join/reserve-spot-section"` |
+| `app/join/page.tsx` | `components/join/join-cta-footer.tsx` | `import { JoinCtaFooter }` | WIRED | Line 6: `import { JoinCtaFooter } from "@/components/join/join-cta-footer"` |
+| `app/join/page.tsx` | `components/landing/landing-header.tsx` | `import { LandingHeader }` | WIRED | Line 1: `import { LandingHeader } from "@/components/landing/landing-header"` |
+| `reserve-spot-section.tsx` CTA | `/launch` | `<Link href="/launch">` | WIRED (by design) | Phase 6 LNCH-04 delivers Stripe checkout at /launch; link is correct per updated requirements |
 
 ---
 
@@ -74,14 +79,14 @@ All 6 import links from `app/join/page.tsx` verified against actual file pattern
 
 | Requirement | Source Plan | Description | Status | Evidence |
 |-------------|------------|-------------|--------|----------|
-| JOIN-01 | 04-01-PLAN.md | Join page at /join with LandingHeader | SATISFIED | `app/join/page.tsx` exists, LandingHeader imported and rendered at line 11 |
-| JOIN-02 | 04-01-PLAN.md | JoinHero with "Find where locals only whisper." headline | SATISFIED | `join-hero.tsx` lines 55-58 render exact locked copy |
-| JOIN-03 | 04-01-PLAN.md | FoodAsLanguageSection renders | SATISFIED | Component imported and rendered; 3 image cards with substantive content |
-| JOIN-04 | 04-01-PLAN.md | FreeSeatSection renders | SATISFIED | Component imported and rendered; 5 role tabs with useState interactivity |
-| JOIN-05 | 04-01-PLAN.md | ReserveSpotSection renders tier cards with CTAs linking to /launch (Stripe checkout integration delivered by Phase 6 LNCH-04) | SATISFIED | Component renders Early Bird and Founding tier cards with Convex-driven countdown; CTAs correctly link to /launch where Phase 6 LNCH-04 will deliver Stripe checkout session creation. Requirement updated to reflect correct Phase 6 scope. |
-| JOIN-06 | 04-01-PLAN.md | JoinCtaFooter renders | SATISFIED | Component imported and rendered; "Your city is waiting. Take your seat." headline and "Join Tenseats" CTA present |
+| JOIN-01 | 04-01-PLAN.md | Join page at /join with LandingHeader | SATISFIED | `app/join/page.tsx` exists, LandingHeader imported line 1, rendered line 11 |
+| JOIN-02 | 04-01-PLAN.md | JoinHero with "Find where locals only whisper." headline (locked copy) | SATISFIED | `join-hero.tsx` lines 55-57 render exact locked copy in two `<span>` elements |
+| JOIN-03 | 04-01-PLAN.md | FoodAsLanguageSection renders | SATISFIED | Component imported and rendered; 3 Unsplash image cards with substantive heading and description |
+| JOIN-04 | 04-01-PLAN.md | FreeSeatSection renders | SATISFIED | Component imported and rendered; 5 role tabs (Chef, Mixologist, Creator, Venue Host, Guest) with useState interactivity |
+| JOIN-05 | 04-01-PLAN.md | ReserveSpotSection renders tier cards with CTAs linking to /launch (Stripe checkout integration delivered by Phase 6 LNCH-04) | SATISFIED | Component renders Early Bird and Founding tier cards with Convex-driven countdown; both CTAs `<Link href="/launch">` — Stripe session creation is Phase 6 LNCH-04 scope per updated REQUIREMENTS.md |
+| JOIN-06 | 04-01-PLAN.md | JoinCtaFooter renders | SATISFIED | Component imported and rendered; "Your city is waiting. Take your seat." at lines 18-20; "Join Tenseats" CTA links to /signup |
 
-**Orphaned requirements:** None — all 6 JOIN-0x IDs appear in 04-01-PLAN.md `requirements` field.
+**Orphaned requirements:** None — all 6 JOIN-0x IDs declared in 04-01-PLAN.md `requirements` field. REQUIREMENTS.md traceability table maps all 6 to Phase 4 with status Complete. No additional JOIN-0x IDs exist in REQUIREMENTS.md for this phase.
 
 ---
 
@@ -89,9 +94,9 @@ All 6 import links from `app/join/page.tsx` verified against actual file pattern
 
 | File | Line | Pattern | Severity | Impact |
 |------|------|---------|----------|--------|
-| `components/join/reserve-spot-section.tsx` | 164 | `<Link href="/launch">` | Info | /launch is the intended navigation target for Phase 6 checkout flow (LNCH-04); link is correct by design |
+| `components/join/reserve-spot-section.tsx` | 164 | `<Link href="/launch">` | Info | /launch is the correct navigation target — Phase 6 LNCH-04 delivers Stripe checkout there. No anti-pattern. |
 
-No TODO/FIXME/placeholder comments, no return null stubs (the `if (config === undefined) return null` is a legitimate loading guard), no empty implementations found.
+No TODO/FIXME/placeholder comments found across any join component. No return null stubs (the `if (config === undefined) return null` in reserve-spot-section.tsx is a legitimate loading guard for the Convex query). No empty implementations.
 
 ---
 
@@ -106,25 +111,23 @@ No TODO/FIXME/placeholder comments, no return null stubs (the `if (config === un
 ### 2. FreeSeatSection Tab Interactivity
 
 **Test:** Visit /join, scroll to "Everyone gets a seat" section, click through all 5 role tabs: Chef, Mixologist, Creator, Venue Host, Guest
-**Expected:** Each click updates the content panel with the correct role headline, description, and perks
-**Why human:** Client-side useState behavior requires a browser
+**Expected:** Each click updates the content panel with the correct role headline, description, and perks (AnimatePresence wraps the keyed motion.div so transitions should also animate)
+**Why human:** Client-side useState behavior and AnimatePresence transitions require a browser
 
 ### 3. ReserveSpotSection CTA Destination
 
 **Test:** Click "Reserve Early Bird Seat" and "Reserve Founding Seat" buttons on the /join page
 **Expected (current state):** Navigates to /launch, which is currently a 404
 **Expected (after Phase 6):** /launch loads the city search and checkout flow
-**Why human:** Confirms whether the gap is a user-visible 404 or gracefully handled
+**Why human:** Confirms whether the navigation lands on a 404 or is gracefully handled
 
 ---
 
 ## Gaps Summary
 
-No gaps remain. The previously identified gap was a documentation mismatch, not a missing implementation.
+No gaps. All 4 success criteria verified with substantive, wired implementations.
 
-**Resolution:** ROADMAP.md Phase 4 success criterion 3 and the phase goal were updated (04-02-PLAN.md) to correctly describe what the join page delivers: tier cards with CTAs linking to /launch. REQUIREMENTS.md JOIN-05 was updated to note that Stripe checkout integration is delivered by Phase 6 LNCH-04, where it belongs.
-
-The join page implementation is correct as-built. ReserveSpotSection renders Early Bird and Founding tier cards with CTAs that link to /launch — the Phase 6 checkout flow. All 4 success criteria are now verified with substantive, wired implementations.
+**Re-verification summary:** This is the second verification run for Phase 4. The first run (initial) found a documentation gap (JOIN-05 / success criterion 3 described Stripe checkout as Phase 4 scope when it belongs to Phase 6 LNCH-04). That gap was closed by 04-02-PLAN.md, which updated ROADMAP.md, REQUIREMENTS.md, and VERIFICATION.md. This regression check confirms all artifacts remain in place, all imports are wired, and no new issues have been introduced. Status remains passed.
 
 ---
 
