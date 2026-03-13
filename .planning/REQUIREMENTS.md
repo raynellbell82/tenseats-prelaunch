@@ -92,6 +92,16 @@
 - [x] **WHY-07**: Comparison table mobile-responsive
 - [x] **WHY-08**: All section copy matches accepted copy decisions (locked)
 
+### Cities Globe (INSERTED)
+
+- [ ] **GLOB-01**: Interactive 3D globe (cobe) on homepage showing 32 city markers with orange glowing dots
+- [ ] **GLOB-02**: Region-tabbed pill system (South, Midwest, Northeast, West) filtering city pills
+- [ ] **GLOB-03**: Pill hover rotates globe to city location with tooltip; pill click navigates to /cities/[slug]
+- [ ] **GLOB-04**: Globe auto-rotates when idle, starts focused on continental US
+- [ ] **GLOB-05**: WebGL fallback — tabs + pills remain functional if globe fails to render
+- [ ] **GLOB-06**: Accessible: ARIA roles on tabs, keyboard navigable pills, prefers-reduced-motion support
+- [ ] **GLOB-07**: Responsive: 500px desktop, 400px tablet, 300px mobile canvas sizing
+
 ### SEO & Deployment
 
 - [x] **DEPL-01**: Sitemap at /sitemap.xml with all 34 URLs (homepage, join, why, launch + 32 cities)
@@ -205,6 +215,13 @@
 | WHY-06 | Phase 8 | Complete |
 | WHY-07 | Phase 8 | Complete |
 | WHY-08 | Phase 8 | Complete |
+| GLOB-01 | Phase 8.1 | Pending |
+| GLOB-02 | Phase 8.1 | Pending |
+| GLOB-03 | Phase 8.1 | Pending |
+| GLOB-04 | Phase 8.1 | Pending |
+| GLOB-05 | Phase 8.1 | Pending |
+| GLOB-06 | Phase 8.1 | Pending |
+| GLOB-07 | Phase 8.1 | Pending |
 | DEPL-01 | Phase 9 | Complete |
 | DEPL-02 | Phase 9 | Complete |
 | DEPL-03 | Phase 9 | Complete |
@@ -220,8 +237,8 @@
 | COPY-06 | Phase 9 | Complete |
 
 **Coverage:**
-- v1 requirements: 76 total
-- Mapped to phases: 76
+- v1 requirements: 83 total
+- Mapped to phases: 83
 - Unmapped: 0 ✓
 
 ---

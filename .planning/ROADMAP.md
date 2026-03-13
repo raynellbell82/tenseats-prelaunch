@@ -20,6 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 6: Launch Flow** - City search, slot grid, queue, Stripe checkout, success/expired pages (completed 2026-03-13)
 - [x] **Phase 7: City Pages** - 32 metro pages with city data, static generation, per-city SEO (completed 2026-03-13)
 - [x] **Phase 8: Why Tenseats Page** - Brand story page with personas, economics table at /why-tenseats (completed 2026-03-13)
+- [ ] **Phase 8.1: Cities Globe** - INSERTED — Interactive 3D globe on homepage with region-tabbed city navigation pills
 - [ ] **Phase 9: SEO, Deployment & Copy QA** - Sitemap, Dockerfile, build health, brand compliance audit
 
 ## Phase Details
@@ -144,6 +145,18 @@ Plans:
 Plans:
 - [ ] 08-01-PLAN.md — Create WhyHero, WhyProblem, and WhyPersonas components
 - [ ] 08-02-PLAN.md — Create WhyEconomics, WhyCta, and /why-tenseats page route
+
+### Phase 8.1: Cities Globe (INSERTED)
+**Goal**: Visitors on the homepage can see all 32 Tenseats cities on an interactive 3D globe and navigate to any city page via region-filtered clickable pills
+**Depends on**: Phase 7, Phase 8
+**Requirements**: GLOB-01, GLOB-02, GLOB-03, GLOB-04, GLOB-05, GLOB-06, GLOB-07
+**Success Criteria** (what must be TRUE):
+  1. Homepage renders an interactive 3D globe (cobe) below the hero with 32 orange city markers
+  2. Region tabs (South, Midwest, Northeast, West) filter the city pills below the globe
+  3. Hovering a pill rotates the globe to that city; clicking navigates to /cities/[slug]
+  4. Globe auto-rotates when idle and starts focused on the continental US
+  5. If WebGL fails, the section degrades to tabs + pills without the globe
+  6. Section is responsive: 500px desktop, 400px tablet, 300px mobile globe canvas
 
 ### Phase 9: SEO, Deployment & Copy QA
 **Goal**: The site builds cleanly, is Coolify-deployable, ranks correctly in search, and every consumer-facing string passes brand compliance
