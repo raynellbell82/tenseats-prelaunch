@@ -168,50 +168,50 @@
 | HOME-04 | Phase 3 | Pending |
 | HOME-05 | Phase 3 | Pending |
 | HOME-06 | Phase 3 | Pending |
-| JOIN-01 | Phase 3 | Pending |
-| JOIN-02 | Phase 3 | Pending |
-| JOIN-03 | Phase 3 | Pending |
-| JOIN-04 | Phase 3 | Pending |
-| JOIN-05 | Phase 3 | Pending |
-| JOIN-06 | Phase 3 | Pending |
-| LNCH-01 | Phase 4 | Pending |
-| LNCH-02 | Phase 4 | Pending |
-| LNCH-03 | Phase 4 | Pending |
-| LNCH-04 | Phase 4 | Pending |
-| LNCH-05 | Phase 4 | Pending |
-| LNCH-06 | Phase 4 | Pending |
-| LNCH-07 | Phase 4 | Pending |
-| LNCH-08 | Phase 4 | Pending |
+| JOIN-01 | Phase 4 | Pending |
+| JOIN-02 | Phase 4 | Pending |
+| JOIN-03 | Phase 4 | Pending |
+| JOIN-04 | Phase 4 | Pending |
+| JOIN-05 | Phase 4 | Pending |
+| JOIN-06 | Phase 4 | Pending |
 | AUTH-01 | Phase 5 | Pending |
 | AUTH-02 | Phase 5 | Pending |
 | AUTH-03 | Phase 5 | Pending |
 | AUTH-04 | Phase 5 | Pending |
 | AUTH-05 | Phase 5 | Pending |
-| CITY-01 | Phase 6 | Pending |
-| CITY-02 | Phase 6 | Pending |
-| CITY-03 | Phase 6 | Pending |
-| CITY-04 | Phase 6 | Pending |
-| CITY-05 | Phase 6 | Pending |
-| CITY-06 | Phase 6 | Pending |
-| CITY-07 | Phase 6 | Pending |
-| CITY-08 | Phase 6 | Pending |
-| CITY-09 | Phase 6 | Pending |
-| CITY-10 | Phase 6 | Pending |
-| WHY-01 | Phase 7 | Pending |
-| WHY-02 | Phase 7 | Pending |
-| WHY-03 | Phase 7 | Pending |
-| WHY-04 | Phase 7 | Pending |
-| WHY-05 | Phase 7 | Pending |
-| WHY-06 | Phase 7 | Pending |
-| WHY-07 | Phase 7 | Pending |
-| WHY-08 | Phase 7 | Pending |
-| DEPL-01 | Phase 8 | Pending |
-| DEPL-02 | Phase 8 | Pending |
-| DEPL-03 | Phase 8 | Pending |
-| DEPL-04 | Phase 8 | Pending |
-| DEPL-05 | Phase 8 | Pending |
-| DEPL-06 | Phase 8 | Pending |
-| DEPL-07 | Phase 8 | Pending |
+| LNCH-01 | Phase 6 | Pending |
+| LNCH-02 | Phase 6 | Pending |
+| LNCH-03 | Phase 6 | Pending |
+| LNCH-04 | Phase 6 | Pending |
+| LNCH-05 | Phase 6 | Pending |
+| LNCH-06 | Phase 6 | Pending |
+| LNCH-07 | Phase 6 | Pending |
+| LNCH-08 | Phase 6 | Pending |
+| CITY-01 | Phase 7 | Pending |
+| CITY-02 | Phase 7 | Pending |
+| CITY-03 | Phase 7 | Pending |
+| CITY-04 | Phase 7 | Pending |
+| CITY-05 | Phase 7 | Pending |
+| CITY-06 | Phase 7 | Pending |
+| CITY-07 | Phase 7 | Pending |
+| CITY-08 | Phase 7 | Pending |
+| CITY-09 | Phase 7 | Pending |
+| CITY-10 | Phase 7 | Pending |
+| WHY-01 | Phase 8 | Pending |
+| WHY-02 | Phase 8 | Pending |
+| WHY-03 | Phase 8 | Pending |
+| WHY-04 | Phase 8 | Pending |
+| WHY-05 | Phase 8 | Pending |
+| WHY-06 | Phase 8 | Pending |
+| WHY-07 | Phase 8 | Pending |
+| WHY-08 | Phase 8 | Pending |
+| DEPL-01 | Phase 9 | Pending |
+| DEPL-02 | Phase 9 | Pending |
+| DEPL-03 | Phase 9 | Pending |
+| DEPL-04 | Phase 9 | Pending |
+| DEPL-05 | Phase 9 | Pending |
+| DEPL-06 | Phase 9 | Pending |
+| DEPL-07 | Phase 9 | Pending |
 | COPY-01 | Phase 9 | Pending |
 | COPY-02 | Phase 9 | Pending |
 | COPY-03 | Phase 9 | Pending |
@@ -220,10 +220,10 @@
 | COPY-06 | Phase 9 | Pending |
 
 **Coverage:**
-- v1 requirements: 64 total
-- Mapped to phases: 64
+- v1 requirements: 76 total
+- Mapped to phases: 76
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-12*
-*Last updated: 2026-03-12 after initial definition*
+*Last updated: 2026-03-12 after roadmap creation (phase assignments finalized, COPY folded into Phase 9 with DEPL)*
