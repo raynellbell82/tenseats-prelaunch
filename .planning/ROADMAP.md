@@ -157,6 +157,9 @@ Plans:
   4. Globe auto-rotates when idle and starts focused on the continental US
   5. If WebGL fails, the section degrades to tabs + pills without the globe
   6. Section is responsive: 500px desktop, 400px tablet, 300px mobile globe canvas
+**Plans**: 1 plan
+Plans:
+- [ ] 08.1-01-PLAN.md — Install cobe, create city regions data, build CitiesGlobe component, wire into homepage
 
 ### Phase 9: SEO, Deployment & Copy QA
 **Goal**: The site builds cleanly, is Coolify-deployable, ranks correctly in search, and every consumer-facing string passes brand compliance
@@ -178,7 +181,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 8.1 -> 9
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -190,4 +193,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 6. Launch Flow | 2/2 | Complete   | 2026-03-13 |
 | 7. City Pages | 2/2 | Complete   | 2026-03-13 |
 | 8. Why Tenseats Page | 2/2 | Complete   | 2026-03-13 |
+| 8.1. Cities Globe | 0/1 | Planned    |  |
 | 9. SEO, Deployment & Copy QA | 2/3 | In Progress|  |
