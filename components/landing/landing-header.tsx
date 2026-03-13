@@ -13,6 +13,7 @@ import {
   SheetTrigger,
   SheetContent,
   SheetClose,
+  SheetTitle,
 } from "@/components/ui/sheet";
 import { cn, fixUploadUrl } from "@/lib/utils";
 
@@ -123,6 +124,7 @@ export function LandingHeader() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-72 p-0">
+                <SheetTitle className="sr-only">Navigation menu</SheetTitle>
                 <nav className="flex flex-col pt-14 px-6 gap-2">
                   <SheetClose asChild>
                     <Link
