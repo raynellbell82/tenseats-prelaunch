@@ -14,8 +14,8 @@ Requirements for Post-Signup Experience milestone. New pages for verification an
 
 ### Verification UX
 
-- [ ] **VERIFY-01**: After queue signup, user is redirected to a shared "almost there" page showing "check your email" messaging with warm, branded design
-- [ ] **VERIFY-02**: The "almost there" page works for both guest and vendor signups (shared page, not role-specific)
+- [x] **VERIFY-01**: After queue signup, user is redirected to a shared "almost there" page showing "check your email" messaging with warm, branded design
+- [x] **VERIFY-02**: The "almost there" page works for both guest and vendor signups (shared page, not role-specific)
 
 ### Guest Success
 
@@ -42,7 +42,7 @@ Requirements for Post-Signup Experience milestone. New pages for verification an
 
 ### Design Quality
 
-- [ ] **DESIGN-01**: All three pages (almost-there, guest success, vendor success) use distinctive, high-quality frontend design — not generic AI aesthetics
+- [x] **DESIGN-01**: All three pages (almost-there, guest success, vendor success) use distinctive, high-quality frontend design — not generic AI aesthetics
 
 ## Future Requirements
 
@@ -72,9 +72,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SCHEMA-02 | Phase 20 | Complete |
 | SOCIAL-01 | Phase 21 | Complete |
 | SOCIAL-02 | Phase 21 | Complete |
-| VERIFY-01 | Phase 22 | Pending |
-| VERIFY-02 | Phase 22 | Pending |
-| DESIGN-01 | Phase 22 | Pending |
+| VERIFY-01 | Phase 22 | Complete |
+| VERIFY-02 | Phase 22 | Complete |
+| DESIGN-01 | Phase 22 | Complete |
 | GSUCCESS-01 | Phase 23 | Pending |
 | GSUCCESS-02 | Phase 23 | Pending |
 | GSUCCESS-03 | Phase 23 | Pending |

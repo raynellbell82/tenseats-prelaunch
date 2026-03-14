@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: Phase 22 context gathered
-last_updated: "2026-03-14T21:58:31.242Z"
+stopped_at: Completed 22-01-PLAN.md
+last_updated: "2026-03-14T22:10:50.654Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
   completed_phases: 2
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 5
+  completed_plans: 4
   percent: 0
 ---
 
@@ -49,6 +49,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 20-schema-coordination P01 | 2 | 2 tasks | 1 files |
 | Phase 20-schema-coordination P02 | 5 | 2 tasks | 0 files |
 | Phase 21-social-icons P01 | 15 | 2 tasks | 1 files |
+| Phase 22-verification-page P01 | 2 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,9 @@ Recent decisions affecting v1.2:
 - [Phase 20-schema-coordination]: isProfileComplete requires hasRole + hasCity; Stripe connect is optional for all roles
 - [Phase 20-schema-coordination]: SCHEMA-02 gate cleared: prelaunch convex/schema.ts was byte-for-byte identical to main app schema — no copy needed, Phase 25 unblocked
 - [Phase 21-social-icons]: Social icons follow identical SVG wrapper pattern from persona-icons.tsx for visual consistency
+- [Phase 22-verification-page]: Headline 'Your Seat Is Nearly Ready.' selected via tenseats-copy-writer skill — table metaphor, direct 2nd-person, brand-warm tone
+- [Phase 22-verification-page]: itemVariants exported from PostSignupLayout so child page elements animate as staggered children of the container
+- [Phase 22-verification-page]: Stub success pages use LandingHeader directly — minimal placeholder appropriate; Phases 23/24 rebuild with full design
 
 ### Pending Todos
 
@@ -77,6 +81,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-14T21:58:31.236Z
-Stopped at: Phase 22 context gathered
-Resume file: .planning/phases/22-verification-page/22-CONTEXT.md
+Last session: 2026-03-14T22:10:50.652Z
+Stopped at: Completed 22-01-PLAN.md
+Resume file: None
