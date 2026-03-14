@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: Completed 22-01-PLAN.md
-last_updated: "2026-03-14T22:10:50.654Z"
+stopped_at: "Completed 22-02-PLAN.md (checkpoint: awaiting human verify of full flow)"
+last_updated: "2026-03-14T22:15:53.513Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 5
-  completed_plans: 4
+  completed_plans: 5
   percent: 0
 ---
 
@@ -50,6 +50,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 20-schema-coordination P02 | 5 | 2 tasks | 0 files |
 | Phase 21-social-icons P01 | 15 | 2 tasks | 1 files |
 | Phase 22-verification-page P01 | 2 | 2 tasks | 6 files |
+| Phase 22-verification-page P02 | 5 | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,7 @@ Recent decisions affecting v1.2:
 - [Phase 22-verification-page]: Headline 'Your Seat Is Nearly Ready.' selected via tenseats-copy-writer skill — table metaphor, direct 2nd-person, brand-warm tone
 - [Phase 22-verification-page]: itemVariants exported from PostSignupLayout so child page elements animate as staggered children of the container
 - [Phase 22-verification-page]: Stub success pages use LandingHeader directly — minimal placeholder appropriate; Phases 23/24 rebuild with full design
+- [Phase 22-verification-page]: getUserRole query added to convex/launch/queue.ts querying userRoles by_user index — post-OTP routing sends vendors to /launch/success/vendor and guests to /launch/success/guest
 
 ### Pending Todos
 
@@ -81,6 +83,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-14T22:10:50.652Z
-Stopped at: Completed 22-01-PLAN.md
+Last session: 2026-03-14T22:15:53.511Z
+Stopped at: Completed 22-02-PLAN.md (checkpoint: awaiting human verify of full flow)
 Resume file: None

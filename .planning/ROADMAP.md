@@ -44,7 +44,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 - [x] **Phase 20: Schema Coordination** — Generate the main-app prompt and verify schema deployment before persistence work begins (completed 2026-03-14)
 - [x] **Phase 21: Social Icons** — Generate custom Instagram and Pinterest SVG icons for use across success pages (completed 2026-03-14)
-- [ ] **Phase 22: Verification Page** — Build the shared "almost there" page with branded email-check messaging
+- [x] **Phase 22: Verification Page** — Build the shared "almost there" page with branded email-check messaging (completed 2026-03-14)
 - [ ] **Phase 23: Guest Success Page** — Build guest success page with community welcome, address book reminder, and social links
 - [ ] **Phase 24: Vendor Success Page** — Build vendor success page with Stripe connect step, Zoho One info, and social links
 - [ ] **Phase 25: Onboarding Persistence** — Wire completed steps to Convex per-user storage so progress survives sessions
@@ -85,7 +85,7 @@ Plans:
   2. After queue signup, a vendor user hits the same "almost there" page — the page is not role-specific
   3. The page design is visually distinctive and warm — not a generic form confirmation screen
   4. All three post-signup pages (this page, guest success, vendor success) share a coherent design language that feels like a purposeful product moment
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 Plans:
 - [ ] 22-01-PLAN.md — Shared post-signup design system and branded verification page
 - [ ] 22-02-PLAN.md — Post-OTP role-based routing and visual verification
@@ -142,7 +142,7 @@ Plans:
 | 13. City Persona Copy | v1.1 | 3/3 | Complete | 2026-03-13 |
 | 20. Schema Coordination | 2/2 | Complete    | 2026-03-14 | - |
 | 21. Social Icons | 1/1 | Complete    | 2026-03-14 | - |
-| 22. Verification Page | 1/2 | In Progress|  | - |
+| 22. Verification Page | 2/2 | Complete   | 2026-03-14 | - |
 | 23. Guest Success Page | v1.2 | 0/? | Not started | - |
 | 24. Vendor Success Page | v1.2 | 0/? | Not started | - |
 | 25. Onboarding Persistence | v1.2 | 0/? | Not started | - |
