@@ -63,7 +63,10 @@ export default function VendorSuccessPage() {
   const [copied, setCopied] = useState(false);
   const [connecting, setConnecting] = useState(false);
 
-  const role = useQuery(api.launch.queue.getUserRole);
+  const role = useQuery(
+    api.launch.queue.getUserRole,
+    session?.user?.emailVerified ? {} : "skip",
+  );
 
   useEffect(() => {
     if (isPending) return;
