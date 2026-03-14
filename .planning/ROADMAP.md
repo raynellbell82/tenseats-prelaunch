@@ -135,7 +135,7 @@ Plans:
 | 11. Nav & Auth Wiring Fixes | v1.0 | 1/1 | Complete | 2026-03-13 |
 | 12. Persona Component Foundation | v1.1 | 1/1 | Complete | 2026-03-13 |
 | 13. City Persona Copy | v1.1 | 3/3 | Complete | 2026-03-13 |
-| 20. Schema Coordination | 2/2 | Complete   | 2026-03-14 | - |
+| 20. Schema Coordination | 2/2 | Complete    | 2026-03-14 | - |
 | 21. Social Icons | v1.2 | 0/? | Not started | - |
 | 22. Verification Page | v1.2 | 0/? | Not started | - |
 | 23. Guest Success Page | v1.2 | 0/? | Not started | - |
