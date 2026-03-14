@@ -85,7 +85,10 @@ Plans:
   2. After queue signup, a vendor user hits the same "almost there" page — the page is not role-specific
   3. The page design is visually distinctive and warm — not a generic form confirmation screen
   4. All three post-signup pages (this page, guest success, vendor success) share a coherent design language that feels like a purposeful product moment
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 22-01-PLAN.md — Shared post-signup design system and branded verification page
+- [ ] 22-02-PLAN.md — Post-OTP role-based routing and visual verification
 
 ### Phase 23: Guest Success Page
 **Goal**: Verified guest users land on a success page that makes them feel welcomed into the Tenseats community, reminds them to safelist the support email, and points them to social channels
@@ -139,7 +142,7 @@ Plans:
 | 13. City Persona Copy | v1.1 | 3/3 | Complete | 2026-03-13 |
 | 20. Schema Coordination | 2/2 | Complete    | 2026-03-14 | - |
 | 21. Social Icons | 1/1 | Complete    | 2026-03-14 | - |
-| 22. Verification Page | v1.2 | 0/? | Not started | - |
+| 22. Verification Page | v1.2 | 0/2 | Planning complete | - |
 | 23. Guest Success Page | v1.2 | 0/? | Not started | - |
 | 24. Vendor Success Page | v1.2 | 0/? | Not started | - |
 | 25. Onboarding Persistence | v1.2 | 0/? | Not started | - |
