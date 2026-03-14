@@ -1,211 +1,95 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import DottedMap from "dotted-map";
+import { useTheme } from "next-themes";
 import { METROS_DATA } from "@/lib/city-data";
 import { REGIONS, getCitiesByRegion, type Region } from "@/lib/city-regions";
+import { US_STATES_PATHS, US_BOUNDS } from "@/lib/us-states-paths";
 
-// Lerp helper for smooth globe rotation
-function lerp(a: number, b: number, t: number): number {
-  return a + (b - a) * t;
+/** Project lat/lng to SVG coordinates within the US crop viewBox. */
+function projectPoint(lat: number, lng: number): { x: number; y: number } {
+  const x =
+    ((lng - US_BOUNDS.minLng) / (US_BOUNDS.maxLng - US_BOUNDS.minLng)) *
+    US_BOUNDS.viewBoxWidth;
+  const y =
+    ((US_BOUNDS.maxLat - lat) / (US_BOUNDS.maxLat - US_BOUNDS.minLat)) *
+    US_BOUNDS.viewBoxHeight;
+  return { x, y };
 }
 
-// Convert lat/lng to cobe phi/theta
-function coordsToGlobe(lat: number, lng: number): { phi: number; theta: number } {
-  const phi = ((lng + 180) * Math.PI) / 180 - Math.PI;
-  const theta = (lat * Math.PI) / 180;
-  return { phi, theta };
-}
-
-// Continental US center: ~longitude -98
-const US_CENTER_PHI = ((98 + 180) * Math.PI) / 180 - Math.PI;
-const US_CENTER_THETA = 0.3;
-
-function getCanvasSize(): number {
-  if (typeof window === "undefined") return 500;
-  if (window.matchMedia("(min-width: 1024px)").matches) return 500;
-  if (window.matchMedia("(min-width: 768px)").matches) return 400;
-  return 300;
-}
+/** Pixel offsets for cities that overlap at map scale. */
+const CITY_OFFSETS: Record<string, { dx: number; dy: number }> = {
+  "scottsdale-az": { dx: 8, dy: -8 },
+  "st-petersburg-fl": { dx: -8, dy: 8 },
+  "ann-arbor-mi": { dx: -6, dy: -6 },
+};
 
 export default function CitiesGlobe() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
-  const globeRef = useRef<{ destroy: () => void } | null>(null);
-  const focusRef = useRef<{ phi: number; theta: number } | null>(null);
-  const autoRotateRef = useRef(true);
-  const idleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const isVisibleRef = useRef(true);
-  const reducedMotionRef = useRef(false);
-  const canvasSizeRef = useRef(500);
-
   const [activeRegion, setActiveRegion] = useState<Region>("South");
-  const [globeError, setGlobeError] = useState(false);
+  const [hoveredCity, setHoveredCity] = useState<string | null>(null);
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
 
-  // Markers for all 32 cities
-  const globeMarkers = METROS_DATA.map((m) => ({
-    location: [m.coordinates.lat, m.coordinates.lng] as [number, number],
-    size: 0.05,
-  }));
+  // Generate dotted map SVG string (memoized per theme)
+  const map = useMemo(() => new DottedMap({ height: 100, grid: "diagonal" }), []);
+  const dotColor = isDark ? "#FFFFFF40" : "#00000040";
+  const bgColor = isDark ? "black" : "white";
+  const svgMap = useMemo(
+    () =>
+      map.getSVG({
+        radius: 0.22,
+        color: dotColor,
+        shape: "circle",
+        backgroundColor: bgColor,
+      }),
+    [map, dotColor, bgColor]
+  );
 
-  const initGlobe = useCallback(() => {
-    if (!canvasRef.current || globeError) return;
-
-    try {
-      const prefersReducedMotion =
-        typeof window !== "undefined" &&
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      reducedMotionRef.current = prefersReducedMotion;
-
-      const size = getCanvasSize();
-      canvasSizeRef.current = size;
-      const dpr = Math.min(window.devicePixelRatio, 2);
-
-      let phi = US_CENTER_PHI;
-      const theta = US_CENTER_THETA;
-
-      // Destroy previous instance if any
-      if (globeRef.current) {
-        globeRef.current.destroy();
-        globeRef.current = null;
-      }
-
-      // Dynamic import of cobe (window-dependent)
-      import("cobe").then(({ default: createGlobe }) => {
-        if (!canvasRef.current) return;
-
-        try {
-          const globe = createGlobe(canvasRef.current, {
-            devicePixelRatio: dpr,
-            width: size * dpr,
-            height: size * dpr,
-            phi,
-            theta,
-            dark: 1,
-            diffuse: 1.2,
-            mapSamples: 16000,
-            mapBrightness: 2,
-            baseColor: [0.1, 0.1, 0.12],
-            glowColor: [0.05, 0.05, 0.08],
-            markerColor: [0.976, 0.451, 0.086],
-            markers: globeMarkers,
-            onRender(state) {
-              if (!isVisibleRef.current) return;
-
-              const lerpFactor = reducedMotionRef.current ? 1 : 0.05;
-
-              if (focusRef.current) {
-                // Smooth rotation toward focused city
-                phi = lerp(phi, focusRef.current.phi, lerpFactor);
-                state.phi = phi;
-                state.theta = lerp(state.theta ?? theta, focusRef.current.theta, lerpFactor);
-              } else if (autoRotateRef.current) {
-                // Auto-rotation when idle
-                if (!reducedMotionRef.current) {
-                  phi += 0.003;
-                  state.phi = phi;
-                }
-              } else {
-                state.phi = phi;
-              }
-            },
-          });
-
-          globeRef.current = globe;
-        } catch {
-          setGlobeError(true);
-        }
-      }).catch(() => {
-        setGlobeError(true);
-      });
-    } catch {
-      setGlobeError(true);
-    }
-  }, [globeError, globeMarkers]);
-
-  // Initialize globe and set up resize/visibility observers
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    initGlobe();
-
-    // IntersectionObserver for performance: pause globe when off-screen
-    const section = sectionRef.current;
-    let observer: IntersectionObserver | null = null;
-
-    if (section) {
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            isVisibleRef.current = entry.isIntersecting;
-          });
-        },
-        { threshold: 0.1 }
-      );
-      observer.observe(section);
-    }
-
-    // Responsive canvas sizing: recreate globe on significant breakpoint change
-    const mqlDesktop = window.matchMedia("(min-width: 1024px)");
-    const mqlTablet = window.matchMedia("(min-width: 768px)");
-
-    const handleResize = () => {
-      const newSize = getCanvasSize();
-      if (newSize !== canvasSizeRef.current) {
-        initGlobe();
-      }
-    };
-
-    mqlDesktop.addEventListener("change", handleResize);
-    mqlTablet.addEventListener("change", handleResize);
-
-    return () => {
-      if (globeRef.current) {
-        globeRef.current.destroy();
-        globeRef.current = null;
-      }
-      if (observer && section) {
-        observer.unobserve(section);
-      }
-      mqlDesktop.removeEventListener("change", handleResize);
-      mqlTablet.removeEventListener("change", handleResize);
-      if (idleTimerRef.current) clearTimeout(idleTimerRef.current);
-      if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const handlePillMouseEnter = useCallback((lat: number, lng: number) => {
-    if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
-    if (idleTimerRef.current) clearTimeout(idleTimerRef.current);
-
-    debounceTimerRef.current = setTimeout(() => {
-      const target = coordsToGlobe(lat, lng);
-      focusRef.current = target;
-      autoRotateRef.current = false;
-    }, 150);
-  }, []);
-
-  const handlePillMouseLeave = useCallback(() => {
-    if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
-    focusRef.current = null;
-
-    idleTimerRef.current = setTimeout(() => {
-      autoRotateRef.current = true;
-    }, 2000);
-  }, []);
+  // Precompute projected city positions with overlap offsets
+  const cityPositions = useMemo(
+    () =>
+      METROS_DATA.map((m) => {
+        const raw = projectPoint(m.coordinates.lat, m.coordinates.lng);
+        const offset = CITY_OFFSETS[m.name];
+        return {
+          ...m,
+          pos: {
+            x: raw.x + (offset?.dx ?? 0),
+            y: raw.y + (offset?.dy ?? 0),
+          },
+        };
+      }),
+    []
+  );
 
   const filteredCities = getCitiesByRegion(activeRegion);
 
-  // Determine canvas size for CSS
-  const canvasSize = typeof window !== "undefined" ? getCanvasSize() : 500;
+  const handlePillMouseEnter = useCallback((slug: string) => {
+    setHoveredCity(slug);
+  }, []);
+
+  const handlePillMouseLeave = useCallback(() => {
+    setHoveredCity(null);
+  }, []);
+
+  // Outline stroke color adapts to theme
+  const outlineStroke = isDark ? "#ffffff18" : "#00000018";
+
+  // Respect prefers-reduced-motion (hydration-safe via useEffect)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  useEffect(() => {
+    setPrefersReducedMotion(
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    );
+  }, []);
 
   return (
     <section
       id="cities-globe"
-      ref={sectionRef}
       className="relative py-20 px-4 overflow-hidden"
       aria-labelledby="cities-globe-heading"
     >
@@ -221,30 +105,136 @@ export default function CitiesGlobe() {
           Find Your City
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Exclusive dining experiences are happening near you. Explore your city&apos;s hidden
-          culinary scene.
+          Exclusive dining experiences are happening near you. Explore your
+          city&apos;s hidden culinary scene.
         </p>
       </div>
 
-      {/* Globe canvas */}
-      {!globeError && (
-        <div
-          role="img"
-          aria-label="Interactive globe showing Tenseats cities across the United States"
-          className="flex justify-center mb-10"
-        >
-          <canvas
-            ref={canvasRef}
-            aria-hidden="true"
+      {/* US Map */}
+      <div
+        role="img"
+        aria-label="Map of the United States showing Tenseats cities"
+        className="relative w-full max-w-4xl mx-auto aspect-[8/5] mb-10"
+      >
+        {/* Layer 1: Dotted map background — cropped to continental US via clip + position */}
+        <div className="absolute inset-0 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white_5%,white_95%,transparent)]">
+          <Image
+            src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
+            className="pointer-events-none select-none"
+            alt=""
+            width={1056}
+            height={528}
+            draggable={false}
+            priority
             style={{
-              width: canvasSize,
-              height: canvasSize,
-              willChange: "transform",
+              position: "absolute",
+              width: "330%",
+              height: "330%",
+              left: "-52%",
+              top: "-72%",
             }}
-            className="rounded-full"
           />
         </div>
-      )}
+
+        {/* Layer 2-4: SVG overlay — outlines, dots, hover effects */}
+        <svg
+          viewBox={`0 0 ${US_BOUNDS.viewBoxWidth} ${US_BOUNDS.viewBoxHeight}`}
+          className="w-full h-full absolute inset-0 pointer-events-none select-none"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <defs>
+            <filter id="city-glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          {/* State outlines */}
+          <g fill="none" stroke={outlineStroke} strokeWidth="0.8">
+            {US_STATES_PATHS.map((d, i) => (
+              <path key={i} d={d} />
+            ))}
+          </g>
+
+          {/* City dots */}
+          {cityPositions.map((city) => {
+            const isHovered = hoveredCity === city.name;
+            return (
+              <g key={city.name}>
+                {/* Pulse ring (only when hovered) */}
+                {isHovered && !prefersReducedMotion && (
+                  <circle
+                    cx={city.pos.x}
+                    cy={city.pos.y}
+                    r="4"
+                    fill="#F97316"
+                    opacity="0.4"
+                  >
+                    <animate
+                      attributeName="r"
+                      from="4"
+                      to="14"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      from="0.4"
+                      to="0"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                )}
+
+                {/* Dot */}
+                <circle
+                  cx={city.pos.x}
+                  cy={city.pos.y}
+                  r={isHovered ? 5 : 3.5}
+                  fill="#F97316"
+                  filter="url(#city-glow)"
+                  style={{
+                    transition: "r 0.2s ease",
+                  }}
+                />
+
+                {/* City label (only when hovered) */}
+                {isHovered && (
+                  <foreignObject
+                    x={city.pos.x - 55}
+                    y={city.pos.y - 30}
+                    width="110"
+                    height="24"
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        height: "100%",
+                      }}
+                    >
+                      <span
+                        className={`text-xs font-medium px-2 py-0.5 rounded-md border shadow-sm ${
+                          isDark
+                            ? "bg-black/90 text-white border-gray-700"
+                            : "bg-white/90 text-black border-gray-200"
+                        }`}
+                      >
+                        {city.displayName}
+                      </span>
+                    </div>
+                  </foreignObject>
+                )}
+              </g>
+            );
+          })}
+        </svg>
+      </div>
 
       {/* Region tabs */}
       <div
@@ -284,9 +274,7 @@ export default function CitiesGlobe() {
             >
               <Link
                 href={`/cities/${metro.name}`}
-                onMouseEnter={() =>
-                  handlePillMouseEnter(metro.coordinates.lat, metro.coordinates.lng)
-                }
+                onMouseEnter={() => handlePillMouseEnter(metro.name)}
                 onMouseLeave={handlePillMouseLeave}
                 className="block bg-card border border-border text-foreground/80 rounded-full px-4 py-2 text-sm transition-colors hover:border-orange-500/50 hover:text-foreground"
               >
