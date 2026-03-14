@@ -4,7 +4,7 @@ milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
 stopped_at: Completed 24-01-PLAN.md (vendor success page)
-last_updated: "2026-03-14T23:33:36.987Z"
+last_updated: "2026-03-14T23:37:46.848Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
