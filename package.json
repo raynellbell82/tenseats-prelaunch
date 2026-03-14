@@ -77,6 +77,7 @@
     "convex-helpers": "^0.1.111",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
+    "dotted-map": "^3.1.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.34.0",
     "ics": "^3.8.1",
