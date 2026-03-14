@@ -44,13 +44,6 @@ export function JoinCtaFooter() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
       >
-        Already a member?{" "}
-        <Link
-          href="/login"
-          className="text-muted-foreground hover:text-foreground underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-foreground/50 transition-colors"
-        >
-          Log in
-        </Link>
       </motion.p>
     </section>
   );

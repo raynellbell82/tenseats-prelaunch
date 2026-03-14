@@ -2,9 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import DottedMap from "dotted-map";
 import { useTheme } from "next-themes";
 import { METROS_DATA } from "@/lib/city-data";
 import { REGIONS, getCitiesByRegion, type Region } from "@/lib/city-regions";
@@ -33,21 +31,6 @@ export default function CitiesGlobe() {
   const [hoveredCity, setHoveredCity] = useState<string | null>(null);
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
-
-  // Generate dotted map SVG string (memoized per theme)
-  const map = useMemo(() => new DottedMap({ height: 100, grid: "diagonal" }), []);
-  const dotColor = isDark ? "#FFFFFF40" : "#00000040";
-  const bgColor = isDark ? "black" : "white";
-  const svgMap = useMemo(
-    () =>
-      map.getSVG({
-        radius: 0.22,
-        color: dotColor,
-        shape: "circle",
-        backgroundColor: bgColor,
-      }),
-    [map, dotColor, bgColor]
-  );
 
   // Precompute projected city positions with overlap offsets
   const cityPositions = useMemo(
@@ -116,27 +99,7 @@ export default function CitiesGlobe() {
         aria-label="Map of the United States showing Tenseats cities"
         className="relative w-full max-w-4xl mx-auto aspect-[8/5] mb-10"
       >
-        {/* Layer 1: Dotted map background — cropped to continental US via clip + position */}
-        <div className="absolute inset-0 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white_5%,white_95%,transparent)]">
-          <Image
-            src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-            className="pointer-events-none select-none"
-            alt=""
-            width={1056}
-            height={528}
-            draggable={false}
-            priority
-            style={{
-              position: "absolute",
-              width: "330%",
-              height: "330%",
-              left: "-52%",
-              top: "-72%",
-            }}
-          />
-        </div>
-
-        {/* Layer 2-4: SVG overlay — outlines, dots, hover effects */}
+        {/* SVG map — outlines, dots, hover effects */}
         <svg
           viewBox={`0 0 ${US_BOUNDS.viewBoxWidth} ${US_BOUNDS.viewBoxHeight}`}
           className="w-full h-full absolute inset-0 pointer-events-none select-none"

@@ -89,14 +89,6 @@ export function LandingHeader() {
                   Cities
                 </Button>
               </Link>
-              <Link href="/login">
-                <Button
-                  variant="ghost"
-                  className="text-base text-muted-foreground hover:text-foreground"
-                >
-                  Log in
-                </Button>
-              </Link>
             </div>
 
             {/* Theme toggle */}
@@ -148,14 +140,6 @@ export function LandingHeader() {
                       className="flex items-center rounded-md px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                     >
                       Cities
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link
-                      href="/login"
-                      className="flex items-center rounded-md px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                    >
-                      Log in
                     </Link>
                   </SheetClose>
                 </nav>

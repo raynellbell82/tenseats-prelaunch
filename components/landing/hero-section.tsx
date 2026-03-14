@@ -48,7 +48,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <Link
-            href="/launch"
+            href="/join"
             className="group inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-[13px] font-medium text-amber-400 transition-colors hover:border-amber-500/50 hover:bg-amber-500/15"
           >
             <Sparkles className="h-3.5 w-3.5" />
@@ -107,7 +107,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
         >
-          <Link href="/signup">
+          <Link href="/join">
             <Button
               size="lg"
               className="group text-[15px] sm:text-base px-8 sm:px-10 h-12 sm:h-13 rounded-full font-medium shadow-lg shadow-foreground/5 dark:shadow-none"
@@ -116,15 +116,6 @@ export function HeroSection() {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Button>
           </Link>
-          <p className="text-[13px] text-muted-foreground/60">
-            Already have an account?{" "}
-            <Link
-              href="/login"
-              className="text-muted-foreground hover:text-foreground underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-foreground/50 transition-colors"
-            >
-              Log in
-            </Link>
-          </p>
           <Link
             href="/why-tenseats"
             className="text-[13px] text-muted-foreground/60 hover:text-foreground underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-foreground/50 transition-colors"
