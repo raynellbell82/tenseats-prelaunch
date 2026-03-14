@@ -1,6 +1,7 @@
 import { mutation, query } from "../_generated/server";
 import { v, ConvexError } from "convex/values";
 import { internal } from "../_generated/api";
+import { getAppUserId } from "../authHelpers";
 
 const membershipCategory = v.union(
   v.literal("chef"),
@@ -332,5 +333,31 @@ export const getAggregateStats = query({
       .withIndex("by_status_createdAt", (q) => q.eq("status", "verified"))
       .collect();
     return { totalFilled, totalAvailable, queueDepth: verified.length };
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Public Query: getUserRole (VERIFY-01)
+// Returns the first active role for the authenticated user from the userRoles
+// table, or null if not authenticated or no role found.
+// Used by verify-email-form after OTP verification for role-based routing.
+// ---------------------------------------------------------------------------
+
+const VENDOR_ROLES = new Set(["chef", "mixologist", "venueHost", "creator"]);
+
+export const getUserRole = query({
+  args: {},
+  returns: v.union(v.string(), v.null()),
+  handler: async (ctx) => {
+    const userId = await getAppUserId(ctx);
+    if (!userId) return null;
+
+    const roleDoc = await ctx.db
+      .query("userRoles")
+      .withIndex("by_user", (q) => q.eq("userId", userId))
+      .first();
+
+    if (!roleDoc) return null;
+    return roleDoc.role;
   },
 });

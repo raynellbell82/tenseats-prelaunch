@@ -6,6 +6,10 @@ import { Loader2, CheckCircle } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
+
+const VENDOR_ROLES = new Set(["chef", "mixologist", "venueHost", "creator"]);
 
 interface VerifyEmailFormProps {
   email: string;
@@ -34,6 +38,14 @@ export function VerifyEmailForm({ email, initialCode }: VerifyEmailFormProps) {
   const [expiryCountdown, setExpiryCountdown] = useState(OTP_EXPIRY_SECONDS);
   const [expired, setExpired] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+
+  // Query user role for post-verification routing (skip until verified)
+  const userRole = useQuery(
+    api.launch.queue.getUserRole,
+    verified ? {} : "skip",
+  );
+  const userRoleRef = useRef<string | null | undefined>(undefined);
+  userRoleRef.current = userRole;
 
   // Mask email: user@example.com -> u***@example.com
   const maskedEmail = email.replace(/^(.)[^@]*/, "$1***");
@@ -173,10 +185,18 @@ export function VerifyEmailForm({ email, initialCode }: VerifyEmailFormProps) {
         return;
       }
 
-      // Success - show animation then redirect
+      // Success - show animation then redirect to role-appropriate success page
       setVerified(true);
       setTimeout(() => {
-        router.push("/");
+        // Read latest role from ref (avoids stale closure on useCallback).
+        // userRole query fires after setVerified(true) enables it.
+        // By 1500ms it should have resolved; fall back to guest if still loading.
+        const role = userRoleRef.current;
+        const destination =
+          role !== undefined && VENDOR_ROLES.has(role ?? "")
+            ? "/launch/success/vendor"
+            : "/launch/success/guest";
+        router.push(destination);
       }, 1500);
     },
     [email, router, attempts]
