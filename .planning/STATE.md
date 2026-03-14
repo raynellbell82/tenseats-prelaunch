@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: "Completed 22-02-PLAN.md (checkpoint: awaiting human verify of full flow)"
-last_updated: "2026-03-14T22:15:53.513Z"
+stopped_at: Completed 22-02-PLAN.md (visual checkpoint approved)
+last_updated: "2026-03-14T22:19:55.922Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
@@ -70,6 +70,7 @@ Recent decisions affecting v1.2:
 - [Phase 22-verification-page]: itemVariants exported from PostSignupLayout so child page elements animate as staggered children of the container
 - [Phase 22-verification-page]: Stub success pages use LandingHeader directly — minimal placeholder appropriate; Phases 23/24 rebuild with full design
 - [Phase 22-verification-page]: getUserRole query added to convex/launch/queue.ts querying userRoles by_user index — post-OTP routing sends vendors to /launch/success/vendor and guests to /launch/success/guest
+- [Phase 22-verification-page]: Visual checkpoint approved: full flow from queue signup through /launch/verify OTP page to role-based success stubs confirmed working and on-brand
 
 ### Pending Todos
 
@@ -83,6 +84,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-14T22:15:53.511Z
-Stopped at: Completed 22-02-PLAN.md (checkpoint: awaiting human verify of full flow)
+Last session: 2026-03-14T22:19:52.577Z
+Stopped at: Completed 22-02-PLAN.md (visual checkpoint approved)
 Resume file: None

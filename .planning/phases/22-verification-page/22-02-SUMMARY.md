@@ -97,7 +97,7 @@ None - no external service configuration required.
 - Full VERIFY-01 flow is code-complete: queue signup -> /launch/verify -> OTP entry -> role-based success stub
 - Stub routes /launch/success/guest and /launch/success/vendor await Phases 23/24 to build real content
 - getUserRole query is reusable by Phase 25 (Onboarding Persistence) if it needs role-gated logic
-- Pending human visual verification at checkpoint (Task 2): full flow from signup through verify page
+- Visual checkpoint (Task 2) approved: full flow from signup through verify page confirmed working and on-brand
 
 ---
 *Phase: 22-verification-page*
