@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: Completed 20-01-PLAN.md
-last_updated: "2026-03-14T17:58:45.612Z"
+stopped_at: Completed 20-02-PLAN.md
+last_updated: "2026-03-14T21:14:26.379Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -47,6 +47,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 20-schema-coordination P01 | 2 | 2 tasks | 1 files |
+| Phase 20-schema-coordination P02 | 5 | 2 tasks | 0 files |
 
 ## Accumulated Context
 
@@ -60,6 +61,7 @@ Recent decisions affecting v1.2:
 - DESIGN-01 scoped to Phase 22 (verification page) — design language established there, extended through 23/24
 - [Phase 20-schema-coordination]: Use existing schema fields for onboarding persistence (stripeCustomerId, currentMetroId, cuisinePreferences, isProfileComplete) — no new onboardingProgress table
 - [Phase 20-schema-coordination]: isProfileComplete requires hasRole + hasCity; Stripe connect is optional for all roles
+- [Phase 20-schema-coordination]: SCHEMA-02 gate cleared: prelaunch convex/schema.ts was byte-for-byte identical to main app schema — no copy needed, Phase 25 unblocked
 
 ### Pending Todos
 
@@ -73,6 +75,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-14T17:58:45.610Z
-Stopped at: Completed 20-01-PLAN.md
+Last session: 2026-03-14T21:14:26.377Z
+Stopped at: Completed 20-02-PLAN.md
 Resume file: None
