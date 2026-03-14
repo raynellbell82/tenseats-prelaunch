@@ -72,7 +72,9 @@ Plans:
   1. An Instagram icon component renders correctly at standard icon sizes in both light and dark themes via `currentColor`
   2. A Pinterest icon component renders correctly at standard icon sizes in both light and dark themes via `currentColor`
   3. Both icons follow the same monoline stroke style as existing persona icons
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 21-01-PLAN.md — Create InstagramIcon and PinterestIcon monoline SVG components
 
 ### Phase 22: Verification Page
 **Goal**: Users who complete queue signup land on a warm, branded "almost there" page that tells them to check their email — the same page works for both guest and vendor signups
@@ -136,7 +138,7 @@ Plans:
 | 12. Persona Component Foundation | v1.1 | 1/1 | Complete | 2026-03-13 |
 | 13. City Persona Copy | v1.1 | 3/3 | Complete | 2026-03-13 |
 | 20. Schema Coordination | 2/2 | Complete    | 2026-03-14 | - |
-| 21. Social Icons | v1.2 | 0/? | Not started | - |
+| 21. Social Icons | v1.2 | 0/1 | Not started | - |
 | 22. Verification Page | v1.2 | 0/? | Not started | - |
 | 23. Guest Success Page | v1.2 | 0/? | Not started | - |
 | 24. Vendor Success Page | v1.2 | 0/? | Not started | - |
