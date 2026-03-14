@@ -121,8 +121,8 @@ export function LaunchQueueSignupForm({
       sessionStorage.setItem("otp-verify-email", values.email);
       sessionStorage.setItem("otp-sent-ts", Date.now().toString());
 
-      // Redirect to verify-email page (existing OTP entry UI)
-      router.push("/verify-email");
+      // Redirect to branded verification page
+      router.push("/launch/verify");
     } catch (error: unknown) {
       const message =
         error instanceof Error ? error.message : String(error);
