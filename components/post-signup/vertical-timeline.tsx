@@ -1,9 +1,12 @@
 "use client";
 
+import { ReactNode } from "react";
+
 interface TimelineStep {
   label: string;
   detail?: string;
   active?: boolean;
+  action?: ReactNode; // Optional inline action element (e.g., button)
 }
 
 interface VerticalTimelineProps {
@@ -31,7 +34,7 @@ export function VerticalTimeline({ steps }: VerticalTimelineProps) {
               )}
             </div>
 
-            {/* Right: label + detail */}
+            {/* Right: label + detail + optional action */}
             <div className={`pb-5 ${isLast ? "pb-0" : ""}`}>
               <p
                 className={`text-sm font-medium leading-tight ${
@@ -44,6 +47,11 @@ export function VerticalTimeline({ steps }: VerticalTimelineProps) {
                 <p className="text-xs text-muted-foreground mt-0.5">
                   {step.detail}
                 </p>
+              )}
+              {step.action && (
+                <div className="mt-2">
+                  {step.action}
+                </div>
               )}
             </div>
           </div>
