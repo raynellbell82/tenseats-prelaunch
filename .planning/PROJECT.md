@@ -36,7 +36,16 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ### Active
 
-(No active requirements — planning next milestone)
+## Current Milestone: v1.2 Post-Signup Experience
+
+**Goal:** Create distinctive post-signup pages — a shared "almost there" verification prompt, a guest welcome/success page, and a vendor onboarding success page with Stripe connect and back-of-house guidance.
+
+**Target features:**
+- Shared "almost there" page (check your email for verification code)
+- Guest success page (inspirational welcome, community messaging, social links)
+- Vendor success page (Stripe connect step, Zoho One back-of-house info, progress persistence)
+- Custom Instagram and Pinterest social icons
+- Onboarding step persistence (save completed steps per user, resume on next login)
 
 ### Out of Scope
 
@@ -96,4 +105,4 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 | City-specific CTA to /launch?city= | Persona section CTA pre-fills city for higher conversion intent | ✓ Good |
 
 ---
-*Last updated: 2026-03-13 after v1.1 milestone completion*
+*Last updated: 2026-03-14 after v1.2 milestone start*

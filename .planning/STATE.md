@@ -1,11 +1,11 @@
 ---
 gsd_state_version: 1.0
-milestone: null
-milestone_name: null
-status: between_milestones
-stopped_at: v1.1 milestone completed
-last_updated: "2026-03-13"
-last_activity: "2026-03-13 — v1.1 City Persona Copy milestone completed and archived"
+milestone: v1.2
+milestone_name: Post-Signup Experience
+status: defining_requirements
+stopped_at: null
+last_updated: "2026-03-14"
+last_activity: "2026-03-14 — Milestone v1.2 started"
 progress:
   total_phases: 0
   completed_phases: 0
@@ -18,15 +18,17 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-13)
+See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** Convert visitors into Early Bird or Founding members via Stripe checkout while telling the Tenseats story across 32 city pages — on a shared Convex backend so accounts carry over to the full marketplace.
-**Current focus:** Planning next milestone
+**Current focus:** v1.2 Post-Signup Experience — defining requirements
 
 ## Current Position
 
-Status: Between milestones — v1.1 shipped, no active milestone
-Last activity: 2026-03-13 — v1.1 City Persona Copy completed
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-03-14 — Milestone v1.2 started
 
 ## Shipped Milestones
 
