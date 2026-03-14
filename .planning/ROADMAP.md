@@ -112,7 +112,9 @@ Plans:
   2. The page offers an optional "Connect your Stripe account" step with clear messaging that this can be done now or at launch
   3. The page explains Zoho One back-of-house setup with the tagline "one fee for 50+ best-in-class tools" and a working link to `https://go.zoho.com/Slvq`
   4. The page displays Instagram and Pinterest social links matching the guest success page layout
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 24-01-PLAN.md — Build vendor success page with role headlines, Stripe Connect, Zoho card, and social links
 
 ### Phase 25: Onboarding Persistence
 **Goal**: Completed onboarding steps survive sessions — users who return after logging out see their progress and are not prompted to repeat steps they have already completed
@@ -146,5 +148,5 @@ Plans:
 | 21. Social Icons | 1/1 | Complete    | 2026-03-14 | - |
 | 22. Verification Page | 2/2 | Complete    | 2026-03-14 | - |
 | 23. Guest Success Page | 1/1 | Complete    | 2026-03-14 | - |
-| 24. Vendor Success Page | v1.2 | 0/? | Not started | - |
+| 24. Vendor Success Page | v1.2 | 0/1 | Not started | - |
 | 25. Onboarding Persistence | v1.2 | 0/? | Not started | - |
