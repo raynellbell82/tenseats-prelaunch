@@ -46,7 +46,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 - [x] **Phase 21: Social Icons** — Generate custom Instagram and Pinterest SVG icons for use across success pages (completed 2026-03-14)
 - [x] **Phase 22: Verification Page** — Build the shared "almost there" page with branded email-check messaging (completed 2026-03-14)
 - [x] **Phase 23: Guest Success Page** — Build guest success page with community welcome, address book reminder, and social links (completed 2026-03-14)
-- [ ] **Phase 24: Vendor Success Page** — Build vendor success page with Stripe connect step, Zoho One info, and social links
+- [x] **Phase 24: Vendor Success Page** — Build vendor success page with Stripe connect step, Zoho One info, and social links (completed 2026-03-14)
 - [ ] **Phase 25: Onboarding Persistence** — Wire completed steps to Convex per-user storage so progress survives sessions
 
 ## Phase Details
@@ -112,7 +112,7 @@ Plans:
   2. The page offers an optional "Connect your Stripe account" step with clear messaging that this can be done now or at launch
   3. The page explains Zoho One back-of-house setup with the tagline "one fee for 50+ best-in-class tools" and a working link to `https://go.zoho.com/Slvq`
   4. The page displays Instagram and Pinterest social links matching the guest success page layout
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 Plans:
 - [ ] 24-01-PLAN.md — Build vendor success page with role headlines, Stripe Connect, Zoho card, and social links
 
@@ -148,5 +148,5 @@ Plans:
 | 21. Social Icons | 1/1 | Complete    | 2026-03-14 | - |
 | 22. Verification Page | 2/2 | Complete    | 2026-03-14 | - |
 | 23. Guest Success Page | 1/1 | Complete    | 2026-03-14 | - |
-| 24. Vendor Success Page | v1.2 | 0/1 | Not started | - |
+| 24. Vendor Success Page | 1/1 | Complete   | 2026-03-14 | - |
 | 25. Onboarding Persistence | v1.2 | 0/? | Not started | - |

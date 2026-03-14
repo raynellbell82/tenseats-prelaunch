@@ -25,10 +25,10 @@ Requirements for Post-Signup Experience milestone. New pages for verification an
 
 ### Vendor Success
 
-- [ ] **VSUCCESS-01**: After OTP verification, vendor users (Chef, Mixologist, Venue Host, Creator) see a dedicated success page with welcome messaging
-- [ ] **VSUCCESS-02**: Vendor success page offers optional "Connect your Stripe account" as first onboarding step (can do now or wait until launch)
-- [ ] **VSUCCESS-03**: Vendor success page explains back-of-house setup with Zoho One recommendation ("one fee for 50+ best-in-class tools") and links to `https://go.zoho.com/Slvq`
-- [ ] **VSUCCESS-04**: Vendor success page displays same social media links as guest page
+- [x] **VSUCCESS-01**: After OTP verification, vendor users (Chef, Mixologist, Venue Host, Creator) see a dedicated success page with welcome messaging
+- [x] **VSUCCESS-02**: Vendor success page offers optional "Connect your Stripe account" as first onboarding step (can do now or wait until launch)
+- [x] **VSUCCESS-03**: Vendor success page explains back-of-house setup with Zoho One recommendation ("one fee for 50+ best-in-class tools") and links to `https://go.zoho.com/Slvq`
+- [x] **VSUCCESS-04**: Vendor success page displays same social media links as guest page
 
 ### Onboarding Persistence
 
@@ -78,10 +78,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GSUCCESS-01 | Phase 23 | Complete |
 | GSUCCESS-02 | Phase 23 | Complete |
 | GSUCCESS-03 | Phase 23 | Complete |
-| VSUCCESS-01 | Phase 24 | Pending |
-| VSUCCESS-02 | Phase 24 | Pending |
-| VSUCCESS-03 | Phase 24 | Pending |
-| VSUCCESS-04 | Phase 24 | Pending |
+| VSUCCESS-01 | Phase 24 | Complete |
+| VSUCCESS-02 | Phase 24 | Complete |
+| VSUCCESS-03 | Phase 24 | Complete |
+| VSUCCESS-04 | Phase 24 | Complete |
 | ONBOARD-01 | Phase 25 | Pending |
 | ONBOARD-02 | Phase 25 | Pending |
 

@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: Phase 24 context gathered
-last_updated: "2026-03-14T23:11:12.948Z"
+stopped_at: Completed 24-01-PLAN.md (vendor success page)
+last_updated: "2026-03-14T23:33:36.987Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
-  completed_phases: 4
-  total_plans: 6
-  completed_plans: 6
+  completed_phases: 5
+  total_plans: 7
+  completed_plans: 7
   percent: 0
 ---
 
@@ -52,6 +52,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 22-verification-page P01 | 2 | 2 tasks | 6 files |
 | Phase 22-verification-page P02 | 5 | 1 tasks | 2 files |
 | Phase 23-guest-success-page P01 | 8 | 1 tasks | 2 files |
+| Phase 24-vendor-success-page P01 | 45 | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,9 @@ Recent decisions affecting v1.2:
 - [Phase 23-guest-success-page]: Headline 'Your seat at the table is set.' selected via copy-writer skill (Pattern 5) — completes arc from verify page
 - [Phase 23-guest-success-page]: SocialLinks extracted to components/post-signup/ as shared component immediately reusable by Phase 24 vendor success page
 - [Phase 23-guest-success-page]: Visual checkpoint approved: guest success page design, copy tone, and interactions confirmed correct by user
+- [Phase 24-vendor-success-page]: Vendor success page visual checkpoint approved: role headlines, Stripe step, Zoho One card, and social links confirmed on-brand
+- [Phase 24-vendor-success-page]: Stripe Connect in Phase 24 is stateless (no account ID persistence) — Phase 25 ONBOARD-01/02 handles persistence
+- [Phase 24-vendor-success-page]: getUserRole useQuery has skip condition when session not verified to prevent Convex auth errors
 
 ### Pending Todos
 
@@ -88,6 +92,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-14T23:11:12.946Z
-Stopped at: Phase 24 context gathered
-Resume file: .planning/phases/24-vendor-success-page/24-CONTEXT.md
+Last session: 2026-03-14T23:33:36.985Z
+Stopped at: Completed 24-01-PLAN.md (vendor success page)
+Resume file: None
