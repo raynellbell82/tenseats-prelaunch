@@ -68,28 +68,28 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SCHEMA-01 | TBD | Pending |
-| SCHEMA-02 | TBD | Pending |
-| VERIFY-01 | TBD | Pending |
-| VERIFY-02 | TBD | Pending |
-| GSUCCESS-01 | TBD | Pending |
-| GSUCCESS-02 | TBD | Pending |
-| GSUCCESS-03 | TBD | Pending |
-| VSUCCESS-01 | TBD | Pending |
-| VSUCCESS-02 | TBD | Pending |
-| VSUCCESS-03 | TBD | Pending |
-| VSUCCESS-04 | TBD | Pending |
-| ONBOARD-01 | TBD | Pending |
-| ONBOARD-02 | TBD | Pending |
-| SOCIAL-01 | TBD | Pending |
-| SOCIAL-02 | TBD | Pending |
-| DESIGN-01 | TBD | Pending |
+| SCHEMA-01 | Phase 20 | Pending |
+| SCHEMA-02 | Phase 20 | Pending |
+| SOCIAL-01 | Phase 21 | Pending |
+| SOCIAL-02 | Phase 21 | Pending |
+| VERIFY-01 | Phase 22 | Pending |
+| VERIFY-02 | Phase 22 | Pending |
+| DESIGN-01 | Phase 22 | Pending |
+| GSUCCESS-01 | Phase 23 | Pending |
+| GSUCCESS-02 | Phase 23 | Pending |
+| GSUCCESS-03 | Phase 23 | Pending |
+| VSUCCESS-01 | Phase 24 | Pending |
+| VSUCCESS-02 | Phase 24 | Pending |
+| VSUCCESS-03 | Phase 24 | Pending |
+| VSUCCESS-04 | Phase 24 | Pending |
+| ONBOARD-01 | Phase 25 | Pending |
+| ONBOARD-02 | Phase 25 | Pending |
 
 **Coverage:**
 - v1.2 requirements: 16 total
-- Mapped to phases: 0
-- Unmapped: 16
+- Mapped to phases: 16
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-14*
-*Last updated: 2026-03-14 after initial definition*
+*Last updated: 2026-03-14 after roadmap creation*
