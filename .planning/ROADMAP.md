@@ -43,7 +43,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 **Milestone Goal:** Create distinctive post-signup pages — verification prompt, guest welcome, and vendor onboarding success with Stripe connect guidance — plus onboarding step persistence backed by the shared Convex schema.
 
 - [x] **Phase 20: Schema Coordination** — Generate the main-app prompt and verify schema deployment before persistence work begins (completed 2026-03-14)
-- [ ] **Phase 21: Social Icons** — Generate custom Instagram and Pinterest SVG icons for use across success pages
+- [x] **Phase 21: Social Icons** — Generate custom Instagram and Pinterest SVG icons for use across success pages (completed 2026-03-14)
 - [ ] **Phase 22: Verification Page** — Build the shared "almost there" page with branded email-check messaging
 - [ ] **Phase 23: Guest Success Page** — Build guest success page with community welcome, address book reminder, and social links
 - [ ] **Phase 24: Vendor Success Page** — Build vendor success page with Stripe connect step, Zoho One info, and social links
@@ -72,7 +72,7 @@ Plans:
   1. An Instagram icon component renders correctly at standard icon sizes in both light and dark themes via `currentColor`
   2. A Pinterest icon component renders correctly at standard icon sizes in both light and dark themes via `currentColor`
   3. Both icons follow the same monoline stroke style as existing persona icons
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 Plans:
 - [ ] 21-01-PLAN.md — Create InstagramIcon and PinterestIcon monoline SVG components
 
@@ -138,7 +138,7 @@ Plans:
 | 12. Persona Component Foundation | v1.1 | 1/1 | Complete | 2026-03-13 |
 | 13. City Persona Copy | v1.1 | 3/3 | Complete | 2026-03-13 |
 | 20. Schema Coordination | 2/2 | Complete    | 2026-03-14 | - |
-| 21. Social Icons | v1.2 | 0/1 | Not started | - |
+| 21. Social Icons | 1/1 | Complete   | 2026-03-14 | - |
 | 22. Verification Page | v1.2 | 0/? | Not started | - |
 | 23. Guest Success Page | v1.2 | 0/? | Not started | - |
 | 24. Vendor Success Page | v1.2 | 0/? | Not started | - |

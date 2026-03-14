@@ -37,8 +37,8 @@ Requirements for Post-Signup Experience milestone. New pages for verification an
 
 ### Social Icons
 
-- [ ] **SOCIAL-01**: Custom Instagram icon generated via Web Asset Generator
-- [ ] **SOCIAL-02**: Custom Pinterest icon generated via Web Asset Generator
+- [x] **SOCIAL-01**: Custom Instagram icon generated via Web Asset Generator
+- [x] **SOCIAL-02**: Custom Pinterest icon generated via Web Asset Generator
 
 ### Design Quality
 
@@ -70,8 +70,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | SCHEMA-01 | Phase 20 | Complete |
 | SCHEMA-02 | Phase 20 | Complete |
-| SOCIAL-01 | Phase 21 | Pending |
-| SOCIAL-02 | Phase 21 | Pending |
+| SOCIAL-01 | Phase 21 | Complete |
+| SOCIAL-02 | Phase 21 | Complete |
 | VERIFY-01 | Phase 22 | Pending |
 | VERIFY-02 | Phase 22 | Pending |
 | DESIGN-01 | Phase 22 | Pending |
