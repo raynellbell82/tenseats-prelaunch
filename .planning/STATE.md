@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: Phase 20 context gathered
-last_updated: "2026-03-14T17:45:36.475Z"
+stopped_at: Completed 20-01-PLAN.md
+last_updated: "2026-03-14T17:58:45.612Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 2
+  completed_plans: 1
   percent: 0
 ---
 
@@ -46,6 +46,7 @@ Progress: [░░░░░░░░░░] 0%
 | - | - | - | - |
 
 *Updated after each plan completion*
+| Phase 20-schema-coordination P01 | 2 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -57,6 +58,8 @@ Recent decisions affecting v1.2:
 - Phase 20 must be first: SCHEMA-01 generates main-app prompt, SCHEMA-02 verifies schema deployed before ONBOARD-01/02
 - Phase 21 (Social Icons) is independent — runs early, icons available for all success pages
 - DESIGN-01 scoped to Phase 22 (verification page) — design language established there, extended through 23/24
+- [Phase 20-schema-coordination]: Use existing schema fields for onboarding persistence (stripeCustomerId, currentMetroId, cuisinePreferences, isProfileComplete) — no new onboardingProgress table
+- [Phase 20-schema-coordination]: isProfileComplete requires hasRole + hasCity; Stripe connect is optional for all roles
 
 ### Pending Todos
 
@@ -70,6 +73,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-14T17:45:36.472Z
-Stopped at: Phase 20 context gathered
-Resume file: .planning/phases/20-schema-coordination/20-CONTEXT.md
+Last session: 2026-03-14T17:58:45.610Z
+Stopped at: Completed 20-01-PLAN.md
+Resume file: None

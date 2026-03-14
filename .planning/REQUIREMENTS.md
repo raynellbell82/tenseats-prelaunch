@@ -9,7 +9,7 @@ Requirements for Post-Signup Experience milestone. New pages for verification an
 
 ### Schema Coordination
 
-- [ ] **SCHEMA-01**: Generate a comprehensive prompt document for the main Tenseats marketplace repo that covers: onboarding progress schema additions, the "almost there" verification page, guest success page, vendor success page with Stripe connect step, Zoho One messaging, social links, and onboarding persistence logic — so the main app has this flow built in when it launches
+- [x] **SCHEMA-01**: Generate a comprehensive prompt document for the main Tenseats marketplace repo that covers: onboarding progress schema additions, the "almost there" verification page, guest success page, vendor success page with Stripe connect step, Zoho One messaging, social links, and onboarding persistence logic — so the main app has this flow built in when it launches
 - [ ] **SCHEMA-02**: Before building onboarding persistence (ONBOARD-01/02), verify the schema change has been deployed to the shared Convex backend
 
 ### Verification UX
@@ -68,7 +68,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SCHEMA-01 | Phase 20 | Pending |
+| SCHEMA-01 | Phase 20 | Complete |
 | SCHEMA-02 | Phase 20 | Pending |
 | SOCIAL-01 | Phase 21 | Pending |
 | SOCIAL-02 | Phase 21 | Pending |

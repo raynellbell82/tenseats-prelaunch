@@ -59,7 +59,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
   1. A prompt document exists that covers every aspect of the post-signup experience for the main app developer to implement (pages, persistence logic, Stripe step, Zoho messaging, social links)
   2. The shared Convex backend has the onboarding progress schema table deployed and queryable before Phase 25 begins
   3. No onboarding persistence code is written until SCHEMA-02 is confirmed (schema deployed)
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
 - [ ] 20-01-PLAN.md — Generate comprehensive Claude Code prompt for main app post-signup experience
 - [ ] 20-02-PLAN.md — Verify schema deployment and copy updated schema to prelaunch repo
@@ -135,7 +135,7 @@ Plans:
 | 11. Nav & Auth Wiring Fixes | v1.0 | 1/1 | Complete | 2026-03-13 |
 | 12. Persona Component Foundation | v1.1 | 1/1 | Complete | 2026-03-13 |
 | 13. City Persona Copy | v1.1 | 3/3 | Complete | 2026-03-13 |
-| 20. Schema Coordination | v1.2 | 0/2 | Not started | - |
+| 20. Schema Coordination | 1/2 | In Progress|  | - |
 | 21. Social Icons | v1.2 | 0/? | Not started | - |
 | 22. Verification Page | v1.2 | 0/? | Not started | - |
 | 23. Guest Success Page | v1.2 | 0/? | Not started | - |
