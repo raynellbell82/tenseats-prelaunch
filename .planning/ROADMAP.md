@@ -124,7 +124,10 @@ Plans:
   1. When a vendor user completes the Stripe connect step, that completion is stored per-user in the Convex backend
   2. When a vendor user logs back in, the vendor success page shows which steps are already complete and does not re-prompt them
   3. A user who has not completed any steps sees the full onboarding flow unchanged
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 25-01-PLAN.md — Backend persistence layer: schema fields, Convex mutations/queries, Stripe Connect API + webhook routes
+- [ ] 25-02-PLAN.md — Frontend reactive display: vendor page shows Stripe connection status with visual checkpoint
 
 ## Progress
 
@@ -149,4 +152,4 @@ Plans:
 | 22. Verification Page | 2/2 | Complete    | 2026-03-14 | - |
 | 23. Guest Success Page | 1/1 | Complete    | 2026-03-14 | - |
 | 24. Vendor Success Page | 1/1 | Complete    | 2026-03-14 | - |
-| 25. Onboarding Persistence | v1.2 | 0/? | Not started | - |
+| 25. Onboarding Persistence | v1.2 | 0/2 | Not started | - |
