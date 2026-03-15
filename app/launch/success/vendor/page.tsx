@@ -34,6 +34,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { CheckCircle2, Copy, Check, ExternalLink } from "lucide-react";
 import { useSession } from "@/lib/auth-client";
@@ -59,6 +60,7 @@ const DEFAULT_HEADLINE = "The table is yours.";
 
 export default function VendorSuccessPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { data: session, isPending } = useSession();
   const [copied, setCopied] = useState(false);
   const [connecting, setConnecting] = useState(false);
@@ -68,12 +70,26 @@ export default function VendorSuccessPage() {
     session?.user?.emailVerified ? {} : "skip",
   );
 
+  const stripeStatus = useQuery(
+    api.launch.stripeConnect.getStripeConnectStatus,
+    session?.user?.emailVerified ? {} : "skip",
+  );
+
   useEffect(() => {
     if (isPending) return;
     if (!session || !session.user.emailVerified) {
       router.push("/launch");
     }
   }, [session, isPending, router]);
+
+  useEffect(() => {
+    // Clean up stripe_connect query param after return from Stripe
+    if (searchParams.get("stripe_connect") === "complete") {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("stripe_connect");
+      window.history.replaceState({}, "", url.pathname);
+    }
+  }, [searchParams]);
 
   const handleCopy = async () => {
     try {
@@ -102,7 +118,18 @@ export default function VendorSuccessPage() {
   const headline =
     role && ROLE_HEADLINES[role] ? ROLE_HEADLINES[role] : DEFAULT_HEADLINE;
 
-  const stripeAction = (
+  const isStripeConnected = stripeStatus?.accountId != null;
+
+  const stripeAction = isStripeConnected ? (
+    // Connected state: green checkmark + label
+    <div className="flex items-center gap-1.5">
+      <CheckCircle2 className="h-4 w-4 text-green-500" />
+      <span className="text-xs text-green-600 dark:text-green-400 font-medium">
+        Stripe Connected
+      </span>
+    </div>
+  ) : (
+    // Not connected: original button
     <div className="flex flex-col items-start gap-1">
       <button
         onClick={handleStripeConnect}
