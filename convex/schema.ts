@@ -208,6 +208,8 @@ export default defineSchema({
     preRegistrationId: v.optional(v.id("preRegistrations")),
     stripeCustomerId: v.optional(v.string()),
     stripeSubscriptionId: v.optional(v.string()),
+    stripeConnectAccountId: v.optional(v.string()), // acct_xxx — Stripe Express account ID (ONBOARD-01)
+    stripeConnectComplete: v.optional(v.boolean()),  // true when webhook confirms onboarding done (ONBOARD-01)
 
     // Timestamps
     ...timestamps,
