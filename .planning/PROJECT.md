@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A standalone Next.js + Convex pre-launch website for Tenseats — a food-focused social marketplace launching in 32 US cities. Lives at `tenseats.io` and serves as the public face until the full marketplace app replaces it via a Coolify deployment swap. Connects to the same Convex deployment (`api.tenseats.io`) as the main app, sharing users, metros, launch slots, and pre-registration tables.
+A standalone Next.js + Convex pre-launch website for Tenseats — a food-focused social marketplace launching in 32 US cities. Lives at `tenseats.io` and serves as the public face until the full marketplace app replaces it via a Coolify deployment swap. Connects to the same Convex deployment (`api.tenseats.io`) as the main app, sharing users, metros, launch slots, and pre-registration tables. Includes a complete post-signup experience: branded verification page, role-based success pages (guest + vendor), Stripe Connect onboarding, and social links.
 
 ## Core Value
 
@@ -34,18 +34,18 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 - ✓ 192 culturally-specific persona descriptions (32 cities × 6 roles) with neighborhood-level specificity — v1.1
 - ✓ Full brand compliance across all persona copy — zero forbidden adjectives — v1.1
 
+- ✓ Shared "almost there" verification page with branded email-check messaging — v1.2
+- ✓ Guest success page with community welcome, support email safelist, social links — v1.2
+- ✓ Vendor success page with role-specific headlines, Stripe Connect, Zoho One card, social links — v1.2
+- ✓ Custom Instagram and Pinterest monoline SVG social icons — v1.2
+- ✓ Stripe Connect onboarding persistence (account ID saved, reactive status on vendor page) — v1.2
+- ✓ Post-signup design system: PostSignupLayout, VerticalTimeline, dark premium aesthetic — v1.2
+- ✓ Role-based post-OTP routing (guest → /launch/success/guest, vendor → /launch/success/vendor) — v1.2
+- ✓ Comprehensive 732-line prompt document for main app post-signup implementation — v1.2
+
 ### Active
 
-## Current Milestone: v1.2 Post-Signup Experience
-
-**Goal:** Create distinctive post-signup pages — a shared "almost there" verification prompt, a guest welcome/success page, and a vendor onboarding success page with Stripe connect and back-of-house guidance.
-
-**Target features:**
-- Shared "almost there" page (check your email for verification code)
-- Guest success page (inspirational welcome, community messaging, social links)
-- Vendor success page (Stripe connect step, Zoho One back-of-house info, progress persistence)
-- Custom Instagram and Pinterest social icons
-- Onboarding step persistence (save completed steps per user, resume on next login)
+(No active milestone — run `/gsd:new-milestone` to start v1.3)
 
 ### Out of Scope
 
@@ -58,7 +58,7 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ## Context
 
-**Current State:** v1.1 shipped. 14 phases, 26 plans, 128 commits, 20,373 LOC TypeScript.
+**Current State:** v1.2 shipped. 20 phases, 35 plans, 169 commits, 21,433 LOC TypeScript.
 
 - **Source repo:** `/Users/tenseats/Documents/dev/Tenseats-marketplace-platform` (also cloneable from `https://github.com/raynellbell82/Tenseats-marketplace-platform.git` to `/tmp/tenseats-source`)
 - **Shared Convex deployment:** Both apps point to `api.tenseats.io`. Users who create accounts on pre-launch site log into the marketplace seamlessly when it goes live — same domain, deployment swap
@@ -75,6 +75,11 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 - Dead code: `request-reset-form.tsx`, `reset-password-form.tsx` (no route pages)
 - Dead exports: `fixConvexUrl` (utils.ts), `listActive` alias (metros.ts)
 - `/join` ReserveSpotSection CTAs link to `/launch` without `?city=` pre-fill
+- Dead `VENDOR_ROLES` constant in `convex/launch/queue.ts` (duplicate of verify-email-form.tsx)
+- Verified user navigating to `/verify-email` redirects to `/` instead of role-appropriate success page
+- `convex/_generated/api.d.ts` manually edited (Convex sync failure) — may need regeneration
+- ONBOARD-02 partial: only Stripe Connect step persists, no general onboarding progress resumption
+- Stripe webhook requires `STRIPE_CONNECT_WEBHOOK_SECRET` and `CONVEX_DEPLOY_KEY` env vars (not yet set)
 
 ## Constraints
 
@@ -103,6 +108,11 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 | Custom SVG icons over Lucide | Monoline stroke icons match brand aesthetic, theme-aware via currentColor | ✓ Good |
 | Replace full topPersonas arrays | Canonical role order enforced (guest→chef→mixologist→curator→venueHost→facilitator) | ✓ Good |
 | City-specific CTA to /launch?city= | Persona section CTA pre-fills city for higher conversion intent | ✓ Good |
+| Existing schema fields for onboarding | No new onboardingProgress table — use stripeConnectAccountId etc. | ✓ Good |
+| PostSignupLayout shared wrapper | Dark premium design system consistent across all 3 post-signup pages | ✓ Good |
+| saveStripeConnectAccount as public mutation | fetchAuthMutation with user JWT — ConvexHttpClient.setAdminAuth is private | ✓ Good |
+| Webhook via Convex HTTP API /api/mutation | confirmStripeConnect (internal) called with deploy key, not private client API | ✓ Good |
+| isStripeConnected from accountId non-null | accountId presence is the meaningful signal, not the complete boolean | ✓ Good |
 
 ---
-*Last updated: 2026-03-14 after v1.2 milestone start*
+*Last updated: 2026-03-15 after v1.2 milestone*

@@ -1,5 +1,29 @@
 # Milestones
 
+## v1.2 Post-Signup Experience (Shipped: 2026-03-15)
+
+**Phases completed:** 6 phases, 9 plans, 41 commits
+
+**Key accomplishments:**
+- Comprehensive Claude Code prompt for main app post-signup implementation (732-line prescriptive document)
+- Shared post-signup design system: PostSignupLayout, VerticalTimeline, dark premium aesthetic with Framer Motion stagger animations
+- Branded "almost there" verification page with email masking, resend cooldown, and 3-step timeline
+- Guest success page with community welcome, click-to-copy support email, and social links
+- Vendor success page with role-specific headlines, optional Stripe Connect, Zoho One card, and social links
+- Stripe Connect onboarding persistence: backend mutations/queries, webhook endpoint, reactive UI status
+
+**Stats:**
+- 41 commits | 43 files | +5,224 / -59 lines | 21,433 LOC TypeScript
+- Timeline: 2026-03-14 (~7 hours)
+- Git range: c52e4b9..fe88e8c
+
+### Known Gaps
+
+- **ONBOARD-02**: "When a user logs back in, they see their progress and can resume from where they left off." Implementation covers Stripe Connect step only — vendor page shows reactive "Stripe Connected" status. General onboarding progress resumption deferred to v1.3.
+- **Environment setup required**: `STRIPE_CONNECT_WEBHOOK_SECRET` and `CONVEX_DEPLOY_KEY` must be set before Stripe Connect webhook works in production.
+
+---
+
 ## v1.1 City Persona Copy (Shipped: 2026-03-13)
 
 **Phases completed:** 2 phases, 4 plans, 8 tasks
