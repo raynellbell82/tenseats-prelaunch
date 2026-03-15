@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: Phase 25 context gathered
-last_updated: "2026-03-15T00:03:50.852Z"
+stopped_at: Completed 25-01-PLAN.md
+last_updated: "2026-03-15T00:29:44.383Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
   completed_phases: 5
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 9
+  completed_plans: 8
   percent: 0
 ---
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 22-verification-page P02 | 5 | 1 tasks | 2 files |
 | Phase 23-guest-success-page P01 | 8 | 1 tasks | 2 files |
 | Phase 24-vendor-success-page P01 | 45 | 3 tasks | 3 files |
+| Phase 25 P01 | 5min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,8 @@ Recent decisions affecting v1.2:
 - [Phase 24-vendor-success-page]: Vendor success page visual checkpoint approved: role headlines, Stripe step, Zoho One card, and social links confirmed on-brand
 - [Phase 24-vendor-success-page]: Stripe Connect in Phase 24 is stateless (no account ID persistence) — Phase 25 ONBOARD-01/02 handles persistence
 - [Phase 24-vendor-success-page]: getUserRole useQuery has skip condition when session not verified to prevent Convex auth errors
+- [Phase 25]: saveStripeConnectAccount is public mutation (not internal) — called via fetchAuthMutation with user JWT; ConvexHttpClient.setAdminAuth is a private API
+- [Phase 25]: Webhook calls confirmStripeConnect (internalMutation) via Convex HTTP API /api/mutation with Authorization: Convex <deploy-key> header
 
 ### Pending Todos
 
@@ -92,6 +95,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-15T00:03:50.848Z
-Stopped at: Phase 25 context gathered
-Resume file: .planning/phases/25-onboarding-persistence/25-CONTEXT.md
+Last session: 2026-03-15T00:29:44.381Z
+Stopped at: Completed 25-01-PLAN.md
+Resume file: None

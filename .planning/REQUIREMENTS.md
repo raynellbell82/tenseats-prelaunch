@@ -32,7 +32,7 @@ Requirements for Post-Signup Experience milestone. New pages for verification an
 
 ### Onboarding Persistence
 
-- [ ] **ONBOARD-01**: Completed onboarding steps are stored per user (requires Convex schema addition)
+- [x] **ONBOARD-01**: Completed onboarding steps are stored per user (requires Convex schema addition)
 - [ ] **ONBOARD-02**: When a user logs back in, they see their progress and can resume from where they left off without repeating completed steps
 
 ### Social Icons
@@ -82,7 +82,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VSUCCESS-02 | Phase 24 | Complete |
 | VSUCCESS-03 | Phase 24 | Complete |
 | VSUCCESS-04 | Phase 24 | Complete |
-| ONBOARD-01 | Phase 25 | Pending |
+| ONBOARD-01 | Phase 25 | Complete |
 | ONBOARD-02 | Phase 25 | Pending |
 
 **Coverage:**
