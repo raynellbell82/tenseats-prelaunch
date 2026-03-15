@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Post-Signup Experience
 status: planning
-stopped_at: Completed 24-01-PLAN.md (vendor success page)
-last_updated: "2026-03-14T23:37:46.848Z"
+stopped_at: Phase 25 context gathered
+last_updated: "2026-03-15T00:03:50.852Z"
 last_activity: 2026-03-14 — Roadmap created for v1.2, 6 phases (20-25)
 progress:
   total_phases: 6
@@ -92,6 +92,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-14T23:33:36.985Z
-Stopped at: Completed 24-01-PLAN.md (vendor success page)
-Resume file: None
+Last session: 2026-03-15T00:03:50.848Z
+Stopped at: Phase 25 context gathered
+Resume file: .planning/phases/25-onboarding-persistence/25-CONTEXT.md
