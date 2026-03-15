@@ -1,28 +1,24 @@
-import { internalMutation, query } from "../_generated/server";
+import { internalMutation, mutation, query } from "../_generated/server";
 import { v } from "convex/values";
 import { getAppUser } from "../authHelpers";
 
 // ---------------------------------------------------------------------------
-// Internal Mutation: saveStripeConnectAccount (ONBOARD-01)
-// Called from /api/stripe/connect route via ConvexHttpClient with admin auth.
-// Looks up user by email and saves the Stripe Express account ID immediately
-// when the account is created (before the user completes onboarding).
+// Public Mutation: saveStripeConnectAccount (ONBOARD-01)
+// Called from /api/stripe/connect route via fetchAuthMutation (user JWT auth).
+// Identifies the user from the auth context and saves the Stripe Express
+// account ID immediately when the account is created (before onboarding).
 // ---------------------------------------------------------------------------
 
-export const saveStripeConnectAccount = internalMutation({
+export const saveStripeConnectAccount = mutation({
   args: {
-    email: v.string(),
     stripeConnectAccountId: v.string(),
   },
   returns: v.null(),
-  handler: async (ctx, { email, stripeConnectAccountId }) => {
-    const user = await ctx.db
-      .query("users")
-      .withIndex("by_email", (q) => q.eq("email", email))
-      .first();
+  handler: async (ctx, { stripeConnectAccountId }) => {
+    const user = await getAppUser(ctx);
 
     if (!user) {
-      throw new Error(`[stripeConnect] No user found for email: ${email}`);
+      throw new Error("[stripeConnect] Not authenticated");
     }
 
     await ctx.db.patch(user._id, {
@@ -36,9 +32,9 @@ export const saveStripeConnectAccount = internalMutation({
 
 // ---------------------------------------------------------------------------
 // Internal Mutation: confirmStripeConnect (ONBOARD-01)
-// Called from /api/stripe/connect/webhook route when Stripe sends an
-// account.updated event with details_submitted === true.
-// Looks up user by account ID (low-volume, no index needed) and marks complete.
+// Called from /api/stripe/connect/webhook route via Convex HTTP API with
+// admin auth (CONVEX_DEPLOY_KEY). Looks up user by account ID (low-volume,
+// no index needed) and marks onboarding as complete.
 // ---------------------------------------------------------------------------
 
 export const confirmStripeConnect = internalMutation({

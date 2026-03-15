@@ -21,6 +21,7 @@ import type * as launch_queueEmail from "../launch/queueEmail.js";
 import type * as launch_queueInternal from "../launch/queueInternal.js";
 import type * as launch_seed from "../launch/seed.js";
 import type * as launch_seedInternal from "../launch/seedInternal.js";
+import type * as launch_stripeConnect from "../launch/stripeConnect.js";
 import type * as mcpServers from "../mcpServers.js";
 import type * as metros from "../metros.js";
 import type * as notificationHelpers from "../notificationHelpers.js";
@@ -45,6 +46,7 @@ declare const fullApi: ApiFromModules<{
   "launch/queueInternal": typeof launch_queueInternal;
   "launch/seed": typeof launch_seed;
   "launch/seedInternal": typeof launch_seedInternal;
+  "launch/stripeConnect": typeof launch_stripeConnect;
   mcpServers: typeof mcpServers;
   metros: typeof metros;
   notificationHelpers: typeof notificationHelpers;
