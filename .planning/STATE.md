@@ -1,11 +1,11 @@
 ---
 gsd_state_version: 1.0
-milestone: null
-milestone_name: null
+milestone: v1.3
+milestone_name: Subscription Management
 status: planning
 stopped_at: null
-last_updated: "2026-03-15"
-last_activity: "2026-03-15 — Completed v1.2 Post-Signup Experience milestone"
+last_updated: "2026-03-22"
+last_activity: "2026-03-22 — Milestone v1.3 started"
 progress:
   total_phases: 0
   completed_phases: 0
@@ -18,16 +18,17 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-15)
+See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Convert visitors into Early Bird or Founding members via Stripe checkout while telling the Tenseats story across 32 city pages — on a shared Convex backend so accounts carry over to the full marketplace.
-**Current focus:** Planning next milestone
+**Current focus:** Defining requirements for v1.3 Subscription Management
 
 ## Current Position
 
-No active milestone. v1.2 Post-Signup Experience shipped 2026-03-15.
-
-Run `/gsd:new-milestone` to start v1.3.
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-03-22 — Milestone v1.3 started
 
 ## Performance Metrics
 
@@ -51,10 +52,10 @@ None.
 
 - Auth limitation: localhost:3001 not in trusted origins. OTP auth only verifiable in production.
 - Stripe Connect webhook requires env vars not yet configured (STRIPE_CONNECT_WEBHOOK_SECRET, CONVEX_DEPLOY_KEY)
-- ONBOARD-02 partial: general onboarding progress resumption deferred to v1.3
+- ONBOARD-02 partial: general onboarding progress resumption deferred
 
 ## Session Continuity
 
-Last session: 2026-03-15
-Stopped at: Milestone v1.2 complete
+Last session: 2026-03-22
+Stopped at: Milestone v1.3 requirements definition
 Resume file: None

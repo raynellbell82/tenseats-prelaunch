@@ -45,7 +45,17 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ### Active
 
-(No active milestone — run `/gsd:new-milestone` to start v1.3)
+## Current Milestone: v1.3 Subscription Management
+
+**Goal:** Add post-purchase subscription lifecycle management for Insider members via the already-installed `@convex-dev/stripe` component.
+
+**Target features:**
+- Membership status page (`/account/membership`) with tier display and lifetime badges
+- Stripe Customer Portal integration for Insider billing management
+- Walled-off `convex/billing/` namespace for subscription functions
+- Post-fulfillment sync bridge for automatic Insider registration
+- Backfill migration for existing Insider subscribers
+- Two-repo coordination (Convex in marketplace repo, frontend in prelaunch)
 
 ### Out of Scope
 
@@ -114,5 +124,22 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 | Webhook via Convex HTTP API /api/mutation | confirmStripeConnect (internal) called with deploy key, not private client API | ✓ Good |
 | isStripeConnected from accountId non-null | accountId presence is the meaningful signal, not the complete boolean | ✓ Good |
 
+## Evolution
+
+This document evolves at phase transitions and milestone boundaries.
+
+**After each phase transition** (via `/gsd:transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd:complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
+
 ---
-*Last updated: 2026-03-15 after v1.2 milestone*
+*Last updated: 2026-03-22 after v1.3 milestone started*
