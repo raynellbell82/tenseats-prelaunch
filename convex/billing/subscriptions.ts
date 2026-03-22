@@ -94,7 +94,7 @@ export const syncCustomerToComponent = internalAction({
     // Instantiate inside handler — env var safety pattern
     const stripe = new StripeSubscriptions(components.stripe);
     const { customerId } = await stripe.getOrCreateCustomer(ctx, { userId, email });
-    // Persist to users table — mutation now in billingHelpers.ts (non-Node file)
+    // Persist to users table — userId is a string, cast to Id<"users">
     await ctx.runMutation(internal.billing.billingHelpers.setStripeBillingCustomerId, {
       userId: userId as Id<"users">,
       customerId,
@@ -122,7 +122,8 @@ export const syncMyBillingCustomer = action({
     const stripe = new StripeSubscriptions(components.stripe);
     const { customerId } = await stripe.getOrCreateCustomer(ctx, { userId, email });
 
-    // Persist to users table — mutation now in billingHelpers.ts (non-Node file)
+    // Persist to users table via internalMutation
+    // authUser._id is Id<"user"> from Better Auth component — double-cast for users table
     await ctx.runMutation(internal.billing.billingHelpers.setStripeBillingCustomerId, {
       userId: authUser._id as unknown as Id<"users">,
       customerId,

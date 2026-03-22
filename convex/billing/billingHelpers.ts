@@ -6,8 +6,6 @@ import type { Doc } from "../_generated/dataModel";
  * Query all active Insider subscribers who have not yet been backfilled.
  * Returns users with membershipTier === "insider" and isMembershipActive === true
  * who are missing stripeBillingCustomerId.
- *
- * Separated from backfill.ts: Convex does not allow queries in "use node" files.
  * BILL-01: getActiveInsiders — internalQuery
  */
 export const getActiveInsiders = internalQuery({
@@ -36,11 +34,12 @@ export const getActiveInsiders = internalQuery({
       )
       .collect();
 
+    // Only return users who need backfilling (no billing customer ID yet)
     return users
-      .filter((u) => !u.stripeBillingCustomerId && u.email)
+      .filter((u): u is typeof u & { email: string } => !u.stripeBillingCustomerId && !!u.email)
       .map((u) => ({
         _id: u._id,
-        email: u.email!,
+        email: u.email,
         stripeSubscriptionId: u.stripeSubscriptionId,
         stripeBillingCustomerId: u.stripeBillingCustomerId,
       }));
@@ -50,8 +49,6 @@ export const getActiveInsiders = internalQuery({
 /**
  * Persist the billing component customer ID to the users table.
  * BILL-04: internalMutation — only called by internal actions, never from client.
- *
- * Separated from subscriptions.ts: Convex does not allow mutations in "use node" files.
  */
 export const setStripeBillingCustomerId = internalMutation({
   args: {
