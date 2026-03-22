@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.3
 milestone_name: Subscription Management
 status: unknown
-stopped_at: Completed 14-schema-env-wiring-01-PLAN.md
-last_updated: "2026-03-22T07:40:32.634Z"
+stopped_at: Completed 15-billing-backend-01-PLAN.md
+last_updated: "2026-03-22T08:14:40.878Z"
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
+  total_plans: 4
+  completed_plans: 2
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Convert visitors into Early Bird or Founding members via Stripe checkout while telling the Tenseats story across 32 city pages — on a shared Convex backend so accounts carry over to the full marketplace.
-**Current focus:** Phase 14 — Schema & Env Wiring
+**Current focus:** Phase 15 — Billing Backend
 
 ## Current Position
 
-Phase: 15
-Plan: Not started
+Phase: 15 (Billing Backend) — EXECUTING
+Plan: 2 of 3
 
 ## Performance Metrics
 
@@ -44,6 +44,8 @@ All decisions logged in PROJECT.md Key Decisions table.
 
 - [Phase 14-schema-env-wiring]: Used STRIPE_CONNECT_WEBHOOK_SECRET name to prevent ambiguity with future billing webhook secret
 - [Phase 14-schema-env-wiring]: stripeBillingCustomerId is a separate field from stripeCustomerId — billing component manages its own customer lifecycle
+- [Phase 15]: authUser._id from Better Auth is Id<user> not Id<users> — requires unknown intermediate cast for setStripeBillingCustomerId
+- [Phase 15]: syncCustomerToComponent uses v.string() userId so both string and Id callers work without conversion
 
 ### v1.3 Architecture Notes
 
@@ -88,6 +90,6 @@ All decisions logged in PROJECT.md Key Decisions table.
 
 ## Session Continuity
 
-Last session: 2026-03-22T07:38:18.602Z
-Stopped at: Completed 14-schema-env-wiring-01-PLAN.md
+Last session: 2026-03-22T08:14:40.876Z
+Stopped at: Completed 15-billing-backend-01-PLAN.md
 Resume file: None

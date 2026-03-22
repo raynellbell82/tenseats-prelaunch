@@ -16,8 +16,8 @@ Requirements for Subscription Management milestone. Each maps to roadmap phases.
 
 - [ ] **BILL-01**: Backfill migration (`convex/billing/backfill.ts`) syncs existing Insider subscribers to `@convex-dev/stripe` component
 - [ ] **BILL-02**: Post-fulfillment sync bridge in `membershipWebhooks.ts` auto-registers new Insider purchases with the component
-- [ ] **BILL-03**: `syncMyBillingCustomer` action for lazy sync on membership page load
-- [ ] **BILL-04**: `setStripeBillingCustomerId` internal mutation to persist billing customer ID
+- [x] **BILL-03**: `syncMyBillingCustomer` action for lazy sync on membership page load
+- [x] **BILL-04**: `setStripeBillingCustomerId` internal mutation to persist billing customer ID
 
 ### Membership Frontend
 
@@ -67,8 +67,8 @@ Requirements for Subscription Management milestone. Each maps to roadmap phases.
 | SCHEMA-02 | Phase 14 | Complete |
 | BILL-01 | Phase 15 | Pending |
 | BILL-02 | Phase 15 | Pending |
-| BILL-03 | Phase 15 | Pending |
-| BILL-04 | Phase 15 | Pending |
+| BILL-03 | Phase 15 | Complete |
+| BILL-04 | Phase 15 | Complete |
 | MEM-01 | Phase 16 | Pending |
 | MEM-02 | Phase 16 | Pending |
 | MEM-03 | Phase 16 | Pending |
