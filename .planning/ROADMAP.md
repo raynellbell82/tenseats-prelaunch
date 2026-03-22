@@ -71,7 +71,9 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
   1. `stripeBillingCustomerId` field exists on the `users` table in `schema.ts` with no deployment errors
   2. `stripeWebhooks.ts` references `STRIPE_CONNECT_WEBHOOK_SECRET` (not `STRIPE_WEBHOOK_SECRET`) for the Connect webhook
   3. Both webhook secret env var names are distinct and unambiguous — Connect secret vs billing secret use separate vars
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 14-01-PLAN.md — Schema field addition and webhook env var rename
 
 ### Phase 15: Billing Backend
 **Goal**: Convex billing namespace is fully functional — existing subscribers are backfilled, new Insider purchases auto-register, and any membership page can lazy-sync a user's billing customer record
@@ -141,7 +143,7 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
 | 23. Guest Success Page | v1.2 | 1/1 | Complete | 2026-03-14 |
 | 24. Vendor Success Page | v1.2 | 1/1 | Complete | 2026-03-14 |
 | 25. Onboarding Persistence | v1.2 | 2/2 | Complete | 2026-03-15 |
-| 14. Schema & Env Wiring | v1.3 | 0/TBD | Not started | - |
+| 14. Schema & Env Wiring | v1.3 | 0/1 | Not started | - |
 | 15. Billing Backend | v1.3 | 0/TBD | Not started | - |
 | 16. Membership Frontend | v1.3 | 0/TBD | Not started | - |
 | 17. Ops Configuration | v1.3 | 0/TBD | Not started | - |
