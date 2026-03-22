@@ -87,7 +87,7 @@ Plans:
 **Plans**: 3 plans
 Plans:
 - [x] 15-01-PLAN.md — Add setStripeBillingCustomerId, syncCustomerToComponent, and syncMyBillingCustomer to subscriptions.ts
-- [ ] 15-02-PLAN.md — Add Insider post-fulfillment sync bridge to membershipWebhooks.ts
+- [x] 15-02-PLAN.md — Add Insider post-fulfillment sync bridge to membershipWebhooks.ts
 - [ ] 15-03-PLAN.md — Create backfill.ts and sync convex/billing/ to prelaunch repo
 
 ### Phase 16: Membership Frontend
@@ -148,7 +148,7 @@ Plans:
 | 24. Vendor Success Page | v1.2 | 1/1 | Complete | 2026-03-14 |
 | 25. Onboarding Persistence | v1.2 | 2/2 | Complete | 2026-03-15 |
 | 14. Schema & Env Wiring | v1.3 | 1/1 | Complete    | 2026-03-22 |
-| 15. Billing Backend | v1.3 | 1/3 | In Progress|  |
+| 15. Billing Backend | v1.3 | 2/3 | In Progress|  |
 | 16. Membership Frontend | v1.3 | 0/TBD | Not started | - |
 | 17. Ops Configuration | v1.3 | 0/TBD | Not started | - |
 | 18. Verification & Testing | v1.3 | 0/TBD | Not started | - |

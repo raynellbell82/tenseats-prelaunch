@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.3
 milestone_name: Subscription Management
 status: unknown
-stopped_at: Completed 15-billing-backend-01-PLAN.md
-last_updated: "2026-03-22T08:14:40.878Z"
+stopped_at: Completed 15-billing-backend-02-PLAN.md
+last_updated: "2026-03-22T08:18:14.529Z"
 progress:
   total_phases: 5
   completed_phases: 1
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 15 (Billing Backend) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 
 ## Performance Metrics
 
@@ -46,6 +46,7 @@ All decisions logged in PROJECT.md Key Decisions table.
 - [Phase 14-schema-env-wiring]: stripeBillingCustomerId is a separate field from stripeCustomerId — billing component manages its own customer lifecycle
 - [Phase 15]: authUser._id from Better Auth is Id<user> not Id<users> — requires unknown intermediate cast for setStripeBillingCustomerId
 - [Phase 15]: syncCustomerToComponent uses v.string() userId so both string and Id callers work without conversion
+- [Phase 15-billing-backend]: Use session metadata email (not user.email) for syncCustomerToComponent — avoids string | undefined type error from v.any() getUserByEmail return type
 
 ### v1.3 Architecture Notes
 
@@ -90,6 +91,6 @@ All decisions logged in PROJECT.md Key Decisions table.
 
 ## Session Continuity
 
-Last session: 2026-03-22T08:14:40.876Z
-Stopped at: Completed 15-billing-backend-01-PLAN.md
+Last session: 2026-03-22T08:18:14.527Z
+Stopped at: Completed 15-billing-backend-02-PLAN.md
 Resume file: None
