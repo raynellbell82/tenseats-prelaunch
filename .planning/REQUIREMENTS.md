@@ -9,8 +9,8 @@ Requirements for Subscription Management milestone. Each maps to roadmap phases.
 
 ### Schema & Wiring
 
-- [ ] **SCHEMA-01**: `stripeBillingCustomerId` field added to `users` table in schema
-- [ ] **SCHEMA-02**: Existing webhook secret env var renamed from `STRIPE_WEBHOOK_SECRET` to `STRIPE_CONNECT_WEBHOOK_SECRET` in `stripeWebhooks.ts`
+- [x] **SCHEMA-01**: `stripeBillingCustomerId` field added to `users` table in schema
+- [x] **SCHEMA-02**: Existing webhook secret env var renamed from `STRIPE_WEBHOOK_SECRET` to `STRIPE_CONNECT_WEBHOOK_SECRET` in `stripeWebhooks.ts`
 
 ### Billing Backend
 
@@ -63,8 +63,8 @@ Requirements for Subscription Management milestone. Each maps to roadmap phases.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SCHEMA-01 | Phase 14 | Pending |
-| SCHEMA-02 | Phase 14 | Pending |
+| SCHEMA-01 | Phase 14 | Complete |
+| SCHEMA-02 | Phase 14 | Complete |
 | BILL-01 | Phase 15 | Pending |
 | BILL-02 | Phase 15 | Pending |
 | BILL-03 | Phase 15 | Pending |

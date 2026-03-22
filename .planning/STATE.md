@@ -2,16 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.3
 milestone_name: Subscription Management
-status: roadmapped
-stopped_at: null
-last_updated: "2026-03-22"
-last_activity: "2026-03-22 — Roadmap created, 5 phases defined (14-18)"
+status: unknown
+stopped_at: Completed 14-schema-env-wiring-01-PLAN.md
+last_updated: "2026-03-22T07:38:18.604Z"
 progress:
   total_phases: 5
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  completed_phases: 1
+  total_plans: 1
+  completed_plans: 1
 ---
 
 # Project State
@@ -21,22 +19,17 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Convert visitors into Early Bird or Founding members via Stripe checkout while telling the Tenseats story across 32 city pages — on a shared Convex backend so accounts carry over to the full marketplace.
-**Current focus:** v1.3 Subscription Management — Phase 14: Schema & Env Wiring (next to plan)
+**Current focus:** Phase 14 — Schema & Env Wiring
 
 ## Current Position
 
-Phase: 14 (Schema & Env Wiring) — not started
-Plan: —
-Status: Roadmap complete, ready for phase planning
-Last activity: 2026-03-22 — Roadmap created for v1.3
-
-```
-Progress: [----------] 0% (0/5 phases complete)
-```
+Phase: 14 (Schema & Env Wiring) — EXECUTING
+Plan: 1 of 1
 
 ## Performance Metrics
 
 **Cumulative:**
+
 - v1.0: 12 phases, 22 plans, 109 commits
 - v1.1: 2 phases, 4 plans, 19 commits
 - v1.2: 6 phases, 9 plans, 41 commits
@@ -49,19 +42,25 @@ Progress: [----------] 0% (0/5 phases complete)
 
 All decisions logged in PROJECT.md Key Decisions table.
 
+- [Phase 14-schema-env-wiring]: Used STRIPE_CONNECT_WEBHOOK_SECRET name to prevent ambiguity with future billing webhook secret
+- [Phase 14-schema-env-wiring]: stripeBillingCustomerId is a separate field from stripeCustomerId — billing component manages its own customer lifecycle
+
 ### v1.3 Architecture Notes
 
 **Two-repo coordination:**
+
 - Schema changes (`schema.ts`) and Convex functions go in `Tenseats-marketplace-platform` repo
 - Frontend (`/account/membership` page, components, success page CTA) goes in `tenseats-prelaunch` repo
 - After Convex deployment, `convex/` folder syncs to prelaunch for generated types
 
 **What already exists in marketplace repo (do not rebuild):**
+
 - `convex/billing/subscriptions.ts` — `createInsiderCheckout`, `createBillingPortalSession`
 - `convex/billing/queries.ts` — `getMySubscription`, `getMyPaymentHistory`
 - `convex/http.ts` — `/stripe/billing-webhook` route via `registerRoutes`
 
 **What Phase 14-15 must add (marketplace repo):**
+
 - `stripeBillingCustomerId` field on `users` table in `schema.ts`
 - `STRIPE_CONNECT_WEBHOOK_SECRET` rename in `stripeWebhooks.ts`
 - `convex/billing/backfill.ts` — backfill migration
@@ -69,6 +68,7 @@ All decisions logged in PROJECT.md Key Decisions table.
 - `syncMyBillingCustomer` action and `setStripeBillingCustomerId` internal mutation
 
 **What Phase 16 must add (prelaunch repo):**
+
 - `/account/membership` page with tier/status display
 - Membership status card distinguishing lifetime vs subscription tiers
 - "Manage Billing" button (Insider only) → Stripe Customer Portal
@@ -88,6 +88,6 @@ All decisions logged in PROJECT.md Key Decisions table.
 
 ## Session Continuity
 
-Last session: 2026-03-22
-Stopped at: Roadmap created for v1.3, ready to plan Phase 14
+Last session: 2026-03-22T07:38:18.602Z
+Stopped at: Completed 14-schema-env-wiring-01-PLAN.md
 Resume file: None
