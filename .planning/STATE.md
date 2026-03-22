@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.3
 milestone_name: Subscription Management
 status: unknown
-stopped_at: Completed 16-01-PLAN.md
-last_updated: "2026-03-22T08:51:09.074Z"
+stopped_at: Completed 16-02-PLAN.md
+last_updated: "2026-03-22T08:55:24.346Z"
 progress:
   total_phases: 5
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -50,6 +50,8 @@ All decisions logged in PROJECT.md Key Decisions table.
 - [Phase 15-billing-backend]: Sequential for...of loop in runBackfill avoids Stripe rate limits; getActiveInsiders filters in-memory (no by_membershipTier index)
 - [Phase 16-01]: Manual api.d.ts update required — npx convex codegen fails at push phase (pre-existing deployment constraint)
 - [Phase 16-01]: MembershipStatusCard is props-driven — data fetching delegated to page layer (Plan 02)
+- [Phase 16-02]: Cast payments through unknown to satisfy TS2352 — getMyPaymentHistory returns v.array(v.any()) so unknown intermediary required
+- [Phase 16-02]: LandingHeader used directly (not PostSignupLayout) on membership page — account-functional page, no framer-motion animations per UI-SPEC
 
 ### v1.3 Architecture Notes
 
@@ -94,6 +96,6 @@ All decisions logged in PROJECT.md Key Decisions table.
 
 ## Session Continuity
 
-Last session: 2026-03-22T08:51:09.072Z
-Stopped at: Completed 16-01-PLAN.md
+Last session: 2026-03-22T08:55:24.344Z
+Stopped at: Completed 16-02-PLAN.md
 Resume file: None

@@ -24,9 +24,9 @@ Requirements for Subscription Management milestone. Each maps to roadmap phases.
 - [x] **MEM-01**: Membership page at `/account/membership` shows tier, status, and lifetime badge
 - [x] **MEM-02**: Membership status card distinguishes Early Bird/Founding (lifetime) from Insider (subscription)
 - [x] **MEM-03**: Insider members see "Manage Billing" button that opens Stripe Customer Portal
-- [ ] **MEM-04**: Payment history component shows Insider payment records
+- [x] **MEM-04**: Payment history component shows Insider payment records
 - [x] **MEM-05**: Lazy sync fires on first Insider membership page load
-- [ ] **MEM-06**: Success page (`/launch/success`) includes "Manage your membership" CTA link
+- [x] **MEM-06**: Success page (`/launch/success`) includes "Manage your membership" CTA link
 
 ### Ops & Configuration
 
@@ -72,9 +72,9 @@ Requirements for Subscription Management milestone. Each maps to roadmap phases.
 | MEM-01 | Phase 16 | Complete |
 | MEM-02 | Phase 16 | Complete |
 | MEM-03 | Phase 16 | Complete |
-| MEM-04 | Phase 16 | Pending |
+| MEM-04 | Phase 16 | Complete |
 | MEM-05 | Phase 16 | Complete |
-| MEM-06 | Phase 16 | Pending |
+| MEM-06 | Phase 16 | Complete |
 | OPS-01 | Phase 17 | Pending |
 | OPS-02 | Phase 17 | Pending |
 | OPS-03 | Phase 17 | Pending |

@@ -57,7 +57,7 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
 
 - [x] **Phase 14: Schema & Env Wiring** — Add billing customer ID field and rename webhook secret env var (Convex/marketplace repo) (completed 2026-03-22)
 - [x] **Phase 15: Billing Backend** — Backfill migration, sync bridge, lazy sync action, and persist mutation (Convex/marketplace repo) (completed 2026-03-22)
-- [ ] **Phase 16: Membership Frontend** — Membership page, tier display, billing portal button, payment history, and success page CTA (prelaunch repo)
+- [x] **Phase 16: Membership Frontend** — Membership page, tier display, billing portal button, payment history, and success page CTA (prelaunch repo) (completed 2026-03-22)
 - [ ] **Phase 17: Ops Configuration** — Set env vars in Convex, register billing webhook in Stripe, configure Customer Portal, run backfill
 - [ ] **Phase 18: Verification & Testing** — All tier types display correctly, Customer Portal flows end-to-end, new Insider checkout auto-syncs
 
@@ -103,7 +103,7 @@ Plans:
 **Plans**: 2 plans
 Plans:
 - [x] 16-01-PLAN.md — Membership query, type generation, and status card components
-- [ ] 16-02-PLAN.md — Payment history, page assembly with lazy sync, and success page CTA
+- [x] 16-02-PLAN.md — Payment history, page assembly with lazy sync, and success page CTA
 
 ### Phase 17: Ops Configuration
 **Goal**: All production environment variables and Stripe Dashboard settings are in place so billing webhooks deliver, the Customer Portal is usable, and all existing Insider subscribers are migrated
@@ -152,6 +152,6 @@ Plans:
 | 25. Onboarding Persistence | v1.2 | 2/2 | Complete | 2026-03-15 |
 | 14. Schema & Env Wiring | v1.3 | 1/1 | Complete    | 2026-03-22 |
 | 15. Billing Backend | v1.3 | 3/3 | Complete    | 2026-03-22 |
-| 16. Membership Frontend | v1.3 | 1/2 | In Progress|  |
+| 16. Membership Frontend | v1.3 | 2/2 | Complete   | 2026-03-22 |
 | 17. Ops Configuration | v1.3 | 0/TBD | Not started | - |
 | 18. Verification & Testing | v1.3 | 0/TBD | Not started | - |
