@@ -4,7 +4,7 @@ milestone: v1.3
 milestone_name: Subscription Management
 status: unknown
 stopped_at: Completed 14-schema-env-wiring-01-PLAN.md
-last_updated: "2026-03-22T07:38:18.604Z"
+last_updated: "2026-03-22T07:40:32.634Z"
 progress:
   total_phases: 5
   completed_phases: 1
@@ -23,8 +23,8 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 
 ## Current Position
 
-Phase: 14 (Schema & Env Wiring) — EXECUTING
-Plan: 1 of 1
+Phase: 15
+Plan: Not started
 
 ## Performance Metrics
 

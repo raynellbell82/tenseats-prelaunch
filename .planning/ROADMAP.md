@@ -143,7 +143,7 @@ Plans:
 | 23. Guest Success Page | v1.2 | 1/1 | Complete | 2026-03-14 |
 | 24. Vendor Success Page | v1.2 | 1/1 | Complete | 2026-03-14 |
 | 25. Onboarding Persistence | v1.2 | 2/2 | Complete | 2026-03-15 |
-| 14. Schema & Env Wiring | v1.3 | 1/1 | Complete   | 2026-03-22 |
+| 14. Schema & Env Wiring | v1.3 | 1/1 | Complete    | 2026-03-22 |
 | 15. Billing Backend | v1.3 | 0/TBD | Not started | - |
 | 16. Membership Frontend | v1.3 | 0/TBD | Not started | - |
 | 17. Ops Configuration | v1.3 | 0/TBD | Not started | - |
