@@ -2,7 +2,21 @@
 
 import { internalAction } from "../_generated/server";
 import { v } from "convex/values";
-import { internal } from "../_generated/api";
+import { makeFunctionReference } from "convex/server";
+
+// Use makeFunctionReference to avoid circular type inference:
+// backfill.ts -> internal (_generated/api) -> billing.backfill -> backfill.ts
+const syncCustomerToComponent = makeFunctionReference<
+  "action",
+  { userId: string; email: string },
+  { customerId: string }
+>("billing/subscriptions:syncCustomerToComponent");
+
+const getActiveInsiders = makeFunctionReference<
+  "query",
+  Record<string, never>,
+  Array<{ _id: string; email: string }>
+>("billing/billingHelpers:getActiveInsiders");
 
 /**
  * Backfill a single Insider subscriber by syncing them to the @convex-dev/stripe component.
@@ -21,7 +35,7 @@ export const backfillSingleInsider = internalAction({
   handler: async (ctx, { userId, email }) => {
     try {
       const result = await ctx.runAction(
-        internal.billing.subscriptions.syncCustomerToComponent,
+        syncCustomerToComponent,
         { userId: String(userId), email }
       );
       console.log(`backfillSingleInsider: synced user ${userId} -> customer ${result.customerId}`);
@@ -47,17 +61,24 @@ export const runBackfill = internalAction({
     failed: v.number(),
   }),
   handler: async (ctx) => {
-    const insiders = await ctx.runQuery(internal.billing.billingHelpers.getActiveInsiders, {});
+    const insiders = await ctx.runQuery(getActiveInsiders, {});
     console.log(`runBackfill: found ${insiders.length} unbackfilled Insider subscribers`);
 
     let succeeded = 0;
     let failed = 0;
 
+    // Use makeFunctionReference to avoid circular type inference (backfill.ts -> internal -> backfill.ts)
+    const backfillSingleRef = makeFunctionReference<
+      "action",
+      { userId: string; email: string },
+      { success: boolean; customerId?: string; error?: string }
+    >("billing/backfill:backfillSingleInsider");
+
     // Sequential — not Promise.all — to avoid Stripe rate limits
     for (const insider of insiders) {
       const result = await ctx.runAction(
-        internal.billing.backfill.backfillSingleInsider,
-        { userId: insider._id, email: insider.email }
+        backfillSingleRef,
+        { userId: String(insider._id), email: insider.email }
       );
       if (result.success) {
         succeeded++;

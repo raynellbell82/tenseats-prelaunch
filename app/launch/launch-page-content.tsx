@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import type { Doc } from "@/convex/_generated/dataModel";
 import { LaunchCitySearch } from "@/components/launch/launch-city-search";
 import { SlotGrid } from "@/components/launch/slot-grid";
 import { LaunchQueueSignupForm } from "@/components/launch/launch-queue-signup-form";
@@ -23,7 +24,7 @@ export function LaunchPageContent({ initialCitySlug }: LaunchPageContentProps) {
 
   useEffect(() => {
     if (initialCitySlug && metros && !hasInitializedCity.current) {
-      const match = metros.find((m) => m.name === initialCitySlug);
+      const match = metros.find((m: Doc<"metros">) => m.name === initialCitySlug);
       if (match) {
         setSelectedMetroId(match._id);
         hasInitializedCity.current = true;
@@ -71,7 +72,7 @@ export function LaunchPageContent({ initialCitySlug }: LaunchPageContentProps) {
           onClear={handleCityClear}
           initialValue={
             initialCitySlug && metros
-              ? metros.find((m) => m.name === initialCitySlug)?.displayName
+              ? metros.find((m: Doc<"metros">) => m.name === initialCitySlug)?.displayName
               : undefined
           }
         />

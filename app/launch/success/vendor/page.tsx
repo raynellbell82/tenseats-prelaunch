@@ -32,7 +32,7 @@
 //   Option 3: "You're already part of what's building. The platform opens soon — here's how to be ready when it does." (Pattern 3)
 //   Option 4: "You made it to the other side of the table. Set up your presence — the platform is almost open." (Pattern 5)
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
@@ -58,7 +58,7 @@ const ROLE_HEADLINES: Record<string, string> = {
 
 const DEFAULT_HEADLINE = "The table is yours.";
 
-export default function VendorSuccessPage() {
+function VendorSuccessPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { data: session, isPending } = useSession();
@@ -241,5 +241,13 @@ export default function VendorSuccessPage() {
         </motion.div>
       </div>
     </PostSignupLayout>
+  );
+}
+
+export default function VendorSuccessPage() {
+  return (
+    <Suspense>
+      <VendorSuccessPageInner />
+    </Suspense>
   );
 }
