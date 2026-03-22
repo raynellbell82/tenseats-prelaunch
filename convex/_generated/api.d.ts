@@ -10,6 +10,9 @@
 
 import type * as auth from "../auth.js";
 import type * as authHelpers from "../authHelpers.js";
+import type * as billing_membership from "../billing/membership.js";
+import type * as billing_queries from "../billing/queries.js";
+import type * as billing_subscriptions from "../billing/subscriptions.js";
 import type * as emailTemplates from "../emailTemplates.js";
 import type * as launch_membershipCheckout from "../launch/membershipCheckout.js";
 import type * as launch_membershipFulfillment from "../launch/membershipFulfillment.js";
@@ -34,6 +37,9 @@ import { ApiFromModules, FilterApi, FunctionReference } from "convex/server";
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   authHelpers: typeof authHelpers;
+  "billing/membership": typeof billing_membership;
+  "billing/queries": typeof billing_queries;
+  "billing/subscriptions": typeof billing_subscriptions;
   emailTemplates: typeof emailTemplates;
   emailUtilities: typeof emailUtilities;
   "launch/membershipCheckout": typeof launch_membershipCheckout;
