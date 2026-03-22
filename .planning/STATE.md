@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.3
 milestone_name: Subscription Management
 status: unknown
-stopped_at: Completed 15-billing-backend-03-PLAN.md
-last_updated: "2026-03-22T08:24:56.854Z"
+stopped_at: Completed 16-01-PLAN.md
+last_updated: "2026-03-22T08:51:09.074Z"
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 6
+  completed_plans: 5
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Convert visitors into Early Bird or Founding members via Stripe checkout while telling the Tenseats story across 32 city pages — on a shared Convex backend so accounts carry over to the full marketplace.
-**Current focus:** Phase 15 — Billing Backend
+**Current focus:** Phase 16 — membership-frontend
 
 ## Current Position
 
-Phase: 16
-Plan: Not started
+Phase: 16 (membership-frontend) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -48,6 +48,8 @@ All decisions logged in PROJECT.md Key Decisions table.
 - [Phase 15]: syncCustomerToComponent uses v.string() userId so both string and Id callers work without conversion
 - [Phase 15-billing-backend]: Use session metadata email (not user.email) for syncCustomerToComponent — avoids string | undefined type error from v.any() getUserByEmail return type
 - [Phase 15-billing-backend]: Sequential for...of loop in runBackfill avoids Stripe rate limits; getActiveInsiders filters in-memory (no by_membershipTier index)
+- [Phase 16-01]: Manual api.d.ts update required — npx convex codegen fails at push phase (pre-existing deployment constraint)
+- [Phase 16-01]: MembershipStatusCard is props-driven — data fetching delegated to page layer (Plan 02)
 
 ### v1.3 Architecture Notes
 
@@ -92,6 +94,6 @@ All decisions logged in PROJECT.md Key Decisions table.
 
 ## Session Continuity
 
-Last session: 2026-03-22T08:22:16.230Z
-Stopped at: Completed 15-billing-backend-03-PLAN.md
+Last session: 2026-03-22T08:51:09.072Z
+Stopped at: Completed 16-01-PLAN.md
 Resume file: None

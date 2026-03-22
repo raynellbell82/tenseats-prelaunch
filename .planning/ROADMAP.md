@@ -102,7 +102,7 @@ Plans:
   5. The `/launch/success` page includes a visible "Manage your membership" link that routes to `/account/membership`
 **Plans**: 2 plans
 Plans:
-- [ ] 16-01-PLAN.md — Membership query, type generation, and status card components
+- [x] 16-01-PLAN.md — Membership query, type generation, and status card components
 - [ ] 16-02-PLAN.md — Payment history, page assembly with lazy sync, and success page CTA
 
 ### Phase 17: Ops Configuration
@@ -152,6 +152,6 @@ Plans:
 | 25. Onboarding Persistence | v1.2 | 2/2 | Complete | 2026-03-15 |
 | 14. Schema & Env Wiring | v1.3 | 1/1 | Complete    | 2026-03-22 |
 | 15. Billing Backend | v1.3 | 3/3 | Complete    | 2026-03-22 |
-| 16. Membership Frontend | v1.3 | 0/2 | Not started | - |
+| 16. Membership Frontend | v1.3 | 1/2 | In Progress|  |
 | 17. Ops Configuration | v1.3 | 0/TBD | Not started | - |
 | 18. Verification & Testing | v1.3 | 0/TBD | Not started | - |
