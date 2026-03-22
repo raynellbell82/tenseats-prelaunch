@@ -58,6 +58,7 @@ const trustedOriginsList = [siteUrl];
 if (!trustedOriginsList.includes("http://localhost:3000")) {
   trustedOriginsList.push("http://localhost:3000");
 }
+trustedOriginsList.push("http://localhost:3001");
 // Allow local network IPs for mobile dev testing (wildcard patterns)
 trustedOriginsList.push("http://192.168.*");
 trustedOriginsList.push("http://10.*");
@@ -89,7 +90,7 @@ export const createAuth = (ctx: GenericCtx<DataModel>) =>
         otpLength: 6,
         expiresIn: 300, // 5 minutes
         overrideDefaultEmailVerification: true,
-        sendVerificationOnSignUp: false, // Not needed — overrideDefaultEmailVerification handles it
+        sendVerificationOnSignUp: true, // Send OTP automatically when user signs up
         async sendVerificationOTP({ email, otp, type }) {
           // Generate verification URL for magic link (one-click verification)
           const verifyUrl = type === "email-verification"

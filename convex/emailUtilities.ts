@@ -2,7 +2,25 @@
 
 import { internalAction } from "./_generated/server";
 import { v } from "convex/values";
-import { signWebhookPayload } from "./webhookSigning";
+import crypto from "crypto";
+
+/**
+ * HMAC-SHA256 signing using Node.js crypto (not Web Crypto API).
+ * webhookSigning.ts uses crypto.subtle which isn't available in
+ * the self-hosted Convex Node.js runtime.
+ */
+async function signWebhookPayload(
+  body: string,
+  secret: string
+): Promise<{ signature: string; timestamp: string }> {
+  const timestamp = Math.floor(Date.now() / 1000).toString();
+  const signaturePayload = `${timestamp}.${body}`;
+  const hex = crypto
+    .createHmac("sha256", secret)
+    .update(signaturePayload)
+    .digest("hex");
+  return { signature: `sha256=${hex}`, timestamp };
+}
 
 // ---------------------------------------------------------------------------
 // Internal Action: sendEmailWithLogging

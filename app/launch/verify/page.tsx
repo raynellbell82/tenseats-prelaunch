@@ -1,19 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Loader2 } from "lucide-react";
+import { useAction } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import type { Id } from "@/convex/_generated/dataModel";
 import { authClient } from "@/lib/auth-client";
 import { PostSignupLayout, itemVariants } from "@/components/post-signup/post-signup-layout";
 import { VerticalTimeline } from "@/components/post-signup/vertical-timeline";
-
-// Headline options considered (tenseats-copy-writer skill):
-// Option 1: "Your Seat Is Nearly Ready." — direct, 2nd person, warm table metaphor (selected)
-// Option 2: "The Table's Almost Set." — classic, slightly more theatrical
-// Option 3: "Almost at the Table." — concise, slight tension
-// Option 4: "One Step From the Table." — proximity + anticipation
 
 const RESEND_COOLDOWN_SECONDS = 60;
 
@@ -27,12 +24,12 @@ function maskEmail(email: string): string {
 const TIMELINE_STEPS = [
   {
     label: "Check your email",
-    detail: "Look for a 6-digit code",
+    detail: "Click the verification link",
     active: true,
   },
   {
-    label: "Enter your code",
-    detail: "On the verification screen",
+    label: "Email verified",
+    detail: "Your spot is confirmed",
     active: false,
   },
   {
@@ -42,21 +39,57 @@ const TIMELINE_STEPS = [
   },
 ];
 
-export default function VerifyPage() {
+function VerifyPageInner() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState<string>("");
   const [resendCooldown, setResendCooldown] = useState(0);
   const [isResending, setIsResending] = useState(false);
+  const [verifying, setVerifying] = useState(false);
+  const [verified, setVerified] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const verifyEmail = useAction(api.launch.queueActions.verifyEmail);
+
+  // Handle token-based verification from email link
+  const tokenId = searchParams.get("id");
+  const token = searchParams.get("token");
 
   useEffect(() => {
-    const stored = sessionStorage.getItem("otp-verify-email");
-    if (!stored) {
-      router.push("/launch");
+    if (!tokenId || !token) {
+      // No token params — check sessionStorage for OTP flow
+      const stored = sessionStorage.getItem("otp-verify-email");
+      if (!stored) {
+        router.push("/launch");
+        return;
+      }
+      setEmail(stored);
       return;
     }
-    setEmail(stored);
 
-    // Restore cooldown from existing otp-sent-ts if recent
+    // Token-based verification from email link
+    setVerifying(true);
+    verifyEmail({
+      preRegistrationId: tokenId as Id<"preRegistrations">,
+      token,
+    })
+      .then((result) => {
+        if (result.success) {
+          setVerified(true);
+        } else {
+          setError(result.message || "Verification failed");
+        }
+      })
+      .catch(() => {
+        setError("Verification failed. Please try again.");
+      })
+      .finally(() => {
+        setVerifying(false);
+      });
+  }, [tokenId, token, router, verifyEmail]);
+
+  // Restore resend cooldown
+  useEffect(() => {
     const sentTs = sessionStorage.getItem("otp-sent-ts");
     if (sentTs) {
       const elapsed = Math.floor((Date.now() - parseInt(sentTs, 10)) / 1000);
@@ -65,7 +98,7 @@ export default function VerifyPage() {
         setResendCooldown(remaining);
       }
     }
-  }, [router]);
+  }, []);
 
   useEffect(() => {
     if (resendCooldown <= 0) return;
@@ -100,17 +133,97 @@ export default function VerifyPage() {
 
   const maskedEmail = email ? maskEmail(email) : "";
 
+  // Token verification in progress
+  if (verifying) {
+    return (
+      <PostSignupLayout>
+        <div className="text-center space-y-8">
+          <motion.div variants={itemVariants} className="flex justify-center">
+            <Loader2 className="h-16 w-16 animate-spin text-muted-foreground" />
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+              Verifying...
+            </h1>
+          </motion.div>
+        </div>
+      </PostSignupLayout>
+    );
+  }
+
+  // Verification succeeded
+  if (verified) {
+    return (
+      <PostSignupLayout>
+        <div className="text-center space-y-8">
+          <motion.div variants={itemVariants} className="flex justify-center">
+            <div className="relative flex items-center justify-center">
+              <div
+                className="absolute h-20 w-20 rounded-full bg-green-500/10 animate-pulse"
+                style={{ animationDuration: "2.5s" }}
+              />
+              <div className="h-20 w-20 rounded-full bg-green-500/20 flex items-center justify-center">
+                <CheckCircle2 className="h-10 w-10 text-green-500" />
+              </div>
+            </div>
+          </motion.div>
+          <motion.div variants={itemVariants} className="space-y-3">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+              You're In.
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-md mx-auto">
+              Your email has been verified and your spot is confirmed.
+              We'll notify you when it's time to join.
+            </p>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <Link
+              href="/launch"
+              className="inline-block rounded-full bg-foreground text-background px-8 py-3 font-semibold hover:opacity-90 transition-opacity"
+            >
+              Back to Launch Page
+            </Link>
+          </motion.div>
+        </div>
+      </PostSignupLayout>
+    );
+  }
+
+  // Verification error
+  if (error) {
+    return (
+      <PostSignupLayout>
+        <div className="text-center space-y-8">
+          <motion.div variants={itemVariants} className="space-y-3">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+              Verification Failed
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-md mx-auto">
+              {error}
+            </p>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <Link
+              href="/launch"
+              className="inline-block rounded-full bg-foreground text-background px-8 py-3 font-semibold hover:opacity-90 transition-opacity"
+            >
+              Try Again
+            </Link>
+          </motion.div>
+        </div>
+      </PostSignupLayout>
+    );
+  }
+
+  // OTP flow (no token params — came from signup form)
   return (
     <PostSignupLayout>
       <div className="text-center space-y-8">
-        {/* Green check circle with pulse */}
         <motion.div variants={itemVariants} className="flex justify-center">
           <div className="relative flex items-center justify-center">
             <div
               className="absolute h-20 w-20 rounded-full bg-green-500/10 animate-pulse"
-              style={{
-                animationDuration: "2.5s",
-              }}
+              style={{ animationDuration: "2.5s" }}
             />
             <div className="h-20 w-20 rounded-full bg-green-500/20 flex items-center justify-center">
               <CheckCircle2 className="h-10 w-10 text-green-500" />
@@ -118,35 +231,24 @@ export default function VerifyPage() {
           </div>
         </motion.div>
 
-        {/* Headline */}
         <motion.div variants={itemVariants} className="space-y-3">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
             Your Seat Is Nearly Ready.
           </h1>
           <p className="text-lg text-muted-foreground max-w-md mx-auto">
-            We sent a 6-digit code to{" "}
+            We sent a verification link to{" "}
             <span className="text-foreground font-medium">{maskedEmail}</span>.
-            Enter it on the next screen to confirm your seat.
+            Click the link in the email to confirm your seat.
           </p>
         </motion.div>
 
-        {/* Vertical Timeline */}
         <motion.div variants={itemVariants} className="flex justify-center">
           <div className="text-left w-48">
             <VerticalTimeline steps={TIMELINE_STEPS} />
           </div>
         </motion.div>
 
-        {/* CTA */}
         <motion.div variants={itemVariants} className="space-y-4">
-          <Link
-            href="/verify-email"
-            className="inline-block rounded-full bg-foreground text-background px-8 py-3 font-semibold hover:opacity-90 transition-opacity"
-          >
-            Enter Verification Code
-          </Link>
-
-          {/* Resend link */}
           <div className="text-sm text-muted-foreground">
             Didn&apos;t get it?{" "}
             <button
@@ -158,11 +260,19 @@ export default function VerifyPage() {
                 ? `Resend in ${resendCooldown}s`
                 : isResending
                   ? "Sending..."
-                  : "Resend code"}
+                  : "Resend email"}
             </button>
           </div>
         </motion.div>
       </div>
     </PostSignupLayout>
+  );
+}
+
+export default function VerifyPage() {
+  return (
+    <Suspense>
+      <VerifyPageInner />
+    </Suspense>
   );
 }
