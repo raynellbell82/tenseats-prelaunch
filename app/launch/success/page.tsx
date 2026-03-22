@@ -25,6 +25,17 @@ export default function SuccessPage() {
         >
           Back to Home
         </Link>
+        <div className="flex flex-col items-center gap-1">
+          <Link
+            href="/account/membership"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Manage your membership
+          </Link>
+          <span className="text-xs text-muted-foreground">
+            View your tier, payment history, and billing settings.
+          </span>
+        </div>
       </div>
     </>
   );
