@@ -43,6 +43,12 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 - ✓ Role-based post-OTP routing (guest → /launch/success/guest, vendor → /launch/success/vendor) — v1.2
 - ✓ Comprehensive 732-line prompt document for main app post-signup implementation — v1.2
 
+- ✓ Membership status page (`/account/membership`) with tier display, lifetime badges, and conditional billing UI — v1.3
+- ✓ Stripe Customer Portal integration via ManageBillingButton for Insider billing management — v1.3
+- ✓ Payment history list for Insider members with loading/empty/error states — v1.3
+- ✓ Lazy syncMyBillingCustomer on first Insider page load (fire-once via useRef guard) — v1.3
+- ✓ Success page CTA linking to /account/membership — v1.3
+
 ### Active
 
 ## Current Milestone: v1.3 Subscription Management
@@ -68,7 +74,7 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ## Context
 
-**Current State:** v1.2 shipped. 20 phases, 35 plans, 169 commits, 21,433 LOC TypeScript.
+**Current State:** v1.3 in progress. Phase 16 complete — membership frontend shipped. 22 phases, 37 plans.
 
 - **Source repo:** `/Users/tenseats/Documents/dev/Tenseats-marketplace-platform` (also cloneable from `https://github.com/raynellbell82/Tenseats-marketplace-platform.git` to `/tmp/tenseats-source`)
 - **Shared Convex deployment:** Both apps point to `api.tenseats.io`. Users who create accounts on pre-launch site log into the marketplace seamlessly when it goes live — same domain, deployment swap
@@ -142,4 +148,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 15 (Billing Backend) complete*
+*Last updated: 2026-03-22 after Phase 16 (Membership Frontend) complete*
