@@ -52,17 +52,17 @@ Source: Default 8-point scale (project standard); touch target exception is acce
 | Role | Size | Weight | Line Height |
 |------|------|--------|-------------|
 | Body | 14px | 400 (regular) | 1.5 |
-| Label | 14px | 500 (medium) | 1.4 |
+| Label | 14px | 400 (regular) | 1.4 |
 | Heading | 20px | 600 (semibold) | 1.2 |
-| Display | 28px | 700 (bold) | 1.1 |
+| Display | 28px | 600 (semibold) | 1.1 |
 
 Notes:
 - Payment history amounts use Geist Mono at 14px weight 400 for tabular alignment.
 - Tier name on membership status card uses 20px semibold.
-- Membership page `<h1>` ("Your Membership") uses 28px bold.
+- Membership page `<h1>` ("Your Membership") uses 28px semibold.
 - "Lifetime Member" badge label uses 12px semibold (inline badge, not a heading role).
 
-Source: Detected from existing components (tier-selector.tsx uses `text-2xl font-bold` for price, `text-sm` for labels, `text-sm font-medium` for tier name). Scales normalized to 3-size system with display for the page h1.
+Source: Detected from existing components (tier-selector.tsx uses `text-2xl font-bold` for price, `text-sm` for labels, `text-sm font-medium` for tier name). Scales normalized to 2-weight system: 400 regular for body/label/mono, 600 semibold for heading/display/badge.
 
 ---
 
@@ -117,7 +117,7 @@ The `/account/membership` page follows the `PostSignupLayout` pattern establishe
 LandingHeader (sticky, full width)
 main (flex col, items-center, px-4 py-12 md:py-20)
   div (w-full max-w-2xl mx-auto, space-y-8)
-    h1 "Your Membership"  — 28px bold
+    h1 "Your Membership"  — 28px semibold
     MembershipStatusCard  — full width card
     PaymentHistoryList    — full width, Insider only (conditional render)
 ```
@@ -155,7 +155,7 @@ The `/launch/success` page receives an additive change only: a secondary link be
 | Loading | 3 `Skeleton` rows at h-10 full width |
 | Empty (Insider, no charges yet) | Empty state: heading "No payments yet", body "Your payment history will appear here after your first charge." |
 | Populated | Table with columns: Date, Description, Amount, Status |
-| Error | "Could not load payment history." muted text, no retry UI |
+| Error | "Could not load payment history. Refresh the page to try again." muted text, no retry button. Muted-text-only treatment is intentional: payment history is supplemental information and a full retry action would be disproportionate to the failure impact. The solution path (refresh) is present in the copy. |
 
 ---
 
@@ -173,7 +173,7 @@ The `/launch/success` page receives an additive change only: a secondary link be
 | Empty state heading (payment history) | "No payments yet" |
 | Empty state body (payment history) | "Your payment history will appear here after your first charge." |
 | Error state (billing portal) | "Could not open billing portal. Try again." |
-| Error state (payment history) | "Could not load payment history." |
+| Error state (payment history) | "Could not load payment history. Refresh the page to try again." |
 | Success page additive link | "Manage your membership" |
 | Success page additive link subtext | "View your tier, payment history, and billing settings." |
 | Destructive confirmation | None — no destructive actions in this phase. Cancellation is handled inside Stripe Customer Portal, not in this UI. |
