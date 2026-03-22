@@ -127,7 +127,10 @@ Plans:
   1. A test account with each tier type (Early Bird, Founding, Insider) shows the correct tier name, badge, and available actions on the membership page
   2. An Insider test account completes the Customer Portal flow — opens portal, updates payment method or cancels, and the change is reflected in Stripe without errors
   3. A new Insider checkout (test mode) completes and the subscriber appears in the billing component records automatically, without running backfill manually
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 18-01-PLAN.md — Automated tier display verification via code analysis and build check
+- [ ] 18-02-PLAN.md — Customer Portal flow and new Insider checkout auto-sync verification
 
 ## Progress
 
@@ -157,4 +160,4 @@ Plans:
 | 15. Billing Backend | v1.3 | 3/3 | Complete    | 2026-03-22 |
 | 16. Membership Frontend | v1.3 | 2/2 | Complete    | 2026-03-22 |
 | 17. Ops Configuration | v1.3 | 0/2 | Not started | - |
-| 18. Verification & Testing | v1.3 | 0/TBD | Not started | - |
+| 18. Verification & Testing | v1.3 | 0/2 | Not started | - |
