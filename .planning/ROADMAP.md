@@ -110,11 +110,14 @@ Plans:
 **Depends on**: Phase 15
 **Requirements**: OPS-01, OPS-02, OPS-03, OPS-04
 **Success Criteria** (what must be TRUE):
-  1. Convex deployment has both `STRIPE_CONNECT_WEBHOOK_SECRET` and `STRIPE_WEBHOOK_SECRET` set to their correct distinct values
+  1. Convex deployment has both `STRIPE_CONNECT_WEBHOOK_SECRET` and `STRIPE_BILLING_WEBHOOK_SECRET` set to their correct distinct values
   2. Stripe Dashboard has a webhook endpoint pointing to `https://api.tenseats.io/stripe/billing-webhook` and it shows as active
   3. Stripe Customer Portal is configured with invoice access, payment method update, and cancellation options enabled
   4. Backfill migration completes with 0 failures logged — every pre-existing Insider subscriber has a linked billing customer record
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 17-01-PLAN.md — Set env vars in Convex, register billing webhook in Stripe, configure Customer Portal
+- [ ] 17-02-PLAN.md — Deploy Convex code and run backfill migration
 
 ### Phase 18: Verification & Testing
 **Goal**: All membership tier types display correctly, the Customer Portal flow is confirmed end-to-end, and new Insider purchases auto-sync without manual intervention
@@ -152,6 +155,6 @@ Plans:
 | 25. Onboarding Persistence | v1.2 | 2/2 | Complete | 2026-03-15 |
 | 14. Schema & Env Wiring | v1.3 | 1/1 | Complete    | 2026-03-22 |
 | 15. Billing Backend | v1.3 | 3/3 | Complete    | 2026-03-22 |
-| 16. Membership Frontend | v1.3 | 2/2 | Complete   | 2026-03-22 |
-| 17. Ops Configuration | v1.3 | 0/TBD | Not started | - |
+| 16. Membership Frontend | v1.3 | 2/2 | Complete    | 2026-03-22 |
+| 17. Ops Configuration | v1.3 | 0/2 | Not started | - |
 | 18. Verification & Testing | v1.3 | 0/TBD | Not started | - |
