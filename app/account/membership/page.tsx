@@ -83,7 +83,7 @@ export default function MembershipPage() {
 
           {isInsider && (
             <PaymentHistoryList
-              payments={(payments as Array<{ _id: string; created?: number; description?: string; amount?: number; currency?: string; status?: string }>) ?? []}
+              payments={(payments as unknown as Array<{ _id: string; created?: number; description?: string; amount?: number; currency?: string; status?: string }>) ?? []}
               isLoading={payments === undefined}
               error={false}
             />
