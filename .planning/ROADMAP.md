@@ -84,7 +84,11 @@ Plans:
   2. A new Insider checkout completion triggers `membershipWebhooks.ts` to automatically register the purchaser with the component (no manual step)
   3. `syncMyBillingCustomer` action resolves the current user's billing customer ID on first call and stores it via `setStripeBillingCustomerId`
   4. `setStripeBillingCustomerId` internal mutation persists the billing customer ID to the `users` table field added in Phase 14
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 15-01-PLAN.md — Add setStripeBillingCustomerId, syncCustomerToComponent, and syncMyBillingCustomer to subscriptions.ts
+- [ ] 15-02-PLAN.md — Add Insider post-fulfillment sync bridge to membershipWebhooks.ts
+- [ ] 15-03-PLAN.md — Create backfill.ts and sync convex/billing/ to prelaunch repo
 
 ### Phase 16: Membership Frontend
 **Goal**: Authenticated members can navigate to `/account/membership` and see their tier, status, and any available billing management actions appropriate to their membership type
@@ -144,7 +148,7 @@ Plans:
 | 24. Vendor Success Page | v1.2 | 1/1 | Complete | 2026-03-14 |
 | 25. Onboarding Persistence | v1.2 | 2/2 | Complete | 2026-03-15 |
 | 14. Schema & Env Wiring | v1.3 | 1/1 | Complete    | 2026-03-22 |
-| 15. Billing Backend | v1.3 | 0/TBD | Not started | - |
+| 15. Billing Backend | v1.3 | 0/3 | Not started | - |
 | 16. Membership Frontend | v1.3 | 0/TBD | Not started | - |
 | 17. Ops Configuration | v1.3 | 0/TBD | Not started | - |
 | 18. Verification & Testing | v1.3 | 0/TBD | Not started | - |
