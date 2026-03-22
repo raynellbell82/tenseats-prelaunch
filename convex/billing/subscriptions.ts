@@ -1,6 +1,6 @@
 "use node";
 
-import { action, internalMutation, internalAction } from "../_generated/server";
+import { action, internalAction } from "../_generated/server";
 import { v } from "convex/values";
 import { components, internal } from "../_generated/api";
 import { StripeSubscriptions } from "@convex-dev/stripe";
@@ -80,22 +80,6 @@ export const createBillingPortalSession = action({
 });
 
 /**
- * Persist the billing component customer ID to the users table.
- * BILL-04: internalMutation — only called by internal actions, never from client.
- */
-export const setStripeBillingCustomerId = internalMutation({
-  args: {
-    userId: v.id("users"),
-    customerId: v.string(),
-  },
-  returns: v.null(),
-  handler: async (ctx, { userId, customerId }) => {
-    await ctx.db.patch(userId, { stripeBillingCustomerId: customerId });
-    return null;
-  },
-});
-
-/**
  * Internal action: register a user with the @convex-dev/stripe component and persist the customer ID.
  * Called by the post-fulfillment sync bridge (BILL-02) and backfill migration (BILL-01).
  * Args use v.string() for userId because callers may have Id<"users"> or string.
@@ -110,8 +94,8 @@ export const syncCustomerToComponent = internalAction({
     // Instantiate inside handler — env var safety pattern
     const stripe = new StripeSubscriptions(components.stripe);
     const { customerId } = await stripe.getOrCreateCustomer(ctx, { userId, email });
-    // Persist to users table — userId is a string, cast to Id<"users">
-    await ctx.runMutation(internal.billing.subscriptions.setStripeBillingCustomerId, {
+    // Persist to users table — mutation now in billingHelpers.ts (non-Node file)
+    await ctx.runMutation(internal.billing.billingHelpers.setStripeBillingCustomerId, {
       userId: userId as Id<"users">,
       customerId,
     });
@@ -138,9 +122,8 @@ export const syncMyBillingCustomer = action({
     const stripe = new StripeSubscriptions(components.stripe);
     const { customerId } = await stripe.getOrCreateCustomer(ctx, { userId, email });
 
-    // Persist to users table via internalMutation
-    // authUser._id is Id<"user"> from Better Auth component — double-cast for users table
-    await ctx.runMutation(internal.billing.subscriptions.setStripeBillingCustomerId, {
+    // Persist to users table — mutation now in billingHelpers.ts (non-Node file)
+    await ctx.runMutation(internal.billing.billingHelpers.setStripeBillingCustomerId, {
       userId: authUser._id as unknown as Id<"users">,
       customerId,
     });

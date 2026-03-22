@@ -1,53 +1,8 @@
 "use node";
 
-import { internalQuery, internalAction } from "../_generated/server";
+import { internalAction } from "../_generated/server";
 import { v } from "convex/values";
 import { internal } from "../_generated/api";
-import type { Doc } from "../_generated/dataModel";
-
-/**
- * Query all active Insider subscribers who have not yet been backfilled.
- * Returns users with membershipTier === "insider" and isMembershipActive === true
- * who are missing stripeBillingCustomerId.
- * BILL-01: getActiveInsiders — internalQuery
- */
-export const getActiveInsiders = internalQuery({
-  args: {},
-  returns: v.array(
-    v.object({
-      _id: v.id("users"),
-      email: v.string(),
-      stripeSubscriptionId: v.optional(v.string()),
-      stripeBillingCustomerId: v.optional(v.string()),
-    })
-  ),
-  handler: async (ctx): Promise<Array<{
-    _id: Doc<"users">["_id"];
-    email: string;
-    stripeSubscriptionId?: string;
-    stripeBillingCustomerId?: string;
-  }>> => {
-    const users = await ctx.db
-      .query("users")
-      .filter((q) =>
-        q.and(
-          q.eq(q.field("membershipTier"), "insider"),
-          q.eq(q.field("isMembershipActive"), true)
-        )
-      )
-      .collect();
-
-    // Only return users who need backfilling (no billing customer ID yet)
-    return users
-      .filter((u) => !u.stripeBillingCustomerId)
-      .map((u) => ({
-        _id: u._id,
-        email: u.email,
-        stripeSubscriptionId: u.stripeSubscriptionId,
-        stripeBillingCustomerId: u.stripeBillingCustomerId,
-      }));
-  },
-});
 
 /**
  * Backfill a single Insider subscriber by syncing them to the @convex-dev/stripe component.
@@ -92,7 +47,7 @@ export const runBackfill = internalAction({
     failed: v.number(),
   }),
   handler: async (ctx) => {
-    const insiders = await ctx.runQuery(internal.billing.backfill.getActiveInsiders, {});
+    const insiders = await ctx.runQuery(internal.billing.billingHelpers.getActiveInsiders, {});
     console.log(`runBackfill: found ${insiders.length} unbackfilled Insider subscribers`);
 
     let succeeded = 0;
