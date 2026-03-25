@@ -59,7 +59,7 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
 - [x] **Phase 15: Billing Backend** — Backfill migration, sync bridge, lazy sync action, and persist mutation (Convex/marketplace repo) (completed 2026-03-22)
 - [x] **Phase 16: Membership Frontend** — Membership page, tier display, billing portal button, payment history, and success page CTA (prelaunch repo) (completed 2026-03-22)
 - [ ] **Phase 17: Ops Configuration** — Set env vars in Convex, register billing webhook in Stripe, configure Customer Portal, run backfill
-- [ ] **Phase 18: Verification & Testing** — All tier types display correctly, Customer Portal flows end-to-end, new Insider checkout auto-syncs
+- [x] **Phase 18: Verification & Testing** — All tier types display correctly, Customer Portal flows end-to-end, new Insider checkout auto-syncs (completed 2026-03-25)
 
 ## Phase Details
 
@@ -130,7 +130,7 @@ Plans:
 **Plans**: 2 plans
 Plans:
 - [x] 18-01-PLAN.md — Automated tier display verification via code analysis and build check
-- [ ] 18-02-PLAN.md — Customer Portal flow and new Insider checkout auto-sync verification
+- [x] 18-02-PLAN.md — Customer Portal flow and new Insider checkout auto-sync verification
 
 ## Progress
 
@@ -160,4 +160,4 @@ Plans:
 | 15. Billing Backend | v1.3 | 3/3 | Complete    | 2026-03-22 |
 | 16. Membership Frontend | v1.3 | 2/2 | Complete    | 2026-03-22 |
 | 17. Ops Configuration | v1.3 | 0/2 | Not started | - |
-| 18. Verification & Testing | v1.3 | 1/2 | In Progress|  |
+| 18. Verification & Testing | v1.3 | 2/2 | Complete   | 2026-03-25 |
