@@ -160,4 +160,4 @@ Plans:
 | 15. Billing Backend | v1.3 | 3/3 | Complete    | 2026-03-22 |
 | 16. Membership Frontend | v1.3 | 2/2 | Complete    | 2026-03-22 |
 | 17. Ops Configuration | v1.3 | 0/2 | Not started | - |
-| 18. Verification & Testing | v1.3 | 2/2 | Complete   | 2026-03-25 |
+| 18. Verification & Testing | v1.3 | 2/2 | Complete    | 2026-03-25 |
