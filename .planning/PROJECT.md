@@ -74,7 +74,7 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ## Context
 
-**Current State:** v1.3 in progress. Phase 16 complete — membership frontend shipped. 22 phases, 37 plans.
+**Current State:** v1.3 complete (pending 2 human UAT items). Phase 18 complete — all automated verification passed, Customer Portal e2e (TEST-02) and checkout auto-sync (TEST-03) deferred for live testing. 22 phases, 37 plans.
 
 - **Source repo:** `/Users/tenseats/Documents/dev/Tenseats-marketplace-platform` (also cloneable from `https://github.com/raynellbell82/Tenseats-marketplace-platform.git` to `/tmp/tenseats-source`)
 - **Shared Convex deployment:** Both apps point to `api.tenseats.io`. Users who create accounts on pre-launch site log into the marketplace seamlessly when it goes live — same domain, deployment swap
@@ -148,4 +148,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 16 (Membership Frontend) complete*
+*Last updated: 2026-03-25 after Phase 18 (Verification & Testing) complete*
