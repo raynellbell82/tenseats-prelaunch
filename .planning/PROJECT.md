@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A standalone Next.js + Convex pre-launch website for Tenseats — a food-focused social marketplace launching in 32 US cities. Lives at `tenseats.io` and serves as the public face until the full marketplace app replaces it via a Coolify deployment swap. Connects to the same Convex deployment (`api.tenseats.io`) as the main app, sharing users, metros, launch slots, and pre-registration tables. Includes a complete post-signup experience: branded verification page, role-based success pages (guest + vendor), Stripe Connect onboarding, and social links.
+A standalone Next.js + Convex pre-launch website for Tenseats — a food-focused social marketplace launching in 32 US cities. Lives at `tenseats.io` and serves as the public face until the full marketplace app replaces it via a Coolify deployment swap. Connects to the same Convex deployment (`api.tenseats.io`) as the main app, sharing users, metros, launch slots, and pre-registration tables. Includes a complete post-signup experience: branded verification page, role-based success pages (guest + vendor), Stripe Connect onboarding, social links, and post-purchase membership management with Stripe Customer Portal integration.
 
 ## Core Value
 
@@ -48,20 +48,13 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 - ✓ Payment history list for Insider members with loading/empty/error states — v1.3
 - ✓ Lazy syncMyBillingCustomer on first Insider page load (fire-once via useRef guard) — v1.3
 - ✓ Success page CTA linking to /account/membership — v1.3
+- ✓ Billing schema wiring (`stripeBillingCustomerId`, webhook secret rename) across both repos — v1.3
+- ✓ Billing backend: backfill migration, post-fulfillment sync bridge, lazy sync action — v1.3
+- ✓ Two-repo Convex coordination (marketplace builds functions, prelaunch syncs for types) — v1.3
 
 ### Active
 
-## Current Milestone: v1.3 Subscription Management
-
-**Goal:** Add post-purchase subscription lifecycle management for Insider members via the already-installed `@convex-dev/stripe` component.
-
-**Target features:**
-- Membership status page (`/account/membership`) with tier display and lifetime badges
-- Stripe Customer Portal integration for Insider billing management
-- Walled-off `convex/billing/` namespace for subscription functions
-- Post-fulfillment sync bridge for automatic Insider registration
-- Backfill migration for existing Insider subscribers
-- Two-repo coordination (Convex in marketplace repo, frontend in prelaunch)
+(None — planning next milestone)
 
 ### Out of Scope
 
@@ -74,7 +67,7 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 
 ## Context
 
-**Current State:** v1.3 complete (pending 2 human UAT items). Phase 18 complete — all automated verification passed, Customer Portal e2e (TEST-02) and checkout auto-sync (TEST-03) deferred for live testing. 22 phases, 37 plans.
+**Current State:** v1.3 shipped 2026-03-26. 4 milestones complete (v1.0-v1.3), 25 phases, 45 plans, ~170 commits. Subscription management fully built — 2 human UAT items deferred (Customer Portal e2e, checkout auto-sync live testing).
 
 - **Source repo:** `/Users/tenseats/Documents/dev/Tenseats-marketplace-platform` (also cloneable from `https://github.com/raynellbell82/Tenseats-marketplace-platform.git` to `/tmp/tenseats-source`)
 - **Shared Convex deployment:** Both apps point to `api.tenseats.io`. Users who create accounts on pre-launch site log into the marketplace seamlessly when it goes live — same domain, deployment swap
@@ -95,7 +88,9 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 - Verified user navigating to `/verify-email` redirects to `/` instead of role-appropriate success page
 - `convex/_generated/api.d.ts` manually edited (Convex sync failure) — may need regeneration
 - ONBOARD-02 partial: only Stripe Connect step persists, no general onboarding progress resumption
-- Stripe webhook requires `STRIPE_CONNECT_WEBHOOK_SECRET` and `CONVEX_DEPLOY_KEY` env vars (not yet set)
+- Stripe webhook requires `CONVEX_DEPLOY_KEY` env var (not yet set)
+- BILL-02 deployment order risk: prelaunch `membershipWebhooks.ts` lacks sync bridge — prelaunch deploy could overwrite marketplace version
+- `error={false}` hardcoded in PaymentHistoryList — error UI unreachable (intentional per Phase 16-02)
 
 ## Constraints
 
@@ -129,6 +124,13 @@ Convert visitors into Early Bird or Founding members via Stripe checkout while t
 | saveStripeConnectAccount as public mutation | fetchAuthMutation with user JWT — ConvexHttpClient.setAdminAuth is private | ✓ Good |
 | Webhook via Convex HTTP API /api/mutation | confirmStripeConnect (internal) called with deploy key, not private client API | ✓ Good |
 | isStripeConnected from accountId non-null | accountId presence is the meaningful signal, not the complete boolean | ✓ Good |
+| Separate stripeBillingCustomerId field | Billing component manages its own customer lifecycle, distinct from stripeCustomerId | ✓ Good |
+| STRIPE_CONNECT_WEBHOOK_SECRET rename | Prevents ambiguity with billing webhook secret | ✓ Good |
+| Sequential backfill (no Promise.all) | Avoids Stripe API rate limits | ✓ Good |
+| Lazy sync via useRef guard | Fire-once syncMyBillingCustomer on first Insider page load | ✓ Good |
+| Manual api.d.ts update | npx convex codegen fails at push phase (pre-existing deployment constraint) | ⚠️ Revisit |
+| Non-fatal sync bridge | Post-fulfillment sync wrapped in try/catch — webhook still succeeds if billing sync fails | ✓ Good |
+| makeFunctionReference in backfill.ts | Breaks circular type inference cycle from internal.* imports | ✓ Good |
 
 ## Evolution
 
@@ -148,4 +150,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-25 after Phase 18 (Verification & Testing) complete*
+*Last updated: 2026-03-26 after v1.3 milestone*

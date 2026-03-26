@@ -128,6 +128,52 @@
 
 ---
 
+## Milestone: v1.3 — Subscription Management
+
+**Shipped:** 2026-03-26
+**Phases:** 5 | **Plans:** 10 | **Commits:** ~40
+
+### What Was Built
+- Billing schema wiring: `stripeBillingCustomerId` field and `STRIPE_CONNECT_WEBHOOK_SECRET` rename across both repos
+- Full billing backend: `syncMyBillingCustomer`, `syncCustomerToComponent`, `setStripeBillingCustomerId`, backfill migration
+- Post-fulfillment sync bridge in `membershipWebhooks.ts` — new Insider checkouts auto-register with billing component
+- Membership frontend: tier display with lifetime/subscription badge differentiation, ManageBillingButton, PaymentHistoryList
+- Ops configuration: env vars, billing webhook registration, Customer Portal setup, backfill execution
+- Verification: automated tier display confirmed, backend wiring for portal and auto-sync validated
+
+### What Worked
+- Two-repo coordination pattern (marketplace builds Convex functions, prelaunch syncs for types) was clean and predictable
+- Phase 14 as foundation (schema + env var rename) unblocked all subsequent phases cleanly
+- Phase 17 as human-operated ops phase was efficient — human confirmed each step, no code changes needed
+- Phase 18 split (automated verification + human checkpoint) was pragmatic — code analysis caught issues that would have required live env otherwise
+- `makeFunctionReference` workaround for circular type inference in backfill.ts resolved a tricky TypeScript issue
+
+### What Was Inefficient
+- Phase 17 has no VERIFICATION.md — ops phases should still get formal verification even when human-operated
+- OPS-01 through OPS-04 checkboxes in REQUIREMENTS.md were never checked despite summaries confirming completion — traceability gap
+- BILL-02 sync bridge exists only in marketplace repo — prelaunch copy of `membershipWebhooks.ts` is stale and could overwrite it on deploy
+- Phase 16 summaries had sparse `requirements_completed` frontmatter — many requirements satisfied but not listed
+
+### Patterns Established
+- Billing functions live in walled-off `convex/billing/` namespace — subscriptions.ts, queries.ts, backfill.ts, membership.ts, billingHelpers.ts
+- Lazy sync pattern: `useRef(false)` guard + fire-and-forget `action({}).catch()` on first page load
+- Conditional UI gating: `isInsider &&` pattern for billing-only components (ManageBillingButton, PaymentHistoryList)
+- Tier differentiation: `isLifetime = tier === "early_bird" || tier === "founding"` — drives badge styling and feature gating
+
+### Key Lessons
+1. Ops phases need VERIFICATION.md — even human-operated steps should have formal verification artifacts to prevent traceability gaps at milestone audit
+2. REQUIREMENTS.md checkboxes should be updated when summaries confirm completion — stale traceability creates confusion at audit time
+3. When two repos share a Convex deployment, deployment order matters — stale copies of shared functions can silently overwrite live code
+4. Deferred human tests should be tracked as HUMAN-UAT.md from the start — prevents them from being forgotten between sessions
+5. Manual api.d.ts edits are fragile — this tech debt needs resolution before v1.4
+
+### Cost Observations
+- Model mix: Orchestration on opus, execution and verification on sonnet
+- Entire v1.3 built in ~4 days (2026-03-22 to 2026-03-26)
+- Notable: Phase 17 (ops) was the fastest — human operator completed all tasks in one session with no code changes
+
+---
+
 ## Cross-Milestone Trends
 
 ### Process Evolution
@@ -137,6 +183,7 @@
 | v1.0 | 109 | 12 | Initial build — copy-from-source with shared backend |
 | v1.1 | 19 | 2 | Content-focused milestone — data expansion with brand compliance |
 | v1.2 | 41 | 6 | Post-signup UX — design system, 3 pages, Stripe Connect persistence |
+| v1.3 | ~40 | 5 | Subscription management — billing backend, membership frontend, ops config |
 
 ### Top Lessons (Verified Across Milestones)
 
@@ -145,3 +192,5 @@
 3. Research accuracy degrades with codebase changes — always verify research against actual file state before execution
 4. Always run the verifier on every phase — missing VERIFICATION.md creates audit friction (v1.2 Phase 25)
 5. Requirement text precision matters — ambiguous scope leads to partial satisfaction (v1.2 ONBOARD-02)
+6. Ops phases need formal verification artifacts even when human-operated (v1.3 Phase 17)
+7. Shared deployment repos must guard against stale function overwrites (v1.3 BILL-02 risk)
